@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+<channel>
+      <title> Steven's Conversations </title>
+      <link>https://www.steventenholder.com</link>
+      <description>Investigations into the minds of interesting people.</description>
+       <copyright>Copyright 2022 Steven ten Holder</copyright>
+      
+      <language>en</language>
+      <itunes:category text="History" />
+      <itunes:author>Steven ten Holder</itunes:author>
+      <itunes:owner>
+            <itunes:name>Steven ten Holder</itunes:name>
+            <itunes:email>steve.tenholder@gmail.com</itunes:email>
+        </itunes:owner>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="https://www.steventenholder.com/images/steven_s_conversations_square.png" />
+      
+      <item>
+         <title>1: Navid Nathoo (ft. Nadeem Nathoo)</title>
+         <link>https://www.steventenholder.com/podcasts.html</link>
+         <description> A sprawling conversation with Navid, founder of The Knowledge Society. </description>
+
+         <author> steve.tenholder@gmail.com </author>
+
+         <enclosure url="https://www.steventenholder.com/podcast/episode1.mp3" length="52820864" type="audio/mp3"/>
+         <pubDate>Thu, 27 May 2021 13:00:00 PDT</pubDate>
+         <guid isPermaLink="true">
+             https://www.steventenholder.com/podcast/episode1.mp3
+         </guid>
+      </item>
+      
+      <item>
+         <title>2: Harry Ghandi </title>
+         <link>https://www.steventenholder.com/podcasts.html</link>
+         <description> A mutual history conversation. Harry is a science entrepreneur I met many years ago at the University of Waterloo's Velocity incubator. We talk about entrepreneurship, our histories/experiences, and philosophy broadly. </description>
+
+         <author> steve.tenholder@gmail.com </author>
+
+         <enclosure url="https://www.steventenholder.com/podcast/episode2.mp3" length="112539389" type="audio/mp3"/>
+         <pubDate>Fri, 12 Nov 2021 13:00:00 PDT</pubDate>
+         <guid isPermaLink="true">
+             https://www.steventenholder.com/podcast/episode2.mp3
+         </guid>
+      </item>
+      
+    <item>
+         <title>3: Paul Reginato  </title>
+         <link>https://www.steventenholder.com/podcasts.html</link>
+         <description> A sprawling conversation. Paul is a bioengineer I met many years ago within the University of Waterloo's iGEM team. We talk about the philosophy of environmentalism, attitudes toward death, the question of purpose, Elon Musk and more. </description>
+
+         <author> steve.tenholder@gmail.com </author>
+
+         <enclosure url="https://www.steventenholder.com/podcast/episode3.mp3" length="55979676" type="audio/mp3"/>
+         <pubDate>Thursday, 30 Dec 2021 13:00:00 PDT</pubDate>
+         <guid isPermaLink="true">
+             https://www.steventenholder.com/podcast/episode3.mp3
+         </guid>
+      </item> 
+      
+      
+      <item>
+         <title>4: Ryan Brown  </title>
+         <link>https://www.steventenholder.com/podcasts.html</link>
+         <description> A climate change debate. Ryan is a battery chemistry entrepreneur (co-founder, Salient Energy) and environmentalist I met many years ago at the University of Waterloo's Velocity startup incubator. </description>
+
+         <author> steve.tenholder@gmail.com </author>
+
+         <enclosure url="https://www.steventenholder.com/podcast/episode4.mp3" length="140779520" type="audio/mp3"/>
+         <pubDate>Tuesday, 15 Mar 2022 13:00:00 PDT</pubDate>
+         <guid isPermaLink="true">
+             https://www.steventenholder.com/podcast/episode4.mp3
+         </guid>
+      </item> 
+      
+      <item>
+         <title>5: Skyler Chan  </title>
+         <link>https://www.steventenholder.com/podcasts.html</link>
+         <description> A 'life direction' conversation. Skyler is a young crypto startup founder (currently @usesonder) from Vancouver. </description>
+
+         <author> steve.tenholder@gmail.com </author>
+
+         <enclosure url="https://www.steventenholder.com/podcast/episode5.mp3" length="140779520" type="audio/mp3"/>
+         <pubDate>Wednesday, 29 Jun 2022 13:00:00 PDT</pubDate>
+         <guid isPermaLink="true">
+             https://www.steventenholder.com/podcast/episode5.mp3
+         </guid>
+      </item> 
+      
+      
+   </channel>
+</rss>
