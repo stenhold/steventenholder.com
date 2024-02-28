@@ -8,10 +8,10 @@ export default function Home() {
         <ul className="space-y-4 w-full px-4 flex flex-wrap justify-center">
           {[
             { href: "/", imgSrc: "/steven.png", text: "Hello, I'm Steven ten Holder" },
-            { href: "/bioengineering-ideas", imgSrc: "/davinci.jpg", text: "New Bioengineering Ideas" },
-            { href: "/bioengineering-ideas", imgSrc: "/acorn_biolabs.jpg", text: "Acorn Biolabs" },
-            { href: "/bioengineering-ideas", imgSrc: "/podcast_conversations.jpg", text: "Podcast" },
-            { href: "/bioengineering-ideas", imgSrc: "/blog.jpg", text: "Blog" },
+            { href: "/bioengineering-ideas", imgSrc: "/davinci.jpg", text: "Bioengineering Ideas" },
+            { href: "/acorn-biolabs", imgSrc: "/acorn_biolabs.jpg", text: "Acorn Biolabs" },
+            { href: "/podcast", imgSrc: "/podcast_conversations.jpg", text: "Podcast" }, // Assume this is also corrected
+            { href: "/blog", imgSrc: "/blog.jpg", text: "Blog" }, // Corrected href for consistency
           ].map((item, index) => (
             <li key={index} className="relative flex flex-col items-center text-center font-roboto">
               <Link href={item.href} passHref>
@@ -30,11 +30,12 @@ export default function Home() {
             </li>
           ))}
         </ul>
+
       </nav>
 
       {/* Footer */}
       <footer className="p-4 mt-10 bg-black w-full text-center text-white">
-        © 2024 - Steven ten Holder
+        The year is 2024
       </footer>
     </div>
   );
