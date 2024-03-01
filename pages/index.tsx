@@ -28,34 +28,41 @@ const Header = () => (
   </div>
 );
 
-const ImagePanel = () => (
+// ImagePanel for the first row
+const ImagePanelFirstRow = () => (
   <div className="max-w-screen-lg mx-auto py-10">
-    <ul className="grid grid-rows-2 grid-cols-2 gap-20 m-20">
-      {/* First row items with default/auto height */}
+    <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mb-2">
       <ImageLink
         href="/bioengineering-ideas"
-        imgSrc="/davinci.jpg"
+        imgSrc="/bio_eng.jpg"
         text="Bioengineering Ideas"
-        gridClass="col-span-2 md:col-span-1" // Assuming normal content height here
+        gridClass="col-span-2 md:col-span-1"
       />
       <ImageLink
         href="/acorn-biolabs"
-        imgSrc="/acorn_biolabs.jpg"
+        imgSrc="/acorn_biolabs_1950.jpg"
         text="Acorn Biolabs"
-        gridClass="col-span-2 md:col-span-1" // Normal content height
+        gridClass="col-span-2 md:col-span-1"
       />
-      {/* Second row items with explicitly set height to make them shorter */}
+    </ul>
+  </div>
+);
+
+// ImagePanel for the second row with potentially different rules or styles
+const ImagePanelSecondRow = () => (
+  <div className="max-w-screen-lg mx-auto py-10">
+    <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mt-2">
       <ImageLink
         href="/podcasts"
         imgSrc="/podcast_conversations.jpg"
         text="Podcast"
-        gridClass="col-span-2 md:col-span-1" // Example: set height to 8rem (32 divided by 4)
+        gridClass="col-span-2 md:col-span-1"
       />
       <ImageLink
         href="/blog"
         imgSrc="/blog.jpg"
         text="Blog"
-        gridClass="col-span-2 md:col-span-1" // This makes the item explicitly shorter
+        gridClass="col-span-2 md:col-span-1"
       />
     </ul>
   </div>
@@ -69,12 +76,13 @@ const Footer = () => (
   </footer>
 );
 
-// Adjust the main container of your Home component
+// Adjust the main container of your Home component to include both ImagePanel components
 export default function Home() {
   return (
     <div className="space-y-4 w-full flex flex-col items-center overflow-x-hidden">
       <Header />
-      <ImagePanel />
+      <ImagePanelFirstRow />
+      <ImagePanelSecondRow />
       <Footer />
     </div>
   );
