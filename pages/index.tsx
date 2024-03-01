@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Header = () => (
   <div className="text-center mt-20">
     <Image src="/steven.png" alt="Steven ten Holder" width={500} height={300} className="rounded-lg shadow-md" layout="intrinsic" />
-    <h2 className="text-3xl font-bold text-white mt-4">Hello, I'm Steven ten Holder</h2>
+    <h2 className="text-3xl font-bold text-white mt-4">Hello, I&#39;m Steven ten Holder</h2>
   </div>
 );
 

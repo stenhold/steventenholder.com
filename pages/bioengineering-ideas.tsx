@@ -52,9 +52,9 @@ export default function BioengineeringIdeas() {
 
             <div className="space-y-4 w-full px-4 m-4 flex flex-col items-center">
                 <p className="space-y-4 w-half px-4 flex flex-col m-8">
-                    There's a certain excitement around the recent achievements and growth of computation.
+                    There&#39;s a certain excitement around the recent achievements and growth of computation.
                     No other new field of science has produced an engineering platform as productivity-boosting and lifestyle-enhancing as it.
-                    We're confident it will continue to be improved and generate new phenomena, including the exciting possibility of
+                    We&#39;re confident it will continue to be improved and generate new phenomena, including the exciting possibility of
                     general artificial intelligence. However, a head-to-head comparison with the astounding capabilities of existing
                     biological systems serves to remind us to appreciate how powerful that operating system can be.
                 </p>
