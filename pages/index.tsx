@@ -14,10 +14,8 @@ interface ImageLinkProps {
 const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '' }) => (
   <li className={`flex-none ${gridClass}`}>
     <Link href={href} passHref>
-      <a>
-        <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg shadow-md" layout="responsive" />
+        <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg"/>
         <span className="mt-2 text-xl font-bold text-white">{text}</span>
-      </a>
     </Link>
   </li>
 );
@@ -25,42 +23,44 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 // Header component
 const Header = () => (
   <div className="text-center mt-20">
-    <Image src="/steven.png" alt="Steven ten Holder" width={500} height={300} className="rounded-lg shadow-md" layout="intrinsic" />
+    <Image src="/steven.png" alt="Steven ten Holder" width={500} height={300} className="rounded-lg"/>
     <h2 className="text-3xl font-bold text-white mt-4">Hello, I&#39;m Steven ten Holder</h2>
   </div>
 );
 
-// Updated ImagePanel component for two-row layout
 const ImagePanel = () => (
-  <div className="max-w-screen-lg mx-auto py-20">
+  <div className="max-w-screen-lg mx-auto py-10">
     <ul className="grid grid-rows-2 grid-cols-2 gap-20 m-20">
+      {/* First row items with default/auto height */}
       <ImageLink
         href="/bioengineering-ideas"
         imgSrc="/davinci.jpg"
         text="Bioengineering Ideas"
-        gridClass=""
+        gridClass="col-span-2 md:col-span-1" // Assuming normal content height here
       />
       <ImageLink
         href="/acorn-biolabs"
         imgSrc="/acorn_biolabs.jpg"
         text="Acorn Biolabs"
-        gridClass=""
+        gridClass="col-span-2 md:col-span-1" // Normal content height
       />
+      {/* Second row items with explicitly set height to make them shorter */}
       <ImageLink
         href="/podcasts"
         imgSrc="/podcast_conversations.jpg"
         text="Podcast"
-        gridClass=""
+        gridClass="col-span-2 md:col-span-1" // Example: set height to 8rem (32 divided by 4)
       />
       <ImageLink
         href="/blog"
         imgSrc="/blog.jpg"
         text="Blog"
-        gridClass=""
+        gridClass="col-span-2 md:col-span-1" // This makes the item explicitly shorter
       />
     </ul>
   </div>
 );
+
 
 // Footer component
 const Footer = () => (
