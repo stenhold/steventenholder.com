@@ -14,8 +14,8 @@ interface ImageLinkProps {
 const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '' }) => (
   <li className={`flex-none ${gridClass}`}>
     <Link href={href} passHref>
-        <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg"/>
-        <span className="mt-2 text-xl font-bold text-white">{text}</span>
+      <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg" />
+      <span className="mt-2 text-xl font-bold text-white">{text}</span>
     </Link>
   </li>
 );
@@ -23,7 +23,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 // Header component
 const Header = () => (
   <div className="text-center mt-20">
-    <Image src="/steven.png" alt="Steven ten Holder" width={500} height={300} className="rounded-lg"/>
+    <Image src="/steven.png" alt="Steven ten Holder" width={500} height={300} className="rounded-lg" />
     <h2 className="text-3xl font-bold text-white mt-4">Hello, I&#39;m Steven ten Holder</h2>
   </div>
 );
@@ -71,15 +71,15 @@ const ImagePanelSecondRow = () => (
 
 // Footer component
 const Footer = () => (
-  <footer className="p-10 mt-4 bg-black w-full text-center text-white">
-    the year is 2024
+  <footer className="italic font-italic p-10 mt-4 bg-black w-full text-center text-white">
+    the year is <b> 2024 </b> and I hereby delcare copywrite the content on this site ya'll
   </footer>
 );
 
 // Adjust the main container of your Home component to include both ImagePanel components
 export default function Home() {
   return (
-    <div className="space-y-4 w-full flex flex-col items-center overflow-x-hidden">
+    <div className="text-xs space-y-4 w-full flex flex-col items-center overflow-x-hidden">
       <Header />
       <ImagePanelFirstRow />
       <ImagePanelSecondRow />
