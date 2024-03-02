@@ -127,10 +127,10 @@ const FullImageGrid = () => (
 const TextGrid = () => (
     <div className="max-w-screen-lg mx-auto py-10 mr-10 ml-10">
         <div className="grid grid-cols-2 gap-10">
-            <div objectFit="cover" className="rounded-lg">
+            <div>
                 This is text
             </div>
-            <div objectFit="cover" className="rounded-lg">
+            <div>
                 This is text 2
             </div>
         </div>
