@@ -29,28 +29,25 @@ const Header = () => (
 );
 
 
-const FullImageGrid = () => (
-    <div className="max-w-screen-lg mx-auto py-10 mr-10 ml-10">
-        <div className="grid grid-cols-2 gap-10">
-            <Image src="/neurons_background.jpg" alt="Neuron Research" height={500} width={500} objectFit="cover" className="rounded-lg" />
-            <Image src="/bio_eng_2.jpg" alt="Brain Enhancements" height={500} width={500} objectFit="cover" className="rounded-lg" />
+const ImageAndTextGrid = () => (
+    <div className="max-w-screen-lg mx-auto py-10 px-10">
+      <div className="grid grid-cols-3 gap-10">
+        <div>
+          <Image src="/origin_of_life_1.jpg" alt="Brain Enhancements" height={500} width={500} objectFit="cover" className="rounded-lg" />
+          <p className="mt-4 text-right">Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.</p>
         </div>
-    </div>
-);
-
-const TextGrid = () => (
-    <div className="max-w-screen-lg mx-auto py-10 mr-10 ml-10">
-        <div className="grid grid-cols-2 gap-10">
-            <div>
-                This is text
-            </div>
-            <div>
-                This is text 2
-            </div>
+        <div>
+          <Image src="/bio_eng_2.jpg" alt="Brain Enhancements" height={500} width={500} objectFit="cover" className="rounded-lg" />
+          <p className="mt-4 text-center">An intelligently-guided, unconstrained version of biology could result in forms and phenomena as yet unimaginable.</p>
         </div>
+        <div>
+          <Image src="/neurons_background.jpg" alt="Neuron Research" height={500} width={500} objectFit="cover" className="rounded-lg" />
+          <p className="mt-4 text-left">We ourselves exist on that same biological operating system. For that reason, it is possibly the ultimate exploration.</p>
+        </div>
+      </div>
     </div>
-);
-
+  );
+  
 
 
 
@@ -89,8 +86,7 @@ export default function Home() {
     return (
         <div className="text-xs space-y-4 w-full flex flex-col items-center overflow-x-hidden">
             <Header />
-            <FullImageGrid />
-            <TextGrid />
+            <ImageAndTextGrid />
             <NavPanel />
             <Footer />
         </div>
