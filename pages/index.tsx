@@ -71,8 +71,9 @@ const ImagePanelSecondRow = () => (
 
 // Footer component
 const Footer = () => (
-  <footer className="italic font-italic p-10 mt-4 bg-black w-full text-center text-white">
-    the year is <b> 2024 </b> and I hereby delcare copywrite the content on this site ya&#39;ll
+  <footer className="italic p-10 mt-4 bg-black w-full text-center text-white">
+    the year is <b>2024</b>
+    <p> all images generated via tireless midjourney prompting. </p>
   </footer>
 );
 
