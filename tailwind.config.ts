@@ -14,6 +14,10 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "neurons-background": "url('/neurons_background.jpg')",
       },
+      fontFamily: {
+        'unna': ['Unna', 'serif'], // Make sure 'Unna' is spelled exactly as it is on Google Fonts
+        'roboto-slab': ['"Roboto Slab"', 'serif'],
+      },
     },
   },
   plugins: [],
