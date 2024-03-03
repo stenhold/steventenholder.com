@@ -27,7 +27,7 @@ const Header2 = () => (
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
-                <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                <h2 className="font-unna font-bold italic text-4xl text-white text-left">
                     Engineering biology will <br /> revolutionize the human condition.
                 </h2>
             </div>
@@ -43,25 +43,24 @@ const Header2 = () => (
     </div>
 );
 
-const ImageAndTextGrid = () => (
+
+const ImageBesideText = () => (
     <div className="max-w-screen-lg mx-auto py-2 px-10">
-        <div className="grid grid-cols-3 gap-10">
-            <div>
-                <Image src="/origin_of_life_1.jpg" alt="Brain Enhancements" height={500} width={500} objectFit="cover" className="rounded-lg" te />
-                <p className="font-roboto-slab font-extralight mt-4 text-left">Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.</p>
-            </div>
-            <div>
-                <Image src="/bio_eng_2.jpg" alt="Brain Enhancements" height={500} width={500} objectFit="cover" className="rounded-lg" />
-                <p className="font-roboto-slab font-extralight mt-4 text-left">An intelligently-guided, unconstrained version of biology could result in forms and phenomena as yet unimaginable.</p>
-            </div>
-            <div>
-                <Image src="/neurons_background.jpg" alt="Neuron Research" height={500} width={500} objectFit="cover" className="rounded-lg" />
-                <p className="font-roboto-slab font-extralight mt-4 text-left">We ourselves exist on that same biological operating system. For that reason, it is possibly the ultimate exploration.</p>
-            </div>
+        <div className="grid grid-cols-2 gap-6">
+            {/* Row 1 */}
+            <Image src="/bio_eng_2.jpg" alt="Life" height={400} width={400} objectFit="cover" className="rounded-lg" />
+            <p className="font-light text-sm font-extralight mt-4 text-left pr-24">Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.</p>
+
+            {/* Row 2 */}
+            <Image src="/origin_of_life_1.jpg" alt="Life" height={400} width={400} objectFit="cover" className="rounded-lg" />
+            <p className="font-light text-sm font-extralight mt-4 text-left pr-24">An intelligently-guided, unconstrained version of biology could result in forms and phenomena as yet unimaginable.</p>
+
+            {/* Row 3 */}
+            <Image src="/neurons_background.jpg" alt="Life" height={400} width={400} objectFit="cover" className="rounded-lg" />
+            <p className="font-light text-sm font-extralight mt-4 text-left pr-24">We ourselves exist on that same biological operating system. For that reason, it is possibly the ultimate exploration.</p>
         </div>
     </div>
 );
-
 
 
 
@@ -102,7 +101,8 @@ export default function Home() {
     return (
         <div className="text-xs space-y-4 w-full flex flex-col items-center overflow-x-hidden">
             <Header2 />
-            <ImageAndTextGrid />
+            <ImageBesideText />
+
             <NavPanel />
             <Footer />
         </div>
