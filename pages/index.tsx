@@ -37,7 +37,7 @@ const Header = () => (
         I also have fun creating music, experimenting with cinematography,
         podcasting, and skateboarding.
         <br /><br />
-        If you'd like to chat:
+        If you&apos;d like to chat:
         steve.tenholder@gmail.com
       </p>
     </div>
