@@ -13,17 +13,19 @@ interface ImageLinkProps {
 
 // Use the ImageLinkProps interface for the ImageLink component&#39;s props
 const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '' }) => (
-    <li className={`flex-none ${gridClass}`}>
+    <li className={`flex-none ${gridClass} w-full sm:w-auto`}>
         <Link href={href} passHref>
-            <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg" />
-            <span className="">{text}</span>
+            <div className="block">
+                <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg" layout="responsive"/>
+                <span className="block text-center mt-2">{text}</span>
+            </div>
         </Link>
     </li>
 );
 
 
 const Header2 = () => (
-    <div className="max-w-screen-lg mx-auto py-2 pl-10 mt-10">
+    <div className="max-w-screen-lg mx-auto pt-10 px-6 sm:px-10">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
@@ -46,52 +48,69 @@ const Header2 = () => (
 
 
 const ImageBesideText = () => (
-    <div className="max-w-screen-lg mx-auto py-2 px-10">
+    <div className="max-w-screen-lg mx-auto py-4 px-6 sm:px-10">
         <div className="grid grid-cols-12 gap-y-12 gap-x-2">
-            {/* Image */}
-                <div className="col-span-4">
-                    <Image src="/origin_of_life_2.jpg" alt="Life" height={300} width={300} objectFit="cover" className="rounded-lg" />
-                </div>
+
             {/* Number */}
                 <div className="col-span-1 flex items-center">
                     <span className="font-unna font-bold italic text-3xl text-white">1.</span>
                 </div>
+            {/* Image */}
+                <div className="col-span-5">
+                    <Image src="/origin_of_life_2.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
+                </div>
             {/* Text */}
                 <div className="col-span-6 flex items-center">
-                    <p className="font-roboto-slab font-extralight text-left text-base">
-                    Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.<br /><br />
+                    <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
+                        Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.<br /><br />
+                    </p>
+                </div>
+
+
+
+            {/* Number */}
+                <div className="col-span-1 flex items-center">
+                    <span className="font-unna font-bold italic text-3xl text-white">2.</span>
+                </div>
+            {/* Image */}
+                <div className="col-span-5">
+                    <Image src="/diversity_of_life_3.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
+                </div>
+            {/* Text */}
+                <div className="col-span-6 flex items-center">
+                    <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
                         That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena 
                         -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.
                     </p>
                 </div>
 
-            {/* Image */}
-                <div className="col-span-4">
-                    <Image src="/intelligent_design.jpg" alt="Life" height={300} width={300} objectFit="cover" className="rounded-lg" />
-                </div>
-            {/* Number */}
-                <div className="col-span-1 flex items-center">
-                    <span className="font-unna font-bold italic text-3xl text-white">2.</span>
-                </div>
-            {/* Text */}
-                <div className="col-span-6 flex items-center">
-                    <p className="font-roboto-slab font-extralight text-left text-base">
-                    An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
-                    </p>
-                </div>
-
-            {/* Image */}
-                <div className="col-span-4">
-                    <Image src="/brain_1.jpg" alt="Life" height={300} width={300} objectFit="cover" className="rounded-lg" />
-                </div>
             {/* Number */}
                 <div className="col-span-1 flex items-center">
                     <span className="font-unna font-bold italic text-3xl text-white">3.</span>
                 </div>
+            {/* Image */}
+                <div className="col-span-5">
+                    <Image src="/intelligent_design_4.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
+                </div>
             {/* Text */}
                 <div className="col-span-6 flex items-center">
-                    <p className="font-roboto-slab font-extralight text-left text-base">
-                    We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, revolutionary exploration of the limits of what is possible from our universe.
+                    <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
+                        An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
+                    </p>
+                </div>
+
+            {/* Number */}
+            <div className="col-span-1 flex items-center">
+                    <span className="font-unna font-bold italic text-3xl text-white">4.</span>
+                </div>
+            {/* Image */}
+                <div className="col-span-5">
+                    <Image src="/brain_1.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
+                </div>
+            {/* Text */}
+                <div className="col-span-6 flex items-center">
+                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
+                        We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, revolutionary exploration of the limits of what is possible from our universe.
                     </p>
                 </div>
         </div>
@@ -108,7 +127,7 @@ const ImageBesideText = () => (
 // ImagePanel for the second row with potentially different rules or styles
 const NavPanel = () => (
     <div className="max-w-screen-lg mx-auto py-10">
-        <ul className="grid grid-rows-1 grid-cols-5 gap-10 mr-20 ml-20 mt-36 text-sm">
+        <ul className="sm:w-auto grid grid-cols-1 sm:grid-cols-5 gap-10 mr-5 sm:mr-20 ml-5 sm:ml-20 mt-36 text-sm">
             {[
                 { href: "/", imgSrc: "/steven.png", text: "Home" },
                 { href: "/bioengineering-ideas", imgSrc: "/bio_eng.jpg", text: "BioEng Ideas" },
