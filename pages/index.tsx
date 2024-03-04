@@ -24,19 +24,26 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 const Header = () => (
   <div className="text-left px-10 mt-20">
     <Image src="/steven.png" alt="Steven ten Holder" width={500} height={500} className="rounded-lg" />
-    <h2 className="text-2xl font-bold text-white">Hello, I&apos;m Steven ten Holder</h2>
+    <h2 className="text-2xl font-bold text-white mt-8">
+      Hello, I&apos;m Steven ten Holder
+    </h2>
     <div style={{ maxWidth: '450px' }}> {/* Wrap the paragraph in a div for alignment */}
-      <p className="text-md font-roboto-slab text-white"> 
-        I&apos;m a biotech entrepreneur interested in how we can engineer life to make humans thrive. 
-        Exploring the intersection of biology and technology, I seek to harness the power of 
-        bioengineering to address some of the most pressing challenges facing humanity today. 
-        Join me on this journey to unlock the potential of synthetic biology and create a better future.
+      <p className="text-md font-roboto-slab text-white mt-2 ml-2">
+        I&apos;m interested in engineering biology to help civilization thrive.
+        Longevity first, intelligence next.
+        <br /><br />
+        Currently I&apos;m exploring how AI can help accelerate bioeng.
+        <br /><br />
+        I also have fun creating music, experimenting with cinematography,
+        podcasting, and skateboarding.
+        <br /><br />
+        If you'd like to chat:
+        steve.tenholder@gmail.com
       </p>
     </div>
+
   </div>
 );
-
-
 
 // ImagePanel for the first row
 const ImagePanelFirstRow = () => (
