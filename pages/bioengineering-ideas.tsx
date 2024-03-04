@@ -126,8 +126,8 @@ const ImageBesideText = () => (
 
 // ImagePanel for the second row with potentially different rules or styles
 const NavPanel = () => (
-    <div className="max-w-screen-lg mx-auto py-10">
-        <ul className="sm:w-auto grid grid-cols-1 sm:grid-cols-5 gap-10 mr-5 sm:mr-20 ml-5 sm:ml-20 mt-36 text-sm">
+    <div className="max-w-screen-lg mx-auto pt-40 pb-20">
+        <ul className="grid grid-cols-2 sm:grid-cols-5 gap-10">
             {[
                 { href: "/", imgSrc: "/steven.png", text: "Home" },
                 { href: "/bioengineering-ideas", imgSrc: "/bio_eng.jpg", text: "BioEng Ideas" },
@@ -135,13 +135,14 @@ const NavPanel = () => (
                 { href: "/podcast", imgSrc: "/podcast_conversations.jpg", text: "Podcast" },
                 { href: "/blog", imgSrc: "/blog.jpg", text: "Blog" }
             ].map((item, index) => (
-                <ImageLink
-                    key={index}
-                    href={item.href}
-                    imgSrc={item.imgSrc}
-                    text={item.text}
-                    gridClass="col-span-5 md:col-span-1"
-                />
+                <li key={index} className="md:col-span-1">
+                  <Link href={item.href} passHref>
+                    <div className="flex flex-col items-center">
+                      <Image src={item.imgSrc} alt={item.text} width={150} height={150} className="rounded-lg w-36 h-auto md:w-full" layout="intrinsic"/>
+                      <span className="mt-2 text-sm">{item.text}</span>
+                    </div>
+                  </Link>
+                </li>
             ))}
         </ul>
     </div>

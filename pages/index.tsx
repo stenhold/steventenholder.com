@@ -22,11 +22,21 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 
 // Header component
 const Header = () => (
-  <div className="text-center mt-20">
-    <Image src="/steven.png" alt="Steven ten Holder" width={500} height={300} className="rounded-lg" />
-    <h2 className="text-3xl font-bold text-white mt-4">Hello, I&#39;m Steven ten Holder</h2>
+  <div className="text-left px-10 mt-20">
+    <Image src="/steven.png" alt="Steven ten Holder" width={500} height={500} className="rounded-lg" />
+    <h2 className="text-2xl font-bold text-white">Hello, I'm Steven ten Holder</h2>
+    <div style={{ maxWidth: '450px' }}> {/* Wrap the paragraph in a div for alignment */}
+      <p className="text-md font-roboto-slab text-white"> 
+        I'm a biotech entrepreneur interested in how we can engineer life to make humans thrive. 
+        Exploring the intersection of biology and technology, I seek to harness the power of 
+        bioengineering to address some of the most pressing challenges facing humanity today. 
+        Join me on this journey to unlock the potential of synthetic biology and create a better future.
+      </p>
+    </div>
   </div>
 );
+
+
 
 // ImagePanel for the first row
 const ImagePanelFirstRow = () => (
