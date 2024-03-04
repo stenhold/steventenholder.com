@@ -24,7 +24,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 const Header = () => (
   <div className="text-left px-10 mt-20">
     <Image src="/steven.png" alt="Steven ten Holder" width={500} height={500} className="rounded-lg" />
-    <h2 className="text-2xl font-bold text-white">Hello, I'm Steven ten Holder</h2>
+    <h2 className="text-2xl font-bold text-white">Hello, I&apos;m Steven ten Holder</h2>
     <div style={{ maxWidth: '450px' }}> {/* Wrap the paragraph in a div for alignment */}
       <p className="text-md font-roboto-slab text-white"> 
         I&apos;m a biotech entrepreneur interested in how we can engineer life to make humans thrive. 
