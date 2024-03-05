@@ -51,66 +51,29 @@ const PanelDesktop = () => (
     <div className="hidden sm:block max-w-screen-lg mx-auto py-4 px-6 sm:px-10">
         <div className="grid grid-cols-12 gap-y-12 gap-x-2">
 
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">1.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/origin_of_life_2.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.<br /><br />
-                </p>
-            </div>
+            {/* Section 1 */}
+            <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">1.</span></div>
+            <div className="col-span-5"><Image src="/origin_of_life_2.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
+            <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
+                Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.<br /><br /></p></div>
 
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">2.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/diversity_of_life_3.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
-                    -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.
-                </p>
-            </div>
+            {/* Section 2 */}
+            <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">2.</span></div>
+            <div className="col-span-5"><Image src="/diversity_of_life_3.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
+            <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
+                That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena...</p></div>
 
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">3.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/intelligent_design_4.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
-                </p>
-            </div>
+            {/* Section 3 */}
+            <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">3.</span></div>
+            <div className="col-span-5"><Image src="/intelligent_design_4.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
+            <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
+                An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena...</p></div>
 
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">4.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/brain_1.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, revolutionary exploration of the limits of what is possible from our universe.
-                </p>
-            </div>
+            {/* Section 4 */}
+            <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">4.</span></div>
+            <div className="col-span-5"><Image src="/brain_1.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
+            <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
+                We ourselves exist on that same biological operating system...</p></div>
         </div>
     </div>
 );
@@ -119,31 +82,35 @@ const PanelDesktop = () => (
 const PanelMobile = () => (
     <div className="sm:hidden max-w-screen-lg mx-auto py-4 px-6">
         <div className="flex flex-col gap-y-12">
+            {/* Section 1 */}
             <div className="flex flex-col items-center">
+                <Image src="/origin_of_life_2.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
                 <span className="font-unna font-bold italic text-3xl text-white">1.</span>
-                <Image src="/origin_of_life_2.jpg" alt="Life" height={350} width={350} className="rounded-lg" />
                 <p className="font-roboto-slab font-extralight text-center text-xs px-2">
                     Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.
                 </p>
             </div>
+            {/* Section 2 */}
             <div className="flex flex-col items-center">
+                <Image src="/diversity_of_life_3.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
                 <span className="font-unna font-bold italic text-3xl text-white">2.</span>
-                <Image src="/diversity_of_life_3.jpg" alt="Life" height={350} width={350} className="rounded-lg" />
                 <p className="font-roboto-slab font-extralight text-center text-xs px-2">
                     That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
                     -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.
                 </p>
             </div>
+            {/* Section 3 */}
             <div className="flex flex-col items-center">
+                <Image src="/intelligent_design_4.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
                 <span className="font-unna font-bold italic text-3xl text-white">3.</span>
-                <Image src="/intelligent_design_4.jpg" alt="Life" height={350} width={350} className="rounded-lg" />
                 <p className="font-roboto-slab font-extralight text-center text-xs px-2">
                     An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
                 </p>
             </div>
+            {/* Section 4 */}
             <div className="flex flex-col items-center">
+                <Image src="/brain_1.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
                 <span className="font-unna font-bold italic text-3xl text-white">4.</span>
-                <Image src="/brain_1.jpg" alt="Life" height={350} width={350} className="rounded-lg" />
                 <p className="font-roboto-slab font-extralight text-center text-xs px-2">
                     We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, revolutionary exploration of the limits of what is possible from our universe.
                 </p>
@@ -151,89 +118,12 @@ const PanelMobile = () => (
         </div>
     </div>
 );
-
-
-
-const ImageBesideText = () => (
-    <div className="max-w-screen-lg mx-auto py-4 px-6 sm:px-10">
-        <div className="grid grid-cols-12 gap-y-12 gap-x-2">
-
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">1.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/origin_of_life_2.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.<br /><br />
-                </p>
-            </div>
-
-
-
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">2.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/diversity_of_life_3.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
-                    -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.
-                </p>
-            </div>
-
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">3.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/intelligent_design_4.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
-                </p>
-            </div>
-
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">4.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/brain_1.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, revolutionary exploration of the limits of what is possible from our universe.
-                </p>
-            </div>
-        </div>
-    </div>
-);
-
-
-
-
-
 
 
 
 // ImagePanel for the second row with potentially different rules or styles
 const NavPanel = () => (
-    <div className="max-w-screen-lg mx-auto pt-40 pb-20">
+    <div className="max-w-screen-lg mx-auto pt-40 pb-20 px-10">
         <ul className="grid grid-cols-2 sm:grid-cols-5 gap-10">
             {[
                 { href: "/", imgSrc: "/steven.png", text: "Home" },
@@ -271,7 +161,6 @@ export default function Home() {
             <Header2 />
             <PanelDesktop />
             <PanelMobile />
-            <ImageBesideText />
             <NavPanel />
             <Footer />
         </div>
