@@ -24,12 +24,33 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 );
 
 
-const Header2 = () => (
-    <div className="max-w-screen-lg mx-auto pt-10 px-6 sm:px-10">
+const HeaderDesktop = () => (
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 px-6 sm:px-10">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
                 <h2 className="font-unna font-bold italic text-4xl text-white text-left">
+                    Engineering biology will <br /> revolutionize the human condition.
+                </h2>
+            </div>
+
+            <div className="col-span-0">
+                <div className="top-0 left-0 w-96 h-0">
+                    <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                    </h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+);
+
+const HeaderMobile = () => (
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 px-6">
+        <div className="grid grid-cols-3">
+
+            <div className="col-span-3">
+                <h2 className="font-unna font-bold italic text-3xl text-white text-left">
                     Engineering biology will <br /> revolutionize the human condition.
                 </h2>
             </div>
@@ -158,7 +179,8 @@ const Footer = () => (
 export default function Home() {
     return (
         <div className="text-xs space-y-4 w-full flex flex-col items-center overflow-x-hidden">
-            <Header2 />
+            <HeaderDesktop />
+            <HeaderMobile />
             <PanelDesktop />
             <PanelMobile />
             <NavPanel />
