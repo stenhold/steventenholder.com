@@ -149,11 +149,11 @@ const TextSummary = () => (
             <span className="col-span-1 col-start-2 font-unna font-bold italic text-3xl text-white">Fin.</span>
             <div className="col-start-2 col-span-5">
                 <p className="font-roboto-slab text-left text-lg px-2">
-                    There's a certain excitement around the recent achievements of computer science.
+                    There&#39;s a certain excitement around the recent achievements of computer science.
                     <br /><br />
                     No other new field has produced engineering as productivity-boosting and lifestyle-enhancing as it.
                     <br /><br />
-                    We're confident it will continue to be improved and generate new phenomena, including the exciting possibility of general artificial intelligence.
+                    We&#39;re confident it will continue to be improved and generate new phenomena, including the exciting possibility of general artificial intelligence.
                     <br /><br />
                     However, the astounding potential capabilities of biological systems should remind us to appreciate just how powerful that operating system could one day be.
                 </p>
