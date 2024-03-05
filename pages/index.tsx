@@ -49,7 +49,7 @@ const Header = () => (
 // ImagePanel for the first row
 const ImagePanelFirstRow = () => (
   <div className="max-w-screen-lg mx-auto py-10">
-    <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mb-2">
+    <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mb-0">
       <ImageLink
         href="/bioengineering-ideas"
         imgSrc="/bio_eng.jpg"
@@ -68,7 +68,7 @@ const ImagePanelFirstRow = () => (
 
 // ImagePanel for the second row with potentially different rules or styles
 const ImagePanelSecondRow = () => (
-  <div className="max-w-screen-lg mx-auto py-6">
+  <div className="max-w-screen-lg mx-auto py-4">
     <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mt-2">
       <ImageLink
         href="/podcasts"
