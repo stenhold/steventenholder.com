@@ -29,13 +29,13 @@ const Header = () => (
     </h2>
     <div style={{ maxWidth: '450px' }}> {/* Wrap the paragraph in a div for alignment */}
       <p className="text-md font-roboto-slab text-white mt-2 ml-0">
-        I&apos;m interested in engineering biology to help civilization thrive.
+        I&apos;m interested in engineering biology to help civilization thrive. <br />
         Longevity first, intelligence next.
         <br /><br />
-        Currently I&apos;m exploring how AI can help accelerate bioeng.
+        Currently I&apos;m exploring how AI can help.
         <br /><br />
         I also have fun creating music, experimenting with cinematography,
-        podcasting, and skateboarding.
+        podcasting, and skateboarding and snowboarding.
         <br /><br />
         <i>
           If you&apos;d like to chat:
@@ -43,7 +43,7 @@ const Header = () => (
         </i>
       </p>
     </div>
-  </div>
+  </div >
 );
 
 // ImagePanel for the first row
