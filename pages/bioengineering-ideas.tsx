@@ -84,19 +84,21 @@ const PanelDesktop = () => (
             <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">2.</span></div>
             <div className="col-span-5"><Image src="/diversity_of_life_3.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
             <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena...</p></div>
+                That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
+                -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.</p></div>
 
             {/* Section 3 */}
             <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">3.</span></div>
             <div className="col-span-5"><Image src="/intelligent_design_4.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
             <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena...</p></div>
+                An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.</p></div>
 
             {/* Section 4 */}
             <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">4.</span></div>
             <div className="col-span-5"><Image src="/brain_1.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
             <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                We ourselves exist on that same biological operating system...</p></div>
+                We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate,
+                revolutionary exploration of the limits of what is possible from our universe.</p></div>
         </div>
     </div>
 );
@@ -146,16 +148,14 @@ const PanelMobile = () => (
 const TextSummary = () => (
     <div className="max-w-screen-lg mx-auto pt-10 px-6">
         <div className="grid grid-cols-8">
-            <span className="col-span-1 col-start-2 font-unna font-bold italic text-3xl text-white">Fin.</span>
-            <div className="col-start-2 col-span-5">
+            <span className="col-span-6 col-start-2 font-unna font-bold italic text-3xl text-white">
+                So let&#39;s accelerate bioengineering </span>
+            <div className="col-start-2 col-span-5 py-4">
                 <p className="font-roboto-slab text-left text-lg px-2">
-                    There&#39;s a certain excitement around the recent achievements of computer science.
+                    We&#39;re at the tip of the <i> genetic hyperspace iceberg</i>.
                     <br /><br />
-                    No other new field has produced engineering as productivity-boosting and lifestyle-enhancing as it.
+                    I&#39;m excited to explore what we can create and how our creations could revolutionize the human condition.
                     <br /><br />
-                    We&#39;re confident it will continue to be improved and generate new phenomena, including the exciting possibility of general artificial intelligence.
-                    <br /><br />
-                    However, the astounding potential capabilities of biological systems should remind us to appreciate just how powerful that operating system could one day be.
                 </p>
             </div>
         </div>
