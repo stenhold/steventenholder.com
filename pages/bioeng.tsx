@@ -122,7 +122,7 @@ const PanelDesktop = () => (
                 </div>
                 <div>
                     <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm">
-                    Natural selection was the only game in town, but isn't the only way. <br />
+                    Natural selection was the only game in town, but isn&#39;t the only way. <br />
                     An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.</p>
                 </div>
             </div>
@@ -210,7 +210,7 @@ const TextSummary1 = () => (
                     So, accelerate bioengineering.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pl-4 pt-4">
-                    We're at the tip of the <i>genetic hyperspace iceberg</i>. <br /><br />
+                    We&#39;re at the tip of the <i>genetic hyperspace iceberg</i>. <br /><br />
                     The kinds and scales of mechanical and phenomenological entities is near.
                     <br /> <br />
                 </p>
@@ -247,7 +247,7 @@ const ComingSoon = () => (
             {/* Text content beside the image */}
             <div className="col-span-8 flex flex-col justify-center pt-20 pb-20">
                 <h2 className="font-unna text-center font-bold italic text-3xl text-white">
-                I'll upload progress here as I go.
+                I&#39;ll upload progress here as I go.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4">
                 Javascript model of the origin of life coming soong. <br />
