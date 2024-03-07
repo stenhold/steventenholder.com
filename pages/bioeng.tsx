@@ -25,7 +25,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 
 
 const HeaderDesktop = () => (
-    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 px-6 sm:px-10">
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-8 px-6 sm:px-10">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
@@ -46,7 +46,7 @@ const HeaderDesktop = () => (
 );
 
 const HeaderMobile = () => (
-    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 px-6">
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
@@ -71,14 +71,20 @@ const HeaderMobile = () => (
 
 // PanelDesktop for larger screens
 const PanelDesktop = () => (
-    <div className="hidden sm:block max-w-screen-lg mx-auto py-4 px-6 sm:px-10">
+    <div className="hidden sm:block max-w-screen-lg mx-auto py-10 px-6 sm:px-10 border-t">
         <div className="grid grid-cols-12 gap-y-12 gap-x-2">
+
+            <div className="col-span-12">
+                <h2 className="font-unna font-bold italic text-2xl text-white text-left">
+                    A few first principles:
+                </h2>
+            </div>
 
             {/* Section 1 */}
             <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">1.</span></div>
             <div className="col-span-5"><Image src="/origin_of_life_2.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
             <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.<br /><br /></p></div>
+                Earth-life emerged spontaneously and evolved itself into brand new phenomenal categories.  Natural slection was the only game it town. <br /><br /></p></div>
 
             {/* Section 2 */}
             <div className="col-span-1 flex items-center"><span className="font-unna font-bold italic text-3xl text-white">2.</span></div>
@@ -98,7 +104,7 @@ const PanelDesktop = () => (
             <div className="col-span-5"><Image src="/brain_1.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" /></div>
             <div className="col-span-6 flex items-center"><p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
                 We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate,
-                revolutionary exploration of the limits of what is possible from our universe.</p></div>
+                human-experience-altering exploration.</p></div>
         </div>
     </div>
 );
@@ -106,7 +112,15 @@ const PanelDesktop = () => (
 // PanelMobile
 const PanelMobile = () => (
     <div className="sm:hidden max-w-screen-lg mx-auto py-4 px-6">
-        <div className="flex flex-col gap-y-12">
+        <div className="flex flex-col gap-y-12 border-t">
+
+
+            <div className="col-span-12 mt-12">
+                <h2 className="font-unna font-bold italic text-2xl text-white text-left">
+                    A few first principles:
+                </h2>
+            </div>
+
             {/* Section 1 */}
             <div className="flex flex-col items-center">
                 <Image src="/origin_of_life_2.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
@@ -137,30 +151,72 @@ const PanelMobile = () => (
                 <Image src="/brain_1.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
                 <span className="font-unna font-bold italic text-3xl text-white">4.</span>
                 <p className="font-roboto-slab font-extralight text-center text-xs px-2">
-                    We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, revolutionary exploration of the limits of what is possible from our universe.
-                </p>
+                    We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate,
+                    human-experience-altering exploration.</p>
             </div>
         </div>
     </div>
 );
 
 
-const TextSummary = () => (
-    <div className="max-w-screen-lg mx-auto pt-10 px-6">
-        <div className="grid grid-cols-8">
-            <span className="col-span-6 col-start-2 font-unna font-bold italic text-3xl text-white">
-                So let&#39;s accelerate bioengineering </span>
-            <div className="col-start-2 col-span-5 py-4">
-                <p className="font-roboto-slab text-left text-lg px-2">
-                    We&#39;re at the tip of the <i> genetic hyperspace iceberg</i>.
-                    <br /><br />
-                    I&#39;m excited to explore what we can create and how our creations could revolutionize the human condition.
-                    <br /><br />
-                </p>
-            </div>
+
+const TextSummary1 = () => (
+    <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto pt-20 px-6 border-t border-white">
+        {/* Image taking up the vertical space equivalent to two rows */}
+        <div className="col-span-3 col-start-1 flex items-center">
+            <Image src="/great_tree_iceberg.jpg" alt="Life" width={500} height={900} className="rounded-lg" layout="intrinsic" />
         </div>
-    </div>
+        {/* Text content beside the image */}
+        <div className="col-span-5 flex flex-col justify-center">
+            <h2 className="font-unna font-bold italic text-3xl text-white">
+                So, accelerate bioengineering.
+            </h2>
+            <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pl-4 pt-4">
+                We're at the tip of the <i>genetic hyperspace iceberg</i>. <br /><br />
+                The kinds and scales of mechanical and phenomenological entities is near.
+                <br /> <br />
+
+            </p>
+        </div >
+    </div >
 );
+
+const TextSummary2 = () => (
+    <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-20">
+        {/* Text content beside the image */}
+        <div className="col-span-3 flex flex-col justify-center">
+            <h2 className="font-unna font-bold italic text-right text-3xl text-white">
+                Powerfully, with AI
+            </h2>
+            <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-4 pt-4 text-right">
+                The chaos of biological complexity will almost certainly become best understood by AI.
+                <br /><br />
+                The emergence of LLMs and their success with human language hints at the possiblity for new understandings of biology.
+            </p>
+        </div >
+        {/* Image taking up the vertical space equivalent to two rows */}
+        <div className="col-span-5 flex items-center">
+            <Image src="/wizard_bird.jpg" alt="Life" width={700} height={800} className="rounded-lg" layout="intrinsic" />
+        </div>
+    </div >
+);
+
+
+const ComingSoon = () => (
+    <div className="grid grid-cols-8 max-w-screen-lg mx-auto px-6 border-b border-t border-white pt-36 pb-36">
+        {/* Text content beside the image */}
+        <div className="col-span-8 flex flex-col">
+            <h2 className="text-center font-unna font-bold italic text-2xl text-white">
+                I'll upload progress here as I go.
+            </h2>
+            <p className="font-roboto-slab text-center font-extralight text-xs sm:text-sm pr-4 pt-4">
+                Javascript model of the origin of life coming soong. <br />
+                But for now hang tight. I'm just one guy learning and building as much as possible, you know.
+            </p>
+        </div >
+    </div >
+);
+
 
 
 // ImagePanel for the second row with potentially different rules or styles
@@ -169,7 +225,7 @@ const NavPanel = () => (
         <ul className="grid grid-cols-2 sm:grid-cols-5 gap-10">
             {[
                 { href: "/", imgSrc: "/steven.png", text: "Home" },
-                { href: "/bioengineering-ideas", imgSrc: "/bio_eng.jpg", text: "BioEng Ideas" },
+                { href: "/bioeng", imgSrc: "/bio_eng.jpg", text: "BioEng Ideas" },
                 { href: "/acorn-biolabs", imgSrc: "/acorn_biolabs_1950.jpg", text: "Acorn Biolabs" },
                 { href: "/podcast", imgSrc: "/podcast_conversations.jpg", text: "Podcast" },
                 { href: "/blog", imgSrc: "/blog.jpg", text: "Blog" }
@@ -204,7 +260,9 @@ export default function Home() {
             <HeaderMobile />
             <PanelDesktop />
             <PanelMobile />
-            <TextSummary />
+            <TextSummary1 />
+            <TextSummary2 />
+            <ComingSoon />
             <NavPanel />
             <Footer />
         </div>

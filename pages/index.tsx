@@ -51,7 +51,7 @@ const ImagePanelFirstRow = () => (
   <div className="max-w-screen-lg mx-auto py-10">
     <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mb-0">
       <ImageLink
-        href="/bioengineering-ideas"
+        href="/bioeng"
         imgSrc="/bio_eng.jpg"
         text="Bioengineering Ideas"
         gridClass="col-span-2 sm:col-span-1"
@@ -71,7 +71,7 @@ const ImagePanelSecondRow = () => (
   <div className="max-w-screen-lg mx-auto py-4">
     <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mt-2">
       <ImageLink
-        href="/podcasts"
+        href="/podcast"
         imgSrc="/podcast_conversations.jpg"
         text="Podcast"
         gridClass="col-span-2 sm:col-span-1"
