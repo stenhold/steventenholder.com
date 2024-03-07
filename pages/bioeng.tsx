@@ -172,7 +172,7 @@ const TextSummary1 = () => (
                 So, accelerate bioengineering.
             </h2>
             <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pl-4 pt-4">
-                We're at the tip of the <i>genetic hyperspace iceberg</i>. <br /><br />
+                We&#39;re at the tip of the <i>genetic hyperspace iceberg</i>. <br /><br />
                 The kinds and scales of mechanical and phenomenological entities is near.
                 <br /> <br />
 
@@ -207,11 +207,11 @@ const ComingSoon = () => (
         {/* Text content beside the image */}
         <div className="col-span-8 flex flex-col">
             <h2 className="text-center font-unna font-bold italic text-2xl text-white">
-                I'll upload progress here as I go.
+                I&#39;ll upload progress here as I go.
             </h2>
             <p className="font-roboto-slab text-center font-extralight text-xs sm:text-sm pr-4 pt-4">
                 Javascript model of the origin of life coming soong. <br />
-                But for now hang tight. I'm just one guy learning and building as much as possible, you know.
+                But for now hang tight. I&#39;m just one guy learning and building as much as possible, you know.
             </p>
         </div >
     </div >
