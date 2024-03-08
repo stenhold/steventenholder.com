@@ -95,7 +95,7 @@ const PanelDesktop = () => (
                     </p>
                 </div>
             </div>
-            
+
             {/* Section 2 */}
             <div className="col-span-5 row-span-3">
                 <Image src="/diversity_of_life.jpg" alt="Life" height={400} width={400} objectFit="cover" className="rounded-lg" />
@@ -106,9 +106,9 @@ const PanelDesktop = () => (
                 </div>
                 <div>
                     <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm">
-                    That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
-                -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena. 
-                    .</p>
+                        That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
+                        -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.
+                        .</p>
                 </div>
             </div>
 
@@ -118,12 +118,12 @@ const PanelDesktop = () => (
             </div>
             <div className="col-span-6 row-span-3 flex flex-col justify-center">
                 <div className="mb-4">
-                    <span className="font-unna font-bold italic text-2xl text-white"> Has immense potential beyond </span>
+                    <span className="font-unna font-bold italic text-2xl text-white"> Has potential beyond the limit </span>
                 </div>
                 <div>
                     <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm">
-                    Natural selection was the only game in town, but isn&#39;t the only way. <br />
-                    An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.</p>
+                        Natural selection was the only game in town, but isn&#39;t the only way. <br />
+                        An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.</p>
                 </div>
             </div>
 
@@ -137,8 +137,8 @@ const PanelDesktop = () => (
                 </div>
                 <div>
                     <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm">
-                    We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate,
-                human-experience-altering exploration.</p>
+                        We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate,
+                        human-experience-altering exploration.</p>
                 </div>
             </div>
 
@@ -178,7 +178,7 @@ const PanelMobile = () => (
             <div className="flex flex-col items-center">
                 <Image src="/intelligent_design_4.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
                 <span className="font-unna font-bold italic text-3xl text-white"> Can evolve un-constrained </span>
-                <p className="font-roboto-slab font-extralight text-center text-xs px-2">
+                <p className="font-roboto-slab font-extralight text-centner text-xs px-2">
                     An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
                 </p>
             </div>
@@ -247,11 +247,11 @@ const ComingSoon = () => (
             {/* Text content beside the image */}
             <div className="col-span-8 flex flex-col justify-center pt-20 pb-20">
                 <h2 className="font-unna text-center font-bold italic text-3xl text-white">
-                I&#39;ll upload progress here as I go.
+                    I&#39;ll upload progress here as I go.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4">
-                Javascript model of the origin of life coming soong. <br />
-                But for now hang tight. I&#39;m just one guy learning and building as much as possible, you know.
+                    Javascript model of the origin of life coming soong. <br />
+                    But for now hang tight. I&#39;m just one guy learning and building as much as possible, you know.
                     <br /> <br />
                 </p>
             </div>
