@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import 'react-h5-audio-player/lib/styles.css'; // Import stylesheet
+import AudioPlayer from 'react-h5-audio-player';
 
 
 // Define an interface for the ImageLink props
@@ -14,7 +16,7 @@ interface ImageLinkProps {
 // Use the ImageLinkProps interface for the ImageLink component&#39;s props
 const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '' }) => (
     <li className={`flex-none ${gridClass} w-full sm:w-auto`}>
-        <Link href={href} passHref>
+        <Link href={href} passHref>npm
             <div className="block">
                 <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg" layout="responsive" />
                 <span className="block text-center mt-2">{text}</span>
@@ -30,7 +32,7 @@ const HeaderDesktop = () => (
 
             <div className="col-span-3">
                 <h2 className="font-unna italic text-4xl text-white text-left">
-                    Should you cryopreserve  <br /> your cells for future longevity?
+                    Should we all be cryopreserving  <br /> our own young cells for longevity?
                 </h2>
             </div>
 
@@ -44,12 +46,13 @@ const HeaderDesktop = () => (
 
             <div className="col-span-3">
                 <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
-                    A logical cost-benefit analyis says yes. <br /> I co-founded a company called Acorn Biolabs to make it real.
+                    I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">Acorn Biolabs</a> to make that idea real.
                 </h2>
             </div>
 
-            <div className="col-span-3 col-start-1 flex items-center pt-12">
-                <Image src="/home-kit-diagram.png" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+
+            <div className="col-span-3 col-start-1 flex items-center pt-8">
+                <Image src="/acorn_cryo_chamber.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
             </div>
 
         </div>
@@ -63,22 +66,18 @@ const HeaderMobile = () => (
 
             <div className="col-span-3">
                 <h2 className="font-unna italic text-4xl text-white text-left">
-                    Should you cryopreserve  <br /> your cells for future longevity?
+                    Should we all be cryopreserving  <br /> our own young cells for longevity?
                 </h2>
             </div>
-
-            <div className="col-span-0">
-                <div className="top-0 left-0 w-96 h-0">
-                    <h2 className="font-unna font-bold italic text-3xl text-white text-left">
-                    </h2>
-                </div>
-            </div>
-
 
             <div className="col-span-3">
-                <h2 className="font-roboto-slab text-lg text-gray-400 text-left pt-8">
-                    A logical cost-benefit analyis says yes. <br /> I co-founded a company called Acorn Biolabs to make it real.
+                <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
+                    I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">Acorn Biolabs</a> to make that idea real.
                 </h2>
+            </div>
+
+            <div className="col-span-3 col-start-1 flex items-center pt-12">
+                <Image src="/acorn_cryo_chamber.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
             </div>
 
         </div>
@@ -87,27 +86,28 @@ const HeaderMobile = () => (
 
 
 const TheLogic = () => (
-    <div className="max-w-screen-lg mx-auto pt-16 px-6">
-        <div className="grid grid-cols-8 gap-2 border-b">
-            <div className="col-span-8 flex flex-col justify-center pt-4 pb-20">
-                <h2 className="font-roboto-slab text-left text-md text-gray-400">
-                    I present, the logical case for young-cell cryopreservation:
-                </h2>
-                <div className="pt-4 border-t border-white">
+    <div className="max-w-screen-lg mx-auto pt-16 pb-10 px-6">
+        <div className="grid grid-cols-8 gap-2 border-b border-white">
+            <div className="col-span-8 flex flex-col justify-center pt-4 pb-2">
+                <div className="pt-4">
                     <h2 className="font-unna text-left font-bold italic text-3xl text-white">
                         Pascal&#39;s Bioengineering Wager
                     </h2>
                     <h2 className="font-unna text-left font-bold italic text-lg text-gray-400">
-                        The gamble for life extension available to everyone--today.
+                        The logic behind modern young-cell cryopreservation.
                     </h2>
                 </div>
 
-                <div className="flex items-center pt-4 pb-4">
+                <div className="flex items-center pt-10 pb-4">
                     <Image src="/pascal.png" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
                 </div>
+            </div>
 
+            <div className="col-span-6 flex flex-col justify-center pt-0 pb-2">
                 <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-                    Have you heard of Pascal&#39;s Wager? It&#39;s about as mathematical a reason to believe in God as any.
+                    <span className="font-unna text-2xl">Have you heard of Pascal&#39;s Wager? </span>
+                    <br /><br />
+                    It&#39;s about as mathematical a reason to believe in God as any.
                     Pascal didn&#39;t rely on evidence or revelation for his argument. Instead, he  stressed the relatively
                     insignificant cost to secure the possibility of an infinitely positive outcome; when the enormities
                     of heaven and hell are at stake, disbelief becomes illogical.
@@ -134,13 +134,14 @@ const TheLogic = () => (
                     technological future into the stars and beyond.
                     <br /><br />
                 </p>
+                <div className="flex items-center pt-4 pb-0">
+                    <Image src="/longevity_wager.png" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+                </div>
+            </div>
 
-
-                <Image src="/longevity_wager.png" alt="Life" width={600} height={100} className="rounded-lg" layout="intrinsic" />
-
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20">
-                    <br /><br />
-                    This is &#39;heaven&#39; in my bio version of Pascal&#39;s Wager.
+            <div className="col-span-6 flex flex-col justify-center pt-0 pb-20">
+                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
+                    <span className="font-unna text-2xl">Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager. </span>
                     <br /><br />
                     So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing to get secure our spot in this possible heaven?
                     <br /><br />
@@ -152,64 +153,133 @@ const TheLogic = () => (
                     <br /><br />
                     This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
                     <br /><br />
-                    It doesn&#39;t cost you that much to arrange to have your young cells preserved for a lifetime. It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with Drew Taylor and Patrick Pumputis
+                    <span className="font-unna text-lg">The cost of cryopreservation is low and the possible benefits are high. </span>
+                    <br /><br /> It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with Drew Taylor and Patrick Pumputis
                     In our lifetimes scientists will have created bio-engineering solutions powerful enough to improve our lifespans using preserved young cellular material. It really matters whether you preserved your cells or not because you&#39;re risking the worst possible outcome: missing out on the opportunity to continue doing the things you love indefinitely.
                     That&#39;s pretty powerful. Is it more or less convincing than the original wager? It becomes personal to each of us to look at the facts, what we believe in, what we want out of life, and how much we feel there&#39;s a real opportunity for bio-engineering to achieve something.
 
                 </p>
             </div>
-        </div >
-    </div>
+        </div>
+    </div >
 );
 
 
 
-const ArchiveSection = () => (
-    <div className="mx-auto mt-20 max-w-4xl space-y-20">
-        {/* Title #2 - FROM THE ARCHIVES */}
-        <div className="text-center">
-            <h1 className="text-3xl font-bold">FROM THE ARCHIVES:</h1>
+const Header2Desktop = () => (
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-2 pb-2 px-6 sm:px-10">
+        <div className="grid grid-cols-3">
+            <div className="col-span-3">
+                <h2 className="font-unna italic text-4xl text-white text-left">
+                    FROM THE ARCHIVES
+                </h2>
+            </div>
+            <div className="col-span-0">
+                <div className="top-0 left-0 w-96 h-0">
+                    <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                    </h2>
+                </div>
+            </div>
+            <div className="col-span-3">
+                <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
+                    A short collection of interviews, videos, and other memoribilia from my time building Acorn.
+                </h2>
+            </div>
         </div>
+    </div>
+);
 
-        {/* Archives #1 - Acorn as an incubating startup */}
-        <div>
-            <h1 className="text-3xl font-bold mb-4">
-                Acorn as an incubating startup in Waterloo, 2017.
-            </h1>
-            <Image src="/images/velocity_garage.jpg" alt="Velocity Garage" width={500} height={300} className="mx-auto" />
-            <div className="mt-10">
-                <audio controls>
-                    <source src="/audio/ten_with_ken_Steven_interview.mp3" type="audio/mpeg" />
-                </audio>
-                <p className="mt-4">
-                    I gave an interview for a university review podcast (Ten with Ken) on the Velocity startup ecosystem at the University of Waterloo back when I was the CEO of Acorn in 2017.
-                </p>
+const Header2Mobile = () => (
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
+        <div className="grid grid-cols-3">
+            <div className="col-span-3">
+                <h2 className="font-unna italic text-4xl text-white text-left">
+                    Should we all be cryopreserving  <br /> our own young cells for longevity?
+                </h2>
+            </div>
+            <div className="col-span-3">
+                <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
+                    I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">Acorn Biolabs</a> to make that idea real.
+                </h2>
+            </div>
+        </div>
+    </div>
+);
+
+const ArchiveSection = () => (
+    <div className="grid grid-cols-8 gap-16 max-w-screen-lg mx-auto px-6 pt-10">
+
+        {/* Section 1 */}
+        <div className="col-span-3 flex flex-col justify-right mt-10">
+            <h2 className="font-unna font-bold italic text-right text-3xl text-white">
+                Pitching Justin Trudeau in Waterloo, 2016
+            </h2>
+            <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-0 pt-2 text-right">
+                He was doing a tour of the Waterloo innovation ecosystem. Shortly after winning Waterloo's big $25k pitch competition.
+            </p>
+        </div >
+        <div className="col-span-3 flex flex-col justify-right mt-10">
+            <div className="aspect-w-16 aspect-h-9">
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/jg0Hb8whXKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
-        {/* Repeat similar structure for other archive entries as needed */}
-    </div>
-);
-
-
-const TextSummary2 = () => (
-    <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pt-16">
-        {/* Text content beside the image */}
-        <div className="col-span-3 flex flex-col justify-center">
+        {/* Section 2 */}
+        <div className="col-span-3 flex flex-col justify-right">
             <h2 className="font-unna font-bold italic text-right text-3xl text-white">
-                Powerfully, with AI
+                Acorn as an incubating startup in Waterloo, 2017
             </h2>
-            <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-4 pt-4 text-right">
-                The chaos of biological complexity will almost certainly become best understood by AI.
-                <br /><br />
-                The emergence of LLMs and their success with human language hints at the possiblity for new understandings of biology.
+            <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-0 pt-2 text-right">
+                I gave an interview for a university review podcast (Ten with Ken) on the Velocity startup
+                ecosystem at the University of Waterloo back when I was the CEO of Acorn in 2017.
             </p>
+            <div className="mt-2 flex justify-end">
+                <audio controls className="mt-4">
+                    <source src="audio/ten_with_ken_Steven_interview.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
         </div >
-        {/* Image taking up the vertical space equivalent to two rows */}
         <div className="col-span-5 flex items-center">
-            <Image src="/wizard_bird.jpg" alt="Life" width={700} height={800} className="rounded-lg" layout="intrinsic" />
+            <Image src="/v_garage.jpg" alt="Life" width={300} height={400} className="rounded-lg" layout="intrinsic" />
         </div>
+
+        {/* Section 3 */}
+        <div className="col-span-3 flex flex-col justify-right mt-10">
+            <h2 className="font-unna font-bold italic text-right text-3xl text-white">
+                Acorn as post-launch startup in Toronto, 2018
+            </h2>
+            <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-0 pt-2 text-right">
+                I gave an interview for podcast 'Spotlight on the Six' (Akash Pasricha) on Acorn,
+                bioengineering, the Toronto startup ecosystem, and my transition from CEO to COO
+                of Acorn Biolabs in 2018.
+            </p>
+            <div className="mt-2 flex justify-end">
+                <audio controls className="mt-4">
+                    <source src="audio/spotlight_on_the_six_interview.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
+        </div >
+        <div className="col-span-5 flex items-center">
+            <Image src="/jlabs.jpg" alt="Life" width={300} height={800} className="rounded-lg" layout="intrinsic" />
+        </div>
+
+        {/* Section 4 */}
+        <div className="col-span-8 flex flex-col items-center justify-center mt-10">
+            <h2 className="font-unna font-bold italic text-center text-3xl text-white">
+                Featured in Disruption Magazine, 2019
+            </h2>
+            <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm px-4 pt-2">
+                We attended a Singularity University event in Calgary, Alberta where we caught the attention of Disrupt Magazine writers.
+            </p>
+            {/* Displaying PDF pages as images */}
+            <div className="mt-4 flex flex-col items-center justify-center">
+                <Image src="/disrupt_mag_1.jpg" alt="Disruption Magazine Page 1" width={3140} height={1945} className="rounded-lg mb-4" layout="intrinsic" />
+                <Image src="/disrupt_mag_2.jpg" alt="Disruption Magazine Page 2" width={3143} height={1949} className="rounded-lg" layout="intrinsic" />
+            </div>
+        </div>
+
     </div >
+
 );
 
 
@@ -258,8 +328,9 @@ export default function Home() {
             <HeaderDesktop />
             <HeaderMobile />
             <TheLogic />
+            <Header2Desktop />
+            <Header2Mobile />
             <ArchiveSection />
-            <TextSummary2 />
             <NavPanel />
             <Footer />
         </div>
