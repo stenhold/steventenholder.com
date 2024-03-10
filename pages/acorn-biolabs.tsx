@@ -215,7 +215,7 @@ const ArchiveSection = () => (
                 Pitching Justin Trudeau in Waterloo, 2016
             </h2>
             <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-0 pt-2 text-right">
-                He was doing a tour of the Waterloo innovation ecosystem. Shortly after winning Waterloo's big $25k pitch competition.
+                He was doing a tour of the Waterloo innovation ecosystem. Shortly after winning Waterloo&#39;s big $25k pitch competition.
             </p>
         </div >
         <div className="col-span-3 flex flex-col justify-right mt-10">
@@ -249,7 +249,7 @@ const ArchiveSection = () => (
                 Acorn as post-launch startup in Toronto, 2018
             </h2>
             <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-0 pt-2 text-right">
-                I gave an interview for podcast 'Spotlight on the Six' (Akash Pasricha) on Acorn,
+                I gave an interview for podcast &#39;Spotlight on the Six&#39; (Akash Pasricha) on Acorn,
                 bioengineering, the Toronto startup ecosystem, and my transition from CEO to COO
                 of Acorn Biolabs in 2018.
             </p>
