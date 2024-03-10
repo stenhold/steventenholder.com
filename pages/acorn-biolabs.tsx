@@ -274,17 +274,26 @@ const ArchiveSection = () => (
             </p>
             {/* Displaying PDF pages as images */}
             <div className="mt-4 flex flex-col items-center justify-center">
-                <Image src="/disrupt_mag_1.jpg" alt="Disruption Magazine Page 1" width={3140} height={1945} className="rounded-lg mb-4" layout="intrinsic" />
-                <Image src="/disrupt_mag_2.jpg" alt="Disruption Magazine Page 2" width={3143} height={1949} className="rounded-lg" layout="intrinsic" />
+                <Image src="/disrupt_mag_1.jpg" alt="Disruption Magazine Page 1" width={700} height={700} className="rounded-lg mb-4" layout="intrinsic" />
+                <Image src="/disrupt_mag_2.jpg" alt="Disruption Magazine Page 2" width={700} height={700} className="rounded-lg" layout="intrinsic" />
             </div>
         </div>
 
+        {/* Section 5 */}
+        <div className="col-span-8 flex flex-col items-center justify-center mt-10">
+            <h2 className="font-unna font-bold italic text-center text-3xl text-white">
+                Patent Publication of Transportation Kit, 2022
+            </h2>
+            <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm px-4 pt-2">
+                https://patents.google.com/patent/WO2022094714A1/en
+            </p>
+            {/* Displaying PDF pages as images */}
+            <div className="mt-4 flex flex-col items-center justify-center">
+                <Image src="/patent_1.jpg" alt="Disruption Magazine Page 1" width={600} height={600} className="rounded-lg mb-4" layout="intrinsic" />
+            </div>
+        </div>
     </div >
-
 );
-
-
-
 
 
 
@@ -316,9 +325,9 @@ const NavPanel = () => (
 
 // Footer component
 const Footer = () => (
-    <footer className="italic p-10 bg-black w-full text-center text-white">
-        the year is <b>2024</b>
-        <p> all images generated via tireless midjourney prompting. </p>
+    <footer className="italic p-10 mt-4 bg-black w-full text-center text-gray-600">
+        the year is <span className="text-gray-400"><b>2024</b></span>
+        <p> all images generated via tireless midjourney prompting </p>
     </footer>
 );
 

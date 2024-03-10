@@ -23,24 +23,29 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 // Header component
 const Header = () => (
   <div className="text-left px-10 mt-20">
-    <Image src="/steven.png" alt="Steven ten Holder" width={500} height={500} className="rounded-lg" />
-    <h2 className="text-2xl font-bold text-white mt-8">
+    <Image src="/steven.png" alt="Steven ten Holder" width={600} height={600} className="rounded-lg" />
+    <h2 className="text-3xl font-unna font-bold text-white mt-8">
       Hello, I&apos;m Steven ten Holder
     </h2>
     <div style={{ maxWidth: '450px' }}> {/* Wrap the paragraph in a div for alignment */}
-      <p className="text-md font-roboto-slab text-white mt-2 ml-0">
-        I&apos;m interested in engineering biology to help civilization thrive. <br />
-        Longevity first, intelligence next.
-        <br /><br />
-        Currently I&apos;m exploring how AI can help.
+      <p className="font-roboto-slab text-gray-400 text-left text-xs sm:text-sm">
+        <span className="font-unna text-lg text-gray-400">
+          I&apos;m believe engineering biology will help civilization thrive. <br /><br /></span>
+        Human longevity first. Intelligence next.
+        <br />
+        Currently I&apos;m exploring how LLMs can empower bio-engineering.
         <br /><br />
         I also have fun creating music, experimenting with cinematography,
-        podcasting, and skateboarding and snowboarding.
-        <br /><br />
-        <i>
-          If you&apos;d like to chat:
-          steve.tenholder@gmail.com
-        </i>
+        podcasting, skateboarding and snowboarding in Vancouver, BC.
+        <br />
+        <br />
+        <br />
+        <span className="font-roboto-slab text-gray-500 text-left text-xs sm:text-xsm">
+          <i>
+            If you&apos;d like to chat:
+            steve.tenholder@gmail.com
+          </i>
+        </span>
       </p>
     </div>
   </div >
@@ -89,9 +94,9 @@ const ImagePanelSecondRow = () => (
 
 // Footer component
 const Footer = () => (
-  <footer className="italic p-10 mt-4 bg-black w-full text-center text-white">
-    the year is <b>2024</b>
-    <p> all images generated via tireless midjourney prompting. </p>
+  <footer className="italic p-10 mt-4 bg-black w-full text-center text-gray-600">
+    the year is <span className="text-gray-400"><b>2024</b></span>
+    <p> all images generated via tireless midjourney prompting </p>
   </footer>
 );
 

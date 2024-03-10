@@ -290,10 +290,11 @@ const NavPanel = () => (
 
 
 // Footer component
+// Footer component
 const Footer = () => (
-    <footer className="italic p-10 bg-black w-full text-center text-white">
-        the year is <b>2024</b>
-        <p> all images generated via tireless midjourney prompting. </p>
+    <footer className="italic p-10 mt-4 bg-black w-full text-center text-gray-600">
+        the year is <span className="text-gray-400"><b>2024</b></span>
+        <p> all images generated via tireless midjourney prompting </p>
     </footer>
 );
 
