@@ -220,9 +220,10 @@ const ArchiveSection = () => (
         </div >
         <div className="col-span-3 flex flex-col justify-right mt-10">
             <div className="aspect-w-16 aspect-h-9">
-                <iframe className="w-full h-full" src="https://www.youtube.com/embed/jg0Hb8whXKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/jg0Hb8whXKY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
         </div>
+
 
         {/* Section 2 */}
         <div className="col-span-3 flex flex-col justify-right">
