@@ -291,7 +291,7 @@ const ArchiveSection = () => (
             </div>
             <div className="col-span-3">
                 <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
-                    I gave an interview for the podcast 'FOUNDATIONS' (by Zayn Patel) on Acorn as a concept, bioengineering principles,
+                    I gave an interview for the podcast &#39;FOUNDATIONS&#39; (by Zayn Patel) on Acorn as a concept, bioengineering principles,
                     the philosophy of personality and more back in 2020.
                 </p>
             </div>
