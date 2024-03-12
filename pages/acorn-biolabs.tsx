@@ -28,12 +28,12 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 
 
 const HeaderDesktop = () => (
-    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-2 px-6 sm:px-10">
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-16 px-6 sm:px-10 border-b">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
                 <h2 className="font-unna italic text-4xl text-white text-left">
-                    Should we all be cryopreserving  <br /> our own young cells for longevity?
+                    Should we be cryopreserving  <br /> young cells for longevity?
                 </h2>
             </div>
 
@@ -47,7 +47,7 @@ const HeaderDesktop = () => (
 
             <div className="col-span-3">
                 <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
-                    Back in 2015, I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">Acorn Biolabs</a> to make that idea real.
+                    Back in 2015, I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">Acorn Biolabs</a> to make that idea real.
                 </h2>
             </div>
 
@@ -56,8 +56,20 @@ const HeaderDesktop = () => (
                 <Image src="/acorn_cryo_chamber.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
             </div>
 
-        </div>
-    </div>
+
+            <div className="col-span-3">
+                <h2 className="font-roboto-slab text-lg text-gray-300 text-left pr-60 pt-8">
+                    This page is meant as fun time-capsule of nostalgic moments that capture my story with Acorn
+                    from concept to launched company.
+                    <br />
+                    <br />
+                    But first, a short essay on the core logic that I believe makes young-cell cryopreservation
+                    a no-brainer.
+                </h2 >
+            </div >
+
+        </div >
+    </div >
 );
 
 const HeaderMobile = () => (
@@ -99,7 +111,7 @@ const TheLogic = () => (
                     </h2>
                 </div>
 
-                <div className="flex items-center pt-10 pb-4">
+                <div className="flex items-center pt-8 pb-4">
                     <Image src="/pascal.png" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
                 </div>
             </div>
@@ -130,7 +142,10 @@ const TheLogic = () => (
                     in a 3D-bioprinter to create a fresh new liver that could save your life. Or modifying the embryological
                     process to generate new organs from individual stem cells for transplant. Both are real strategies already
                     in preliminary proof-of-concept (links here and here) that could lead to substantial health and life-extension
-                    improvements. If we can manage to live decades or centuries longer we can bear witness to human civilizational
+                    improvements.
+                    <br />
+                    <br />
+                    If we can manage to live decades or centuries longer we can bear witness to human civilizational
                     progress over millennial time-scales, upgrade our own intelligence, and join humanity&#39;s incredibly rich
                     technological future into the stars and beyond.
                     <br /><br />
@@ -171,8 +186,8 @@ const Header2Desktop = () => (
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10 border-t border-white">
         <div className="grid grid-cols-3">
             <div className="col-span-3">
-                <h2 className="font-unna italic text-5xl text-yellow-500 text-left">
-                    Archival Memorabilia
+                <h2 className="font-unna italic text-5xl text-gray-200 text-left">
+                    Digital Memorabilia
                 </h2>
             </div>
 
@@ -185,7 +200,7 @@ const Header2Desktop = () => (
 
 
             <div className="col-span-3">
-                <h2 className="font-roboto-slab text-lg text-yellow-700 text-left pt-2">
+                <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
                     Nostalgic bits of content from my years working on Acorn.
                 </h2>
             </div>
@@ -219,17 +234,17 @@ const ArchiveSection = () => (
         <div className="grid grid-cols-3">
 
             {/* Section 1 */}
-            <div className="col-span-3 pt-16">
+            <div className="col-span-3 pt-4">
                 <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
                     Pitching Justin Trudeau in Waterloo, 2016
                 </h2>
-                <p className="col-span-3 text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-0 text-left">
+                <p className="col-span-3 text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-48 pt-0 text-left">
                     Trudeau was doing a tour of the Waterloo innovation ecosystem. Shortly after winning Waterloo&#39;s big $25k pitch competition.
                 </p>
             </div >
             <div className="col-span-3 flex flex-col justify-right mt-4">
                 <div className="aspect-w-16 aspect-h-9">
-                    <iframe className="w-1/2 h-full" src="https://www.youtube.com/embed/jg0Hb8whXKY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe className="w-1/2 h-full" src="https://www.youtube.com/embed/jg0Hb8whXKY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </div>
 
@@ -241,9 +256,9 @@ const ArchiveSection = () => (
                 </h2>
             </div>
             <div className="col-span-3">
-                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-0 text-left">
+                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-48 pt-0 text-left">
                     I gave an interview for a university review podcast (Ten with Ken) on the Velocity startup
-                    ecosystem at the University of Waterloo back when I was the CEO of Acorn in 2017.
+                    ecosystem at the University of Waterloo back when I was the CEO of Acorn.
                 </p>
             </div>
             {/* Shared Row for Audio Player and Image */}
@@ -266,10 +281,10 @@ const ArchiveSection = () => (
                 </h2>
             </div>
             <div className="col-span-3">
-                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-0 text-left">
+                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-48 pt-0 text-left">
                     I gave an interview for podcast &#39;Spotlight on the Six&#39; (Akash Pasricha) on Acorn,
                     bioengineering, the Toronto startup ecosystem, and my transition from CEO to COO
-                    of Acorn Biolabs in 2018.
+                    of Acorn Biolabs in 2017.
                 </p>
             </div>
             {/* Shared Row for Audio Player and Image */}
@@ -292,8 +307,8 @@ const ArchiveSection = () => (
                 </h2>
             </div>
             <div className="col-span-3">
-                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
-                I gave an interview for a TKS student podcast &#39;The Daily Experiment&#39; (by Mikey and Mukundh) on Acorn as a concept, bioengineering principles, the philosophy of personality and more back in 2020.
+                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-48 pt-0 text-left">
+                    I gave an interview for a TKS student podcast &#39;The Daily Experiment&#39; (by Mikey and Mukundh) on Acorn as a concept, bioengineering principles, the philosophy of personality and more back in 2020.
                 </p>
             </div>
             {/* Shared Row for Audio Player and Image */}
@@ -332,7 +347,7 @@ const ClickEnlarge1 = () => {
                     </div>
                 </div>
                 <div className="col-span-3">
-                    <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
+                    <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-48 pt-2 text-left">
                         We attended a Singularity University event in Calgary, Alberta where we caught the attention of Disrupt Magazine writers.
                     </p>
                     <h2 className="font-roboto-slab text-md text-gray-300 text-left pt-4">
@@ -374,7 +389,7 @@ const ClickEnlarge2 = () => {
     return (
         <div className="hidden sm:block max-w-screen-lg mx-auto pt-16 pb-2 px-6 sm:px-10">
             <div className="grid grid-cols-3">
-            <div className="col-span-3 pt-10">
+                <div className="col-span-3 pt-10">
                     <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
                         Patent Publication of Transport Kit, 2022
                     </h2>
@@ -386,12 +401,12 @@ const ClickEnlarge2 = () => {
                     </div>
                 </div>
                 <div className="col-span-3">
-                    <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
+                    <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-48 pt-2 text-left">
                         I worked really hard to bring an at-home version of the cell collection process into reality. I lead the design
-                        and created all of the images you see in the patent. Believe it or not, I used Blender to create all of these! 
+                        and created all of the images you see in the patent. Believe it or not, I used Blender to create all of these!
                         <br />
-                        <br /> 
-                        After a few years of design and movement through the patent process, the world-wide patent (WO 2022/094714 A1) was finally awarded to us in 2022. 
+                        <br />
+                        After a few years of design and movement through the patent process, the world-wide patent (WO 2022/094714 A1) was finally awarded to us in 2022.
                     </p>
                     <h2 className="font-roboto-slab text-md text-gray-300 text-left pt-4">
                         <i> (Click image to Enlarge) </i>

@@ -71,12 +71,12 @@ const HeaderMobile = () => (
 
 // PanelDesktop for larger screens
 const PanelDesktop = () => (
-    <div className="hidden sm:block max-w-screen-lg mx-auto py-10 px-6 sm:px-10 border-t">
-        <div className="grid grid-cols-12 gap-y-4 gap-x-2">
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-4 px-6 sm:px-10 border-t">
+        <div className="grid grid-cols-12 gap-y-8 gap-x-4">
 
             {/* Introduction */}
             <div className="col-span-12">
-                <h2 className="font-unna font-bold italic text-2xl text-white text-left">
+                <h2 className="font-roboto-slab font-bold text-lg text-gray-300 text-left">
                     A few first principles:
                 </h2>
             </div>
@@ -87,25 +87,25 @@ const PanelDesktop = () => (
             </div>
             <div className="col-span-6 row-span-3 flex flex-col justify-center">
                 <div className="mb-4">
-                    <span className="font-unna font-bold italic text-2xl text-white">Life started itself </span>
+                    <span className="font-roboto-slab font-bold text-2xl text-white">Life started itself </span>
                 </div>
                 <div>
-                    <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm">
-                        Earth-life emerged spontaneously and evolved itself into brand new phenomenal categories. <br /><br />
+                    <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm">
+                        Earth-life emerged spontaneously from the primordial earth ~4 billion years ago and evolved itself into brand new phenomenal categories. <br /><br />
                     </p>
                 </div>
             </div>
 
             {/* Section 2 */}
             <div className="col-span-5 row-span-3">
-                <Image src="/diversity_of_life.jpg" alt="Life" height={400} width={400} objectFit="cover" className="rounded-lg" />
+                <Image src="/neurons_background.jpg" alt="Life" height={400} width={400} objectFit="cover" className="rounded-lg" />
             </div>
             <div className="col-span-6 row-span-3 flex flex-col justify-center">
                 <div className="mb-4">
-                    <span className="font-unna font-bold italic text-2xl text-white"> Evolved within the limit </span>
+                    <span className="font-roboto-slab font-bold text-2xl text-white"> Evolved within the limit </span>
                 </div>
                 <div>
-                    <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm">
+                    <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm">
                         That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
                         -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.
                         .</p>
@@ -118,11 +118,11 @@ const PanelDesktop = () => (
             </div>
             <div className="col-span-6 row-span-3 flex flex-col justify-center">
                 <div className="mb-4">
-                    <span className="font-unna font-bold italic text-2xl text-white"> Has potential beyond the limit </span>
+                    <span className="font-roboto-slab font-bold text-2xl text-white"> Has potential beyond the limit </span>
                 </div>
                 <div>
-                    <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm">
-                        Natural selection was the only game in town, but isn&#39;t the only way. <br />
+                    <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm">
+                        Natural selection was the only game in town, but isn&#39;t the only way. <br /><br />
                         An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.</p>
                 </div>
             </div>
@@ -133,10 +133,10 @@ const PanelDesktop = () => (
             </div>
             <div className="col-span-6 row-span-3 flex flex-col justify-center">
                 <div className="mb-4">
-                    <span className="font-unna font-bold italic text-2xl text-white"> Importantly, we exist on biology-as-a-platform </span>
+                    <span className="font-roboto-slab font-bold text-2xl text-white"> We too are engineerable biology </span>
                 </div>
                 <div>
-                    <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm">
+                    <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm">
                         We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate,
                         human-experience-altering exploration.</p>
                 </div>
@@ -197,19 +197,19 @@ const PanelMobile = () => (
 
 
 const TextSummary1 = () => (
-    <div className="max-w-screen-lg mx-auto pt-16 px-6">
+    <div className="max-w-screen-lg mx-auto pt-8 px-6">
         {/* Grid layout */}
         <div className="grid grid-cols-8 gap-4 border-t border-white">
             {/* Image taking up the vertical space equivalent to two rows */}
-            <div className="col-span-3 col-start-1 flex items-center pt-36">
+            <div className="col-span-3 col-start-1 flex items-center pt-12">
                 <Image src="/great_tree_iceberg.jpg" alt="Life" width={500} height={900} className="rounded-lg" layout="intrinsic" />
             </div>
             {/* Text content beside the image */}
             <div className="col-span-5 flex flex-col justify-center">
-                <h2 className="font-unna font-bold italic text-3xl text-white">
-                    So, accelerate bioengineering.
+                <h2 className="font-roboto-slab font-bold italic text-2xl pl-2 text-white">
+                    So, let&#39;s accelerate bioengineering.
                 </h2>
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pl-4 pt-4">
+                <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pl-2 pt-4">
                     We&#39;re at the tip of the <i>genetic hyperspace iceberg</i>. <br /><br />
                     The kinds and scales of mechanical and phenomenological entities is near.
                     <br /> <br />
@@ -223,10 +223,10 @@ const TextSummary2 = () => (
     <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-12">
         {/* Text content beside the image */}
         <div className="col-span-3 flex flex-col justify-center">
-            <h2 className="font-unna font-bold italic text-right text-3xl text-white">
+            <h2 className="font-roboto-slab font-bold italic text-right text-2xl pr-2 text-white">
                 Powerfully, with AI
             </h2>
-            <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-4 pt-4 text-right">
+            <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pr-2 pt-4 text-right">
                 The chaos of biological complexity will almost certainly become best understood by AI.
                 <br /><br />
                 The emergence of LLMs and their success with human language hints at the possiblity for new understandings of biology.
@@ -250,7 +250,7 @@ const ComingSoon = () => (
                     I&#39;ll upload progress here as I go.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4">
-                    Javascript model of the origin of life coming soong. <br />
+                    Javascript model of the origin of life coming soon. <br />
                     But for now hang tight. I&#39;m just one guy learning and building as much as possible, you know.
                     <br /> <br />
                 </p>
