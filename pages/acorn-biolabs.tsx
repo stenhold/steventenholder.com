@@ -142,7 +142,7 @@ const TheLogic = () => (
 
             <div className="col-span-2 flex flex-col justify-center pt-0 pb-20">
                 <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-                    <span className="font-unna text-2xl">Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager. </span>
+                    <span className="font-unna text-lg">Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager. </span>
                     <br /><br />
                     So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing to get secure our spot in this possible heaven?
                     <br /><br />
@@ -171,7 +171,7 @@ const Header2Desktop = () => (
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10 border-t border-white">
         <div className="grid grid-cols-3">
             <div className="col-span-3">
-                <h2 className="font-unna italic text-4xl text-yellow-500 text-left">
+                <h2 className="font-unna italic text-5xl text-yellow-500 text-left">
                     Archival Memorabilia
                 </h2>
             </div>
@@ -185,13 +185,14 @@ const Header2Desktop = () => (
 
 
             <div className="col-span-3">
-                <h2 className="font-roboto-slab text-lg text-gray-400 text-left pt-2">
+                <h2 className="font-roboto-slab text-lg text-yellow-700 text-left pt-2">
                     Nostalgic bits of content from my years working on Acorn.
                 </h2>
             </div>
         </div>
     </div>
 );
+
 
 const Header2Mobile = () => (
     <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
@@ -212,20 +213,21 @@ const Header2Mobile = () => (
     </div>
 );
 
+
 const ArchiveSection = () => (
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-2 px-6 sm:px-10">
         <div className="grid grid-cols-3">
 
             {/* Section 1 */}
-            <div className="col-span-3 pt-10">
+            <div className="col-span-3 pt-16">
                 <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
                     Pitching Justin Trudeau in Waterloo, 2016
                 </h2>
-                <p className="col-span-3 text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
+                <p className="col-span-3 text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-0 text-left">
                     Trudeau was doing a tour of the Waterloo innovation ecosystem. Shortly after winning Waterloo&#39;s big $25k pitch competition.
                 </p>
             </div >
-            <div className="col-span-3 flex flex-col justify-right mt-10">
+            <div className="col-span-3 flex flex-col justify-right mt-4">
                 <div className="aspect-w-16 aspect-h-9">
                     <iframe className="w-1/2 h-full" src="https://www.youtube.com/embed/jg0Hb8whXKY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
@@ -233,19 +235,19 @@ const ArchiveSection = () => (
 
 
             {/* Section 2 */}
-            <div className="col-span-3 pt-20">
+            <div className="col-span-3 pt-28">
                 <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
                     Acorn as an incubating startup in Waterloo, 2017
                 </h2>
             </div>
             <div className="col-span-3">
-                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
+                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-0 text-left">
                     I gave an interview for a university review podcast (Ten with Ken) on the Velocity startup
                     ecosystem at the University of Waterloo back when I was the CEO of Acorn in 2017.
                 </p>
             </div>
             {/* Shared Row for Audio Player and Image */}
-            <div className="col-span-3 flex flex-row pt-6">
+            <div className="col-span-3 flex flex-row pt-4">
                 <div className="flex-1 flex justify-start">
                     <Image src="/v_garage.jpg" alt="Life" width={400} height={400} className="rounded-lg" layout="intrinsic" />
                 </div>
@@ -258,20 +260,20 @@ const ArchiveSection = () => (
 
 
             {/* Section 3 */}
-            <div className="col-span-3 pt-20">
+            <div className="col-span-3 pt-28">
                 <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
                     Acorn as post-launch startup in Toronto, 2018
                 </h2>
             </div>
             <div className="col-span-3">
-                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
+                <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-0 text-left">
                     I gave an interview for podcast &#39;Spotlight on the Six&#39; (Akash Pasricha) on Acorn,
                     bioengineering, the Toronto startup ecosystem, and my transition from CEO to COO
                     of Acorn Biolabs in 2018.
                 </p>
             </div>
             {/* Shared Row for Audio Player and Image */}
-            <div className="col-span-3 flex flex-row pt-6">
+            <div className="col-span-3 flex flex-row pt-4">
                 <div className="flex-1 flex justify-start">
                     <Image src="/jlabs.jpg" alt="Life" width={400} height={400} className="rounded-lg" layout="intrinsic" />
                 </div>
@@ -284,25 +286,24 @@ const ArchiveSection = () => (
 
 
             {/* Section 3 */}
-            <div className="col-span-3 pt-20">
+            <div className="col-span-3 pt-28">
                 <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
-                    Discussing Acorn with TKS students in Vancouver, 2020
+                    Discussing Acorn with a TKS students in Vancouver, 2020
                 </h2>
             </div>
             <div className="col-span-3">
                 <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
-                    I gave an interview for the podcast &#39;FOUNDATIONS&#39; (by Zayn Patel) on Acorn as a concept, bioengineering principles,
-                    the philosophy of personality and more back in 2020.
+                I gave an interview for a TKS student podcast &#39;The Daily Experiment&#39; (by Mikey and Mukundh) on Acorn as a concept, bioengineering principles, the philosophy of personality and more back in 2020.
                 </p>
             </div>
             {/* Shared Row for Audio Player and Image */}
-            <div className="col-span-3 flex flex-row pt-6">
+            <div className="col-span-3 flex flex-row pt-4">
                 <div className="flex-1 flex justify-start">
                     <Image src="/vancouver_skyline.jpg" alt="Life" width={400} height={400} className="rounded-lg" layout="intrinsic" />
                 </div>
                 <div className="flex-1 pl-8 flex items-center justify-center">
                     <audio controls className="w-full">
-                        <source src="audio/spotlight_on_the_six_interview.mp3" type="audio/mpeg" />
+                        <source src="audio/TDE_interview_small.mp3" type="audio/mpeg" />
                     </audio>
                 </div>
             </div>
@@ -317,7 +318,7 @@ const ClickEnlarge1 = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className="hidden sm:block max-w-screen-lg mx-auto pt-6 pb-2 px-6 sm:px-10">
+        <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10">
             <div className="grid grid-cols-3">
                 <div className="col-span-3 pt-10">
                     <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
@@ -334,12 +335,12 @@ const ClickEnlarge1 = () => {
                     <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
                         We attended a Singularity University event in Calgary, Alberta where we caught the attention of Disrupt Magazine writers.
                     </p>
-                    <h2 className="font-roboto-slab text-md text-gray-300 text-left pt-2">
+                    <h2 className="font-roboto-slab text-md text-gray-300 text-left pt-4">
                         <i> (Click image to Enlarge)</i>
                     </h2>
                 </ div>
             </ div>
-            <div className="col-span-3 mt-4 flex flex-col items-left justify-start">
+            <div className="col-span-3 mt-6 flex flex-col items-left justify-start">
                 {/* Modified to add onClick event to show modal */}
                 <div className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
                     <Image src="/disrupt_mag.jpg" alt="full kit patent" width={600} height={600} className="rounded-lg mb-4" layout="intrinsic" />
@@ -373,8 +374,8 @@ const ClickEnlarge2 = () => {
     return (
         <div className="hidden sm:block max-w-screen-lg mx-auto pt-16 pb-2 px-6 sm:px-10">
             <div className="grid grid-cols-3">
-                <div className="col-span-3">
-                    <h2 className="font-unna italic text-3xl text-white text-left">
+            <div className="col-span-3 pt-10">
+                    <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
                         Patent Publication of Transport Kit, 2022
                     </h2>
                 </div>
@@ -385,10 +386,17 @@ const ClickEnlarge2 = () => {
                     </div>
                 </div>
                 <div className="col-span-3">
-                    <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
-                        https://patents.google.com/patent/WO2022094714A1/en
+                    <p className="text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-36 pt-2 text-left">
+                        I worked really hard to bring an at-home version of the cell collection process into reality. I lead the design
+                        and created all of the images you see in the patent. Believe it or not, I used Blender to create all of these! 
+                        <br />
+                        <br /> 
+                        After a few years of design and movement through the patent process, the world-wide patent (WO 2022/094714 A1) was finally awarded to us in 2022. 
+                    </p>
+                    <h2 className="font-roboto-slab text-md text-gray-300 text-left pt-4">
+                        <i> (Click image to Enlarge) </i>
                     </h2>
-                </div>
+                </ div>
                 <div className="col-span-3 mt-4 flex flex-col items-left justify-start">
                     {/* Modified to add onClick event to show modal */}
                     <div className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
