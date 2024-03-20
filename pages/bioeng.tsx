@@ -283,8 +283,8 @@ const TextSummary2Mobile = () => (
 
 
 
-const ComingSoon = () => (
-    <div className="max-w-screen-lg mx-auto pt-16 px-6">
+const ComingSoonDesktop = () => (
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-16 px-6">
         {/* Grid layout */}
         <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
             {/* Text content beside the image */}
@@ -293,6 +293,26 @@ const ComingSoon = () => (
                     I&#39;ll upload progress here as I go.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4">
+                    Javascript model of the origin of life coming soon. <br />
+                    But for now hang tight. I&#39;m just one guy learning and building as much as possible, you know.
+                    <br /> <br />
+                </p>
+            </div>
+        </div>
+    </div>
+);
+
+
+const ComingSoonMobile = () => (
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-16 px-6">
+        {/* Grid layout */}
+        <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
+            {/* Text content beside the image */}
+            <div className="col-span-8 flex flex-col justify-center pt-20 pb-20">
+                <h2 className="font-unna text-center font-bold italic text-3xl text-white">
+                    I&#39;ll upload progress <br />  here as I go.
+                </h2>
+                <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
                     Javascript model of the origin of life coming soon. <br />
                     But for now hang tight. I&#39;m just one guy learning and building as much as possible, you know.
                     <br /> <br />
@@ -353,7 +373,8 @@ export default function Home() {
             <TextSummary1Mobile />
             <TextSummary2 />
             <TextSummary2Mobile />
-            <ComingSoon />
+            <ComingSoonDesktop />
+            <ComingSoonMobile />
             <NavPanel />
             <Footer />
         </div>

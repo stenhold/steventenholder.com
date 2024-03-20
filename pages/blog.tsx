@@ -97,12 +97,13 @@ const BlogMobile = () => (
 
 
 
+// ImagePanel for the second row with potentially different rules or styles
 const NavPanel = () => (
-    <div className="max-w-screen-lg mx-auto pt-40 pb-20">
+    <div className="max-w-screen-lg mx-auto pt-40 pb-20 px-10">
         <ul className="grid grid-cols-2 sm:grid-cols-5 gap-10">
             {[
                 { href: "/", imgSrc: "/steven.png", text: "Home" },
-                { href: "/bioengineering-ideas", imgSrc: "/bio_eng.jpg", text: "BioEng Ideas" },
+                { href: "/bioeng", imgSrc: "/bio_eng.jpg", text: "BioEng Ideas" },
                 { href: "/acorn-biolabs", imgSrc: "/acorn_biolabs_1950.jpg", text: "Acorn Biolabs" },
                 { href: "/podcast", imgSrc: "/podcast_conversations.jpg", text: "Podcast" },
                 { href: "/blog", imgSrc: "/blog.jpg", text: "Blog" }

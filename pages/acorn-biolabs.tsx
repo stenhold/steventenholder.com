@@ -684,6 +684,7 @@ const ClickEnlarge2Mobile = () => {
 
 
 
+// ImagePanel for the second row with potentially different rules or styles
 const NavPanel = () => (
     <div className="max-w-screen-lg mx-auto pt-40 pb-20 px-10">
         <ul className="grid grid-cols-2 sm:grid-cols-5 gap-10">
