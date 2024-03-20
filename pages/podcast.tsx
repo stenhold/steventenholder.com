@@ -123,7 +123,6 @@ const HeaderMobile = () => (
                 width="100%"
                 height="500"
                 frameBorder="0"
-                allowTransparency="true"
                 allow="encrypted-media"
                 className="mt-4">
             </iframe>
