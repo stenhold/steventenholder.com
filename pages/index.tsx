@@ -23,7 +23,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 // Header component
 const Header = () => (
   <div className="text-left px-10 mt-20">
-    <Image src="/steven.png" alt="Steven ten Holder" width={600} height={600} className="rounded-lg" />
+    <Image src="/steven.png" alt="Steven ten Holder" width={700} height={700} className="rounded-lg" />
     <h2 className="text-3xl font-unna font-bold text-white mt-8">
       Hello, I&apos;m Steven ten Holder
     </h2>

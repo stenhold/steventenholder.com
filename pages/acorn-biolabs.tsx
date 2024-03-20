@@ -93,6 +93,17 @@ const HeaderMobile = () => (
                 <Image src="/acorn_cryo_chamber.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
             </div>
 
+            <div className="col-span-3">
+            <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-8">
+                    This page is meant as fun time-capsule of nostalgic moments that capture my story with Acorn
+                    from concept to launched company.
+                    <br />
+                    <br />
+                    But first, a short essay on the core logic that I believe makes young-cell cryopreservation
+                    a no-brainer.
+                </h2 >
+            </div >
+
         </div>
     </div>
 );
@@ -178,7 +189,7 @@ const TheLogic = () => (
 );
 
 const TheLogicMobile = () => (
-    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-2 px-6">
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-28 px-6">
       <div className="grid grid-cols-1">
         <div className="col-span-1">
           <div className="pt-4">
@@ -271,7 +282,7 @@ const MemorabiliaDesktop = () => (
 
 
 const MemorabiliaMobile = () => (
-    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-6 pb-2 px-6 border-t">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
@@ -365,11 +376,11 @@ const ArchiveSection1 = () => (
 );
 
 const ArchiveSection1Mobile = () => (
-    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-2 px-6">
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-4 pb-2 px-6">
       <div className="grid grid-cols-1 gap-y-10">
   
           {/* Section 1 */}
-          <div className="pt-4">
+          <div className="pt-8">
               <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
                   Pitching Justin Trudeau in Waterloo, 2016
               </h2>
@@ -382,9 +393,9 @@ const ArchiveSection1Mobile = () => (
           </div>
   
           {/* Section 2 */}
-          <div className="pt-4">
+          <div className="pt-8">
               <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
-                  Acorn as an incubating startup in Waterloo, 2017
+                  Acorn as a young startup in Waterloo, 2017
               </h2>
               <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
                   I gave an interview for a university review podcast (Ten with Ken) on the Velocity startup ecosystem at the University of Waterloo back when I was the CEO of Acorn.
@@ -398,7 +409,7 @@ const ArchiveSection1Mobile = () => (
           </div>
   
           {/* Section 3 */}
-          <div className="pt-4">
+          <div className="pt-8">
               <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
                   Acorn as post-launch startup in Toronto, 2018
               </h2>
@@ -481,34 +492,30 @@ const ClickEnlarge1Mobile = () => {
                     <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
                         Featured in Disrupt Magazine, 2019
                     </h2>
-                </div>
-                <div>
                     <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
                         We attended a Singularity University event in Calgary, Alberta where we caught the attention of Disrupt Magazine writers.
                     </p>
                     <h2 className="font-roboto-slab text-sm text-gray-300 text-left pt-4">
-                        <i>(Tap image to enlarge)</i>
+                        <i>(Tap image to enlarge and explore)</i>
                     </h2>
                 </div>
                 <div className="mt-4 flex items-center justify-center">
-                    {/* Modified to add onClick event to show modal */}
                     <div className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
                         <Image src="/disrupt_mag.jpg" alt="Disrupt Magazine feature" width={300} height={300} className="rounded-lg mb-4" layout="intrinsic" />
                     </div>
                 </div>
-                {/* Modal for enlarging the image */}
                 {isModalOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-                        <div className="bg-white p-4 rounded-lg max-w-xs max-h-full overflow-auto">
-                            {/* Close button */}
-                            <button onClick={() => setIsModalOpen(false)} className="mb-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">
-                                Close
-                            </button>
-                            <Image src="/disrupt_mag.jpg" alt="Enlarged Image" width={1000} height={1000} layout="intrinsic" />
-                            {/* Close button */}
-                            <button onClick={() => setIsModalOpen(false)} className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">
-                                Close
-                            </button>
+                    <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex justify-center items-center p-4">
+                        <div className="bg-white overflow-auto max-h-full w-full max-w-3xl rounded-lg">
+                            <div className="flex justify-between items-center p-4">
+                                <span className="text-xl font-bold">Disrupt Magazine Feature</span>
+                                <button onClick={() => setIsModalOpen(false)} className="text-lg font-semibold bg-red-500 text-white p-2 rounded hover:bg-red-700 transition-colors">
+                                    Close
+                                </button>
+                            </div>
+                            <div className="flex justify-center items-center">
+                                <Image src="/disrupt_mag.jpg" alt="Enlarged Image" width={1000} height={1000} layout="intrinsic" />
+                            </div>
                         </div>
                     </div>
                 )}
@@ -516,6 +523,7 @@ const ClickEnlarge1Mobile = () => {
         </div>
     );
 };
+
 
 
 
@@ -552,26 +560,27 @@ const ArchiveSection2 = () => (
 );
 
 const ArchiveSection2Mobile = () => (
-    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-2 px-6">
-      <div className="grid grid-cols-1 gap-y-8">
-  
-          {/* Section 4 */}
-          <div className="pt-4">
+
+    
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-4 pb-2 px-6">
+      <div className="grid grid-cols-1 gap-y-10">
+
+      <div className="pt-8">
               <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
-                  Discussing Acorn with TKS students in Vancouver, 2020
+                TKS student interview Vancouver, 2020
               </h2>
               <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
-                  I gave an interview for a TKS student podcast &#39;The Daily Experiment&#39; (by Mikey and Mukundh) on Acorn as a concept, bioengineering principles, the philosophy of personality, and more back in 2020.
+                I gave an interview for a TKS student podcast &#39;The Daily Experiment&#39; (by Mikey and Mukundh) on Acorn as a concept, bioengineering principles, the philosophy of personality, and more back in 2020.
               </p>
-          </div>
-          {/* Shared Row for Audio Player and Image */}
-          <div className="flex flex-col items-center justify-center pt-4">
-              <Image src="/vancouver_skyline.jpg" alt="Vancouver Skyline" width={300} height={300} className="rounded-lg" layout="intrinsic" />
-              <audio controls className="w-full mt-4">
-                  <source src="audio/TDE_interview_small.mp3" type="audio/mpeg" />
-              </audio>
-          </div>
+              <div className="flex flex-col items-center justify-center mt-4">
+                  <Image src="/vancouver_skyline.jpg" alt="Velocity Garage" width={400} height={400} className="rounded-lg" layout="intrinsic" />
+                  <audio controls className="w-full mt-4">
+                      <source src="audio/TDE_interview_small.mp3" type="audio/mpeg" />
+                  </audio>
+              </div>
+        </div>
   
+
       </div>
     </div>
   );
@@ -647,13 +656,13 @@ const ClickEnlarge2Mobile = () => {
                         After a few years of design and movement through the patent process, the world-wide patent (WO 2022/094714 A1) was finally awarded to us in 2022.
                     </p>
                     <h2 className="font-roboto-slab text-sm text-gray-300 text-left pt-4">
-                        <i>(Tap image to enlarge)</i>
+                        <i>(Tap image to enlarge and explore)</i>
                     </h2>
                 </div>
                 <div className="mt-4 flex items-center justify-center">
                     {/* Modified to add onTap event to show modal */}
                     <div className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
-                        <Image src="/kit_patent_full.jpg" alt="full kit patent" width={300} height={300} className="rounded-lg mb-4" layout="intrinsic" />
+                        <Image src="/kit_patent_full.jpg" alt="full kit patent" width={400} height={400} className="rounded-lg mb-4" layout="intrinsic" />
                     </div>
                 </div>
                 {/* Modal for enlarging the image */}
