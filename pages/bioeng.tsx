@@ -228,10 +228,10 @@ const TextSummary1Mobile = () => (
             </div>
             <div>
                 <h2 className="font-unna font-bold italic text-xl text-white text-center">
-                    So, let's accelerate bioengineering.
+                    So, let&#39;s accelerate bioengineering.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-gray-400 text-center text-sm pt-4">
-                    We're at the tip of the <i>genetic hyperspace iceberg</i>.<br /><br />
+                    We&#39;re at the tip of the <i>genetic hyperspace iceberg</i>.<br /><br />
                     The kinds and scales of mechanical and phenomenological entities are near.
                 </p>
             </div>
