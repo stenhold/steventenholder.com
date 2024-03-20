@@ -25,55 +25,22 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 
 
 const HeaderDesktop = () => (
-    <div className="hidden sm:block max-w-screen-lg mx-auto pt-28 pb-16 px-6 sm:px-10">
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-16 px-6 sm:px-10">
         <div className="grid grid-cols-3">
-
             <div className="col-span-3">
                 <h2 className="font-unna italic text-4xl text-white text-left">
-                &#39;Podcast&#39;, but actually just casual conversations with friends. 
+                    Casual conversations with friends.
                 </h2>
             </div>
-
-
             <div className="col-span-3">
                 <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
-                    I think casual personal podcasts can be the new blogs -- conversations on display. 
+                    Podcast is the new blog: conversations on display.
                 </h2>
             </div>
 
             <div className="col-span-3 col-start-1 flex items-center pt-8">
                 <Image src="/podcast_convos.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
             </div>
-
-
-            <div className="col-span-3">
-            <h1 className="font-unna text-2xl pt-32 pb-4">
-                On Apple Podcasts
-            </h1>
-                <iframe
-                allow="autoplay *; encrypted-media *; fullscreen *"
-                frameBorder="0"
-                height="450"
-                className="w-full overflow-hidden bg-transparent"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.podcasts.apple.com/us/podcast/chemical-conversations/id1569555415">
-                </iframe>
-            </div >
-            
-            <div className="col-span-3">
-            <h1 className="font-unna text-2xl pt-20 pb-2">
-                On Spotify Podcasts
-             </h1>
-            <iframe
-                src="https://open.spotify.com/embed/show/3HAx176OOvVFrMSu7IyHvX?theme=0"
-                width="100%"
-                height="450"
-                frameBorder="0"
-                allow="encrypted-media"
-                className="mt-4">
-            </iframe>
-
-            </div >
         </div >
     </div >
 );
@@ -81,55 +48,123 @@ const HeaderDesktop = () => (
 const HeaderMobile = () => (
     <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
         <div className="grid grid-cols-3">
-
-
             <div className="col-span-3">
                 <h2 className="font-unna italic text-4xl text-white text-left">
-                &#39;Podcast&#39;, but actually just casual conversations with friends. 
+                    Casual conversations with friends.
                 </h2>
             </div>
-
             <div className="col-span-3">
                 <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
-                I think casual personal podcasts can be the new blogs -- conversations on display. 
+                    Podcast is the new blog: <br /> conversations on display.
                 </h2>
             </div>
-
             <div className="col-span-3 col-start-1 flex items-center pt-12">
                 <Image src="/podcast_convos.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
             </div>
+        </div>
+    </div>
+);
 
-            
+
+
+
+const ComingSoonDesktop = () => (
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-8 px-6">
+        {/* Grid layout */}
+        <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
+            {/* Text content beside the image */}
+            <div className="col-span-8 flex flex-col justify-center pt-12 pb-12">
+                <h2 className="font-unna text-center font-bold italic text-3xl text-white">
+                    I have many more <br /> conversations to upload.
+                </h2>
+                <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
+                    Coming soon, but for now please enjoy what I have up:
+                </p>
+            </div>
+        </div>
+    </div>
+);
+
+
+const ComingSoonMobile = () => (
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-12 px-6">
+        {/* Grid layout */}
+        <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
+            {/* Text content beside the image */}
+            <div className="col-span-8 flex flex-col justify-center pt-12 pb-12">
+                <h2 className="font-unna text-center font-bold italic text-2xl text-white">
+                    I have many more <br /> conversations to upload.
+                </h2>
+                <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
+                    Coming soon, but for now please enjoy what I have up:
+                </p>
+            </div>
+        </div>
+    </div>
+);
+
+
+
+const PodcastsDesktop = () => (
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-14 pb-16 px-6 sm:px-10">
+        <div className="grid grid-cols-6 gap-10">
             <div className="col-span-3">
-            <h1 className="font-unna text-2xl pt-32 pb-4">
-                On Apple Podcasts
-            </h1>
+                <h1 className="font-unna text-2xl pt-20 pb-4">
+                    On Apple Podcasts
+                </h1>
                 <iframe
-                allow="autoplay *; encrypted-media *; fullscreen *"
-                frameBorder="0"
-                height="500"
-                className="w-full max-w-[660px] overflow-hidden bg-transparent"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.podcasts.apple.com/us/podcast/chemical-conversations/id1569555415">
+                    allow="autoplay *; encrypted-media *; fullscreen *"
+                    height="450"
+                    className="w-full overflow-hidden bg-transparent"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                    src="https://embed.podcasts.apple.com/us/podcast/chemical-conversations/id1569555415">
                 </iframe>
             </div >
-            
             <div className="col-span-3">
-            <h1 className="font-unna text-2xl pt-20 pb-2">
-                On Spotify Podcasts
-             </h1>
-            <iframe
-                src="https://open.spotify.com/embed/show/3HAx176OOvVFrMSu7IyHvX?theme=0"
-                width="100%"
-                height="500"
-                frameBorder="0"
-                allow="encrypted-media"
-                className="mt-4">
-            </iframe>
-
+                <h1 className="font-unna text-2xl pt-20 pb-2">
+                    On Spotify Podcasts
+                </h1>
+                <iframe
+                    src="https://open.spotify.com/embed/show/3HAx176OOvVFrMSu7IyHvX?theme=0"
+                    width="100%"
+                    height="500"
+                    frameBorder="0"
+                    allow="encrypted-media"
+                    className="mt-4">
+                </iframe>
             </div >
+        </div>
+    </div>
+);
 
-        
+const PodcastsMobile = () => (
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6 sm:px-10">
+        <div className="grid grid-cols-3 gap-10">
+            <div className="col-span-3">
+                <h1 className="font-unna text-2xl pt-4 pb-4">
+                    On Apple Podcasts
+                </h1>
+                <iframe
+                    allow="autoplay *; encrypted-media *; fullscreen *"
+                    height="450"
+                    className="w-full overflow-hidden bg-transparent"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                    src="https://embed.podcasts.apple.com/us/podcast/chemical-conversations/id1569555415">
+                </iframe>
+            </div >
+            <div className="col-span-3">
+                <h1 className="font-unna text-2xl pt-8 pb-2">
+                    On Spotify Podcasts
+                </h1>
+                <iframe
+                    src="https://open.spotify.com/embed/show/3HAx176OOvVFrMSu7IyHvX?theme=0"
+                    width="100%"
+                    height="500"
+                    frameBorder="0"
+                    allow="encrypted-media"
+                    className="mt-4">
+                </iframe>
+            </div >
         </div>
     </div>
 );
@@ -139,12 +174,9 @@ const HeaderMobile = () => (
 
 
 
-
-
-
 // ImagePanel for the second row with potentially different rules or styles
 const NavPanel = () => (
-    <div className="max-w-screen-lg mx-auto pt-40 pb-20">
+    <div className="max-w-screen-lg mx-auto pt-20 pb-20">
         <ul className="grid grid-cols-2 sm:grid-cols-5 gap-10">
             {[
                 { href: "/", imgSrc: "/steven.png", text: "Home" },
@@ -179,8 +211,12 @@ const Footer = () => (
 export default function Home() {
     return (
         <div className="text-xs space-y-4 w-full flex flex-col items-center overflow-x-hidden">
-            <HeaderDesktop /> 
-            <HeaderMobile /> 
+            <HeaderDesktop />
+            <HeaderMobile />
+            <ComingSoonDesktop />
+            <ComingSoonMobile />
+            <PodcastsDesktop />
+            <PodcastsMobile />
             <NavPanel />
             <Footer />
         </div>

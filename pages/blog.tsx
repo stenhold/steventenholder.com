@@ -27,7 +27,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 const Blog = () => (
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-8 px-6">
         {/* Grid layout */}
-        <div className="grid grid-cols-8 gap-4 border-t border-white">
+        <div className="grid grid-cols-8 gap-4 border-t border-b pb-14 border-white">
             {/* Image taking up the vertical space equivalent to two rows */}
             <div className="col-span-3 col-start-1 flex items-center pt-12">
                 <Image src="/blog_cosmos.jpg" alt="Life" width={500} height={900} className="rounded-lg" layout="intrinsic" />
@@ -35,16 +35,28 @@ const Blog = () => (
             {/* Text content beside the image */}
             <div className="col-span-5 flex flex-col justify-center">
                 <h2 className="font-unna font-bold italic text-2xl pl-2 text-white">
-                    I&#39;ve enjoyed writing, from time to time.
+                    I&#39;ve enjoyed writing about big questions.
                 </h2>
-                <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pl-2 pt-4">
+                <p className="font-roboto-slab italic text-gray-400 text-left pb-6 pt-8 text-xs sm:text-sm pl-6 pt-4">
+                    - What does our sexuality say about human nature?
+                    <br />
+                    - How valuable are humans on the comsic scale?
+                    <br />
+                    - Given modern progress, how should we define purpose?
+                    <br />
+                </p>
+                <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-4">
                     In each piece I attempt to take an empirical logical perspective on relevant, controvercial human issues toward unintuitive conclusions.
                     <br /> <br />
-                    <a href="https://medium.com/@steventen" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow-900 text-white px-6 py-3 rounded hover:bg-yellow-700 transition-colors">visit medium.com</a>
+                    Check it out:
                 </p>
+                <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-10">
+                    <a href="https://medium.com/@steventen" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow-900 text-white px-6 py-3 rounded hover:bg-yellow-700 transition-colors">Visit medium.com</a>
+                </p>
+
             </div>
         </div>
-    </div>
+    </div >
 );
 
 
@@ -56,11 +68,23 @@ const BlogMobile = () => (
             </div>
             <div>
                 <h2 className="font-unna font-bold italic text-xl text-white text-center">
-                    I&#39;ve enjoyed writing, from time to time.
+                    I&#39;ve enjoyed writing about big questions.
                 </h2>
-                <p className="font-roboto-slab font-extralight text-gray-400 text-center text-sm pt-4">
-                In each piece I attempt to take an empirical logical perspective on relevant, controvercial human issues toward unintutive conclusions.
-                <a href="https://medium.com/@steventen" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow-900 text-white px-6 py-3 rounded hover:bg-yellow-700 transition-colors">visit medium.com</a>
+                <p className="font-roboto-slab italic text-gray-400 text-left pb-6 pt-8 text-xs sm:text-sm pl-4 pt-4">
+                    - What does our sexuality say about human nature?
+                    <br />
+                    - How valuable are humans on the comsic scale?
+                    <br />
+                    - Given modern progress, how should we define purpose?
+                    <br />
+                </p>
+                <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-4">
+                    In each piece I attempt to take an empirical logical perspective on relevant, controvercial human issues toward unintuitive conclusions.
+                    <br /> <br />
+                    Check it out:
+                </p>
+                <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-10">
+                    <a href="https://medium.com/@steventen" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow-900 text-white px-6 py-3 rounded hover:bg-yellow-700 transition-colors">Visit medium.com</a>
                 </p>
             </div>
         </div>
@@ -69,7 +93,7 @@ const BlogMobile = () => (
 
 
 
-  
+
 
 
 
@@ -109,8 +133,8 @@ const Footer = () => (
 export default function Home() {
     return (
         <div className="text-xs space-y-4 w-full flex flex-col items-center overflow-x-hidden">
-            <Blog /> 
-            <BlogMobile /> 
+            <Blog />
+            <BlogMobile />
             <NavPanel />
             <Footer />
         </div>

@@ -25,7 +25,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 
 
 const HeaderDesktop = () => (
-    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-8 px-6 sm:px-10">
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-16 px-6 sm:px-10">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
@@ -46,7 +46,7 @@ const HeaderDesktop = () => (
 );
 
 const HeaderMobile = () => (
-    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-12 px-6">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
@@ -71,13 +71,13 @@ const HeaderMobile = () => (
 
 // PanelDesktop for larger screens
 const PanelDesktop = () => (
-    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-4 px-6 sm:px-10 border-t">
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-4 pb-4 px-6 sm:px-10 border-t">
         <div className="grid grid-cols-12 gap-y-8 gap-x-4">
 
             {/* Introduction */}
             <div className="col-span-12">
-                <h2 className="font-roboto-slab font-bold text-lg text-gray-300 text-left">
-                    A few first principles:
+                <h2 className="font-unna font-bold text-lg text-gray-400 text-left">
+                    A few first principles toward my North Star:
                 </h2>
             </div>
 
@@ -149,11 +149,11 @@ const PanelDesktop = () => (
 
 // PanelMobile
 const PanelMobile = () => (
-    <div className="sm:hidden max-w-screen-lg mx-auto py-4 px-6">
-        <div className="flex flex-col gap-y-12 border-t">
-            <div className="col-span-12 mt-12">
-                <h2 className="font-unna font-bold italic text-2xl text-white text-left">
-                    A few first principles:
+    <div className="sm:hidden max-w-screen-lg mx-auto py-4 px-6 border-t">
+        <div className="flex flex-col gap-y-12">
+            <div className="col-span-12 mt-2">
+                <h2 className="font-unna font-bold italic text-lg text-gray-400 leading-tight text-center">
+                    First, a short story of first principles<br /> toward a North Star:
                 </h2>
             </div>
 
@@ -242,23 +242,23 @@ const TextSummary1Mobile = () => (
 
 const TextSummary2 = () => (
     <div className="hidden sm:block">
-    <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-12">
-        {/* Text content beside the image */}
-        <div className="col-span-3 flex flex-col justify-center">
-            <h2 className="font-unna font-bold italic text-right text-2xl pr-2 text-white">
-                Powerfully, with AI
-            </h2>
-            <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pr-2 pt-4 text-right">
-                The chaos of biological complexity will almost certainly become best understood by AI.
-                <br /><br />
-                The emergence of LLMs and their success with human language hints at the possiblity for new understandings of biology.
-            </p>
+        <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-12">
+            {/* Text content beside the image */}
+            <div className="col-span-3 flex flex-col justify-center">
+                <h2 className="font-unna font-bold italic text-right text-2xl pr-2 text-white">
+                    Powerfully, with AI
+                </h2>
+                <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pr-2 pt-4 text-right">
+                    The chaos of biological complexity will almost certainly become best understood by AI.
+                    <br /><br />
+                    The emergence of LLMs and their success with human language hints at the possiblity for new understandings of biology.
+                </p>
+            </div >
+            <div className="col-span-5 flex items-center">
+                <Image src="/wizard_bird.jpg" alt="Life" width={700} height={800} className="rounded-lg" layout="intrinsic" />
+            </div>
         </div >
-        <div className="col-span-5 flex items-center">
-            <Image src="/wizard_bird.jpg" alt="Life" width={700} height={800} className="rounded-lg" layout="intrinsic" />
-        </div>
-    </div >
-    </div> 
+    </div>
 );
 
 
@@ -266,9 +266,9 @@ const TextSummary2Mobile = () => (
     <div className="sm:hidden max-w-screen-lg mx-auto pt-8 px-6">
         <div className="flex flex-col items-center">
             <div className="pb-8">
-            <div>
-                <Image src="/wizard_bird.jpg" alt="Life" width={350} height={400} className="rounded-lg" layout="intrinsic" />
-            </div>
+                <div>
+                    <Image src="/wizard_bird.jpg" alt="Life" width={350} height={400} className="rounded-lg" layout="intrinsic" />
+                </div>
                 <h2 className="font-unna font-bold italic text-xl text-white text-center pt-8">
                     Powerfully, with AI
                 </h2>
@@ -350,9 +350,9 @@ export default function Home() {
             <PanelDesktop />
             <PanelMobile />
             <TextSummary1 />
-            <TextSummary1Mobile /> 
+            <TextSummary1Mobile />
             <TextSummary2 />
-            <TextSummary2Mobile /> 
+            <TextSummary2Mobile />
             <ComingSoon />
             <NavPanel />
             <Footer />
