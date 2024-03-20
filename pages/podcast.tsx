@@ -24,98 +24,118 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 );
 
 
-const Header2 = () => (
-    <div className="max-w-screen-lg mx-auto pt-10 px-6 sm:px-10">
+const HeaderDesktop = () => (
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-28 pb-16 px-6 sm:px-10">
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
-                <h2 className="font-unna font-bold italic text-4xl text-white text-left">
-                    Engineering biology will <br /> revolutionize the human condition.
+                <h2 className="font-unna italic text-4xl text-white text-left">
+                &#39;Podcast&#39;, but actually just casual conversations with friends. 
                 </h2>
             </div>
 
-            <div className="col-span-0">
-                <div className="top-0 left-0 w-96 h-0">
-                    <h2 className="font-unna font-bold italic text-3xl text-white text-left">
-                    </h2>
-                </div>
+
+            <div className="col-span-3">
+                <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
+                    I think casual personal podcasts can be the new blogs -- conversations on display. 
+                </h2>
             </div>
 
+            <div className="col-span-3 col-start-1 flex items-center pt-8">
+                <Image src="/podcast_convos.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+            </div>
+
+
+            <div className="col-span-3">
+            <h1 className="font-unna text-2xl pt-32 pb-4">
+                On Apple Podcasts
+            </h1>
+                <iframe
+                allow="autoplay *; encrypted-media *; fullscreen *"
+                frameBorder="0"
+                height="450"
+                className="w-full overflow-hidden bg-transparent"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.podcasts.apple.com/us/podcast/chemical-conversations/id1569555415">
+                </iframe>
+            </div >
+            
+            <div className="col-span-3">
+            <h1 className="font-unna text-2xl pt-20 pb-2">
+                On Spotify Podcasts
+             </h1>
+            <iframe
+                src="https://open.spotify.com/embed/show/3HAx176OOvVFrMSu7IyHvX?theme=0"
+                width="100%"
+                height="450"
+                frameBorder="0"
+                allowTransparency="true"
+                allow="encrypted-media"
+                className="mt-4">
+            </iframe>
+
+            </div >
+        </div >
+    </div >
+);
+
+const HeaderMobile = () => (
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
+        <div className="grid grid-cols-3">
+
+
+            <div className="col-span-3">
+                <h2 className="font-unna italic text-4xl text-white text-left">
+                &#39;Podcast&#39;, but actually just casual conversations with friends. 
+                </h2>
+            </div>
+
+            <div className="col-span-3">
+                <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
+                I think casual personal podcasts can be the new blogs -- conversations on display. 
+                </h2>
+            </div>
+
+            <div className="col-span-3 col-start-1 flex items-center pt-12">
+                <Image src="/podcast_convos.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+            </div>
+
+            
+            <div className="col-span-3">
+            <h1 className="font-unna text-2xl pt-32 pb-4">
+                On Apple Podcasts
+            </h1>
+                <iframe
+                allow="autoplay *; encrypted-media *; fullscreen *"
+                frameBorder="0"
+                height="500"
+                className="w-full max-w-[660px] overflow-hidden bg-transparent"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.podcasts.apple.com/us/podcast/chemical-conversations/id1569555415">
+                </iframe>
+            </div >
+            
+            <div className="col-span-3">
+            <h1 className="font-unna text-2xl pt-20 pb-2">
+                On Spotify Podcasts
+             </h1>
+            <iframe
+                src="https://open.spotify.com/embed/show/3HAx176OOvVFrMSu7IyHvX?theme=0"
+                width="100%"
+                height="500"
+                frameBorder="0"
+                allowTransparency="true"
+                allow="encrypted-media"
+                className="mt-4">
+            </iframe>
+
+            </div >
+
+        
         </div>
     </div>
 );
 
-
-
-const ImageBesideText = () => (
-    <div className="max-w-screen-lg mx-auto py-4 px-6 sm:px-10">
-        <div className="grid grid-cols-12 gap-y-12 gap-x-2">
-
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">1.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/origin_of_life_2.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.<br /><br />
-                </p>
-            </div>
-
-
-
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">2.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/diversity_of_life_3.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
-                    -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.
-                </p>
-            </div>
-
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">3.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/intelligent_design_4.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
-                </p>
-            </div>
-
-            {/* Number */}
-            <div className="col-span-1 flex items-center">
-                <span className="font-unna font-bold italic text-3xl text-white">4.</span>
-            </div>
-            {/* Image */}
-            <div className="col-span-5">
-                <Image src="/brain_1.jpg" alt="Life" height={350} width={350} objectFit="cover" className="rounded-lg" />
-            </div>
-            {/* Text */}
-            <div className="col-span-6 flex items-center">
-                <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm sm:pr-28 pr-0">
-                    We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, revolutionary exploration of the limits of what is possible from our universe.
-                </p>
-            </div>
-        </div>
-    </div>
-);
 
 
 
@@ -161,8 +181,8 @@ const Footer = () => (
 export default function Home() {
     return (
         <div className="text-xs space-y-4 w-full flex flex-col items-center overflow-x-hidden">
-            <Header2 />
-            <ImageBesideText />
+            <HeaderDesktop /> 
+            <HeaderMobile /> 
             <NavPanel />
             <Footer />
         </div>
