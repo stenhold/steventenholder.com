@@ -23,14 +23,15 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 // Header component
 const Header = () => (
   <div className="text-left px-10 mt-20">
-    <Image src="/steven.png" alt="Steven ten Holder" width={700} height={700} className="rounded-lg" />
-    <h2 className="text-3xl font-unna font-bold text-white mt-8">
-      Hello, I&apos;m Steven ten Holder
+    <Image src="/steven.png" alt="Steven ten Holder" width={600} height={600} className="rounded-lg" />
+    <h2 className="font-unna italic text-4xl text-white mt-8 mb-8">
+      Hello, <br /> I&apos;m  Steven ten Holder
     </h2>
-    <div style={{ maxWidth: '450px' }}> {/* Wrap the paragraph in a div for alignment */}
+    <div style={{ maxWidth: '450px' }}>
+    <h2 className="font-unna italic text-lg text-gray-400 mb-6">
+    I believe engineering biology will help civilization thrive. 
+    </h2>
       <p className="font-roboto-slab text-gray-400 text-left text-xs sm:text-sm">
-        <span className="font-unna text-lg text-gray-400">
-          I&apos;m believe engineering biology will help civilization thrive. <br /><br /></span>
         Human longevity first. Intelligence next.
         <br />
         Currently I&apos;m exploring how LLMs can empower bio-engineering.
@@ -96,7 +97,7 @@ const ImagePanelSecondRow = () => (
 const Footer = () => (
   <footer className="italic p-10 mt-4 bg-black w-full text-center text-gray-600">
     the year is <span className="text-gray-400"><b>2024</b></span>
-    <p> all images generated via tireless midjourney prompting </p>
+    <p> most images generated via tireless midjourney prompting </p>
   </footer>
 );
 

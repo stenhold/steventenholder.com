@@ -1,14 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Import Roboto and Unna fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
+  /* Set the primary font family to Roboto, but you can specify Unna or Roboto Slab for specific elements or classes as needed */
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* You might want to add specific classes for Unna and Roboto Slab or set them for specific elements */
+.unna-font {
+  font-family: 'Unna', serif;
+}
+
+.roboto-slab-font {
+  font-family: 'Roboto Slab', serif;
 }
 
 :root {

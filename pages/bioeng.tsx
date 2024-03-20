@@ -197,7 +197,7 @@ const PanelMobile = () => (
 
 
 const TextSummary1 = () => (
-    <div className="max-w-screen-lg mx-auto pt-8 px-6">
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-8 px-6">
         {/* Grid layout */}
         <div className="grid grid-cols-8 gap-4 border-t border-white">
             {/* Image taking up the vertical space equivalent to two rows */}
@@ -206,7 +206,7 @@ const TextSummary1 = () => (
             </div>
             {/* Text content beside the image */}
             <div className="col-span-5 flex flex-col justify-center">
-                <h2 className="font-roboto-slab font-bold italic text-2xl pl-2 text-white">
+                <h2 className="font-unna font-bold italic text-2xl pl-2 text-white">
                     So, let&#39;s accelerate bioengineering.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pl-2 pt-4">
@@ -219,11 +219,33 @@ const TextSummary1 = () => (
     </div>
 );
 
+
+const TextSummary1Mobile = () => (
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-8 px-6">
+        <div className="flex flex-col items-center">
+            <div className="pb-8">
+                <Image src="/great_tree_iceberg.jpg" alt="Life" width={300} height={540} className="rounded-lg" layout="intrinsic" />
+            </div>
+            <div>
+                <h2 className="font-unna font-bold italic text-xl text-white text-center">
+                    So, let's accelerate bioengineering.
+                </h2>
+                <p className="font-roboto-slab font-extralight text-gray-400 text-center text-sm pt-4">
+                    We're at the tip of the <i>genetic hyperspace iceberg</i>.<br /><br />
+                    The kinds and scales of mechanical and phenomenological entities are near.
+                </p>
+            </div>
+        </div>
+    </div>
+);
+
+
 const TextSummary2 = () => (
+    <div className="hidden sm:block">
     <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-12">
         {/* Text content beside the image */}
         <div className="col-span-3 flex flex-col justify-center">
-            <h2 className="font-roboto-slab font-bold italic text-right text-2xl pr-2 text-white">
+            <h2 className="font-unna font-bold italic text-right text-2xl pr-2 text-white">
                 Powerfully, with AI
             </h2>
             <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pr-2 pt-4 text-right">
@@ -232,12 +254,33 @@ const TextSummary2 = () => (
                 The emergence of LLMs and their success with human language hints at the possiblity for new understandings of biology.
             </p>
         </div >
-        {/* Image taking up the vertical space equivalent to two rows */}
         <div className="col-span-5 flex items-center">
             <Image src="/wizard_bird.jpg" alt="Life" width={700} height={800} className="rounded-lg" layout="intrinsic" />
         </div>
     </div >
+    </div> 
 );
+
+
+const TextSummary2Mobile = () => (
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-8 px-6">
+        <div className="flex flex-col items-center">
+            <div className="pb-8">
+            <div>
+                <Image src="/wizard_bird.jpg" alt="Life" width={350} height={400} className="rounded-lg" layout="intrinsic" />
+            </div>
+                <h2 className="font-unna font-bold italic text-xl text-white text-center pt-8">
+                    Powerfully, with AI
+                </h2>
+                <p className="font-roboto-slab font-extralight text-gray-400 text-center text-sm pt-4">
+                    The chaos of biological complexity will almost certainly become best understood by AI.<br /><br />
+                    The emergence of LLMs and their success with human language hints at the possibility for new understandings of biology.
+                </p>
+            </div>
+        </div>
+    </div>
+);
+
 
 
 const ComingSoon = () => (
@@ -307,7 +350,9 @@ export default function Home() {
             <PanelDesktop />
             <PanelMobile />
             <TextSummary1 />
+            <TextSummary1Mobile /> 
             <TextSummary2 />
+            <TextSummary2Mobile /> 
             <ComingSoon />
             <NavPanel />
             <Footer />
