@@ -86,6 +86,21 @@
              https://www.steventenholder.com/podcast/episode5.mp3
          </guid>
       </item> 
+
+
+    <item>
+         <title>6: Cody Shirriff  </title>
+         <link>https://www.steventenholder.com/podcasts.html</link>
+         <description> A fun philosophical exploration of just about everything. Cody is a biotech founder and friend in Vancouver. </description>
+
+         <author> steve.tenholder@gmail.com </author>
+
+         <enclosure url="https://www.steventenholder.com/podcast/episode6.mp3" length="140779520" type="audio/mp3"/>
+         <pubDate>Wednesday, 29 Jun 2022 13:00:00 PDT</pubDate>
+         <guid isPermaLink="true">
+             https://www.steventenholder.com/podcast/episode6.mp3
+         </guid>
+      </item> 
       
       
    </channel>
