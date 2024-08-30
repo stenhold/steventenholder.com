@@ -32,7 +32,7 @@ const HeaderDesktop = () => (
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
-                <h2 className="font-unna italic text-4xl text-white text-left pb-10">
+                <h2 className="font-roboto-slab font-bold text-4xl text-white text-left pb-4">
                     Should we be cryopreserving  <br /> young cells for longevity?
                 </h2>
             </div>
@@ -46,8 +46,8 @@ const HeaderDesktop = () => (
 
 
             <div className="col-span-3">
-                <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-8 pb-0">
-                    Back in 2015, I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">Acorn Biolabs</a> to make that idea real.
+                <h2 className="font-roboto-slab text-lg text-gray-200 text-left pt-8 pb-0">
+                    Back in 2015, I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">Acorn Biolabs</a> <br/> to make young-cell-cryopreservation-as-a-service real.
                 </h2>
             </div>
 
@@ -58,13 +58,16 @@ const HeaderDesktop = () => (
 
 
             <div className="col-span-3">
-                <h2 className="font-roboto-slab text-md text-gray-300 text-left pr-80 pt-8">
-                    This page is meant as fun time-capsule of nostalgic moments that capture my story with Acorn
-                    from concept to launched company.
+                <h2 className="font-roboto-slab text-md text-gray-200 text-left pr-80 pt-8">
+                    This page is intended to be a fun time-capsule of nostalgic moments that 
+                    <br />
+                    capture my story with Acorn
+                    from concept through execution.
                     <br />
                     <br />
-                    But first, a short essay on the core logic that I believe makes young-cell cryopreservation
-                    a no-brainer.
+                    But first, a short essay on the core logic
+                    that I believe makes <br /> young-cell cryopreservation
+                    a logical no-brainer.
                 </h2 >
             </div >
 
@@ -114,10 +117,10 @@ const TheLogic = () => (
         <div className="grid grid-cols-3">
             <div className="col-span-3">
                 <div className="pt-4">
-                    <h2 className="font-unna text-left font-bold italic text-3xl text-white">
+                    <h2 className="font-roboto-slab text-left font-bold text-3xl text-white">
                         Pascal&#39;s Bioengineering Wager
                     </h2>
-                    <h2 className="font-unna text-left font-bold italic text-lg text-gray-500">
+                    <h2 className="font-roboto-slab text-left italic text-md text-gray-200 pt-3">
                         The logic behind modern young-cell cryopreservation.
                     </h2>
                 </div>
@@ -128,37 +131,49 @@ const TheLogic = () => (
             </div>
             <div className="col-span-2 flex flex-col justify-center pt-0 pb-2">
                 <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-                    <span className="font-unna text-2xl">Have you heard of Pascal&#39;s Wager? </span>
+                    <div className=" text-left font-bold text-lg text-gray-100">
+                     Have you heard of Pascal&#39;s Wager?
+                     </div>
+                    <br />
+                    It&#39;s a very simple, statistically reliable reason to believe in the Christian God.
+                    <br /><br /> 
+
+                    Neither does Pascal depend on evidence nor personal revelation for his argument. 
+                    Instead, he merely emphasizes the relatively insignificant cost to secure <i> the possibility </i> of an
+                    infinitely positive outcome: eternity in heaven.
+                    While a reasonable thinker may doubt heaven&#39;s existence on any number of gounrds, 
+                    there will always remain an inescapable uncertanty. 
+                    One hour of church once a week (plus tithing) isn&#39;t an irrational price to pay to hedge one&#39;s bets.
                     <br /><br />
-                    It&#39;s about as mathematical a reason to believe in God as any.
-                    Pascal didn&#39;t rely on evidence or revelation for his argument. Instead, he  stressed the relatively
-                    insignificant cost to secure the possibility of an infinitely positive outcome; when the enormities
-                    of heaven and hell are at stake, disbelief becomes illogical.
-                    <br /> <br />
-                    In basic terms, Pascal&#39;s argument is that logically you might as well believe in God.
-                    <br /> <br />
-                    When the benefit is infinitely positive and the consequence infinitely negative - heaven&amp;hell.
-                    Even in the face of uncertainty about the reality of heaven or hell, if the cost to play it safe
-                    is low enough you might as well go through the motions and believe! One hour of church once a week
-                    isn&#39;t so bad when an infinity of good or bad after death are at stake.
-                    <br /><br />
-                    Wether or not Pascal&#39;s Wager is actually convincing, his argument&#39;s underlying logic can apply neatly
+
+                    Wether or not Pascal&#39;s Wager is actually convincing, his argument&#39;s underlying rationalle apply neatly
                     today to human longevity.
                     <br /><br />
-                    My bioengineering longevity version goes like this:
-                    <br /><br />
+                    <br />
+
+                    <div className=" text-left font-bold text-lg text-gray-100">
+                    My modern bioengineering-longevity-version goes something like this:
+                     </div>  <br />
+
                     There are compelling reasons to believe biotechnology is going to continue advancing tremendously in
-                    the coming decades and result in radical life-extension. Imagine, for example, using your own cells
-                    in a 3D-bioprinter to create a fresh new liver that could save your life. Or modifying the embryological
-                    process to generate new organs from individual stem cells for transplant. Both are real strategies already
-                    in preliminary proof-of-concept (links here and here) that could lead to substantial health and life-extension
+                    the coming decades and those advancements may lead to radical life-extension therapeutics. 
+                    <br /> <br />
+                    Imagine, for example, using your own cells
+                    in a 3D-bioprinter to create a fresh new liver that could save your life. 
+                    Or modifying the embryological
+                    process to generate new organs from individual stem cells for transplant. 
+                    <br /> <br />
+                    Both are real strategies already
+                    in preliminary proof-of-concept that could lead to substantial health and life-extension
                     improvements.
                     <br />
                     <br />
+
                     If we can manage to live decades or centuries longer we can bear witness to human civilizational
                     progress over millennial time-scales, upgrade our own intelligence, and join humanity&#39;s incredibly rich
-                    technological future into the stars and beyond.
+                    technological future into the stars and beyond. Basically, <i>real</i> heaven.
                     <br /><br />
+
                 </p>
                 <div className="flex items-center pt-4 pb-0">
                     <Image src="/longevity_wager.png" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />

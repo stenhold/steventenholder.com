@@ -8,6 +8,10 @@ class MyDocument extends Document {
           {/* Preload fonts for performance */}
           <link rel="preload" href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@1,700&display=swap" as="style" />
           <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200&display=swap" as="style" />
+          
+          {/* Preconnect to the font's origin to improve loading speed */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 
           {/* Stylesheet links for fonts */}
           <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@1,700&display=swap" rel="stylesheet" />
