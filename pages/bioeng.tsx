@@ -153,7 +153,7 @@ const PanelMobile = () => (
         <div className="flex flex-col gap-y-12">
             <div className="col-span-12 mt-2">
                 <h2 className="font-roboto-slab font-bold italic text-lg text-gray-400 leading-tight text-center">
-                    First, a short story of first principles<br /> toward a North Star:
+                    First, a short story of first principles<br /> toward my North Star:
                 </h2>
             </div>
 
