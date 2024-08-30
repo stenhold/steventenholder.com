@@ -23,7 +23,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
 const HeaderDesktop = () => (
   <div className="hidden sm:block text-left px-10 mt-20">
     <Image src="/steven.png" alt="Steven ten Holder" width={600} height={600} className="rounded-lg" />
-    <h2 className="font-unna italic text-2xl text-gray-400 -mt-10 mb-2">
+    <h2 className="font-roboto-slab text-xl text-gray-300 -mt-10 mb-2">
       Hello, I&apos;m
     </h2>
     <h2 className="font-unna italic text-4xl text-white -mt-4 mb-2">
@@ -31,8 +31,8 @@ const HeaderDesktop = () => (
     </h2>
 
     <div style={{ maxWidth: '450px' }}>
-      <h2 className="font-unna italic text-lg text-gray-400 mb-6 pt-4">
-        I believe engineering biology will help civilization thrive.
+      <h2 className="font-roboto-slab text-lg text-gray-300 mb-6 pt-4">
+        I believe bioengineering will help civilization thrive.
       </h2>
       <p className="font-roboto-slab text-gray-400 text-left text-xs sm:text-sm">
         Human longevity first. Intelligence next.

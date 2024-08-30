@@ -19,7 +19,7 @@ const ImageLink: React.FC<ImageLinkProps> = ({ href, imgSrc, text, gridClass = '
     <li className={`flex-none ${gridClass} w-full sm:w-auto`}>
         <Link href={href} passHref>npm
             <div className="block">
-                <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg" layout="responsive" />
+                <Image src={imgSrc} alt={text} width={500} height={300} className="rounded-lg"/>
                 <span className="block text-center mt-2">{text}</span>
             </div>
         </Link>
@@ -39,7 +39,7 @@ const HeaderDesktop = () => (
 
             <div className="col-span-0">
                 <div className="top-0 left-0 w-96 h-0">
-                    <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                    <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left">
                     </h2>
                 </div>
             </div>
@@ -53,7 +53,7 @@ const HeaderDesktop = () => (
 
 
             <div className="col-span-3 col-start-1 flex items-center pt-8">
-                <Image src="/acorn_cryo_chamber.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+                <Image src="/acorn_cryo_chamber.jpg" alt="Life" width={800} height={700} className="rounded-lg"/>
             </div>
 
 
@@ -81,7 +81,7 @@ const HeaderMobile = () => (
 
 
             <div className="col-span-3">
-                <h2 className="font-unna italic text-4xl text-white text-left pb-16">
+                <h2 className="font-roboto-slab italic text-4xl text-white text-left pb-16">
                     Should we all be cryopreserving  <br /> our own young cells for longevity?
                 </h2>
             </div>
@@ -93,7 +93,7 @@ const HeaderMobile = () => (
             </div>
 
             <div className="col-span-3 col-start-1 flex items-center pt-8">
-                <Image src="/acorn_cryo_chamber.jpg" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+                <Image src="/acorn_cryo_chamber.jpg" alt="Life" width={800} height={700} className="rounded-lg" />
             </div>
 
             <div className="col-span-3">
@@ -126,14 +126,15 @@ const TheLogic = () => (
                 </div>
 
                 <div className="flex items-center pt-8 pb-4">
-                    <Image src="/pascal.png" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/pascal.png" alt="Life" width={800} height={700} className="rounded-lg"/>
                 </div>
             </div>
             <div className="col-span-2 flex flex-col justify-center pt-0 pb-2">
                 <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-                    <div className=" text-left font-bold text-lg text-gray-100">
+                    <span className=" text-left font-bold text-lg text-gray-100">
                      Have you heard of Pascal&#39;s Wager?
-                     </div>
+                     </span>
+                     <br />
                     <br />
                     It&#39;s a very simple, statistically reliable reason to believe in the Christian God.
                     <br /><br /> 
@@ -151,9 +152,9 @@ const TheLogic = () => (
                     <br /><br />
                     <br />
 
-                    <div className=" text-left font-bold text-lg text-gray-100">
-                    My modern bioengineering-longevity-version goes something like this:
-                     </div>  <br />
+                    <span className=" text-left font-bold text-lg text-gray-100">
+                    My modern bioengineering-longevity-version goes like this:
+                     </span>  <br /> <br />
 
                     There are compelling reasons to believe biotechnology is going to continue advancing tremendously in
                     the coming decades and those advancements may lead to radical life-extension therapeutics. 
@@ -176,12 +177,14 @@ const TheLogic = () => (
 
                 </p>
                 <div className="flex items-center pt-4 pb-0">
-                    <Image src="/longevity_wager.png" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/longevity_wager.png" alt="Life" width={800} height={700} className="rounded-lg"/>
                 </div>
             </div>
             <div className="col-span-2 flex flex-col justify-center pt-0 pb-20">
                 <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-                    <span className="font-unna text-lg">Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager. </span>
+                    <span className=" text-left font-bold text-lg text-gray-100">    
+                    Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager. 
+                    </span>
                     <br /><br />
                     So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing to get secure our spot in this possible heaven?
                     <br /><br />
@@ -192,8 +195,8 @@ const TheLogic = () => (
                     Imagine yourself decades from now as an old fart donating your stem cells to be grown and used in 3D-bioprinting to create your new liver, or heart, or skin, or kidney, or neurons. Your stem cells suck because you&#39;re old. Your granddaughter is happy to donate her healthy young stem cells, but the doctors tell you that your immune system won&#39;t accept. If only you had… BANKED YOUR OWN STEM CELLS FOR YOURSELF WHEN YOU WERE YOUNG.
                     <br /><br />
                     This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
-                    <br /><br />
-                    <span className="font-unna text-lg">The cost of cryopreservation is low and the possible benefits are high. </span>
+                    <br /><br /><br />
+                    <span className="font-roboto-slab font-bold text-lg">The cost of cryopreservation is low. </span>
                     <br /><br /> It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with Drew Taylor and Patrick Pumputis
                     In our lifetimes scientists will have created bio-engineering solutions powerful enough to improve our lifespans using preserved young cellular material. It really matters whether you preserved your cells or not because you&#39;re risking the worst possible outcome: missing out on the opportunity to continue doing the things you love indefinitely.
                     That&#39;s pretty powerful. Is it more or less convincing than the original wager? It becomes personal to each of us to look at the facts, what we believe in, what we want out of life, and how much we feel there&#39;s a real opportunity for bio-engineering to achieve something.
@@ -208,22 +211,22 @@ const TheLogicMobile = () => (
         <div className="grid grid-cols-1">
             <div className="col-span-1">
                 <div className="pt-4">
-                    <h2 className="font-unna text-left font-bold italic text-2xl text-white">
+                    <h2 className="font-roboto-slab text-left font-bold italic text-2xl text-white">
                         Pascal&#39;s Bioengineering Wager
                     </h2>
-                    <h2 className="font-unna text-left font-bold italic text-sm text-gray-500">
+                    <h2 className="font-roboto-slab text-left font-bold italic text-sm text-gray-500">
                         The logic behind modern young-cell cryopreservation.
                     </h2>
                 </div>
 
                 <div className="flex items-center pt-8 pb-4">
-                    <Image src="/pascal.png" alt="Pascal" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/pascal.png" alt="Pascal" width={800} height={700} className="rounded-lg"/>
                 </div>
             </div>
 
             <div className="col-span-1 flex flex-col justify-center pt-0 pb-2">
                 <p className="font-roboto-slab font-extralight text-left text-xs pr-4 pt-4">
-                    <span className="font-unna text-xl">Have you heard of Pascal&#39;s Wager?</span>
+                    <span className="font-roboto-slab text-xl">Have you heard of Pascal&#39;s Wager?</span>
                     <br /><br />
                     It&#39;s about as mathematical a reason to believe in God as any. Pascal didn&#39;t rely on evidence or revelation for his argument. Instead, he stressed the relatively insignificant cost to secure the possibility of an infinitely positive outcome; when the enormities of heaven and hell are at stake, disbelief becomes illogical.
                     <br /><br />
@@ -242,12 +245,12 @@ const TheLogicMobile = () => (
                     <br /><br />
                 </p>
                 <div className="flex items-center pt-4 pb-0">
-                    <Image src="/longevity_wager.png" alt="Life" width={800} height={700} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/longevity_wager.png" alt="Life" width={1000} height={1000} className="rounded-lg" />
                 </div>
 
                 <p className="font-roboto-slab font-extralight text-left text-xs pr-4 pt-4">
-                    <span className="font-unna text-lg">Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager.</span>
-                    <br /><br />
+                    <span className="font-roboto-slab text-lg">Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager..</span>
+                    <br />
                     So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing to secure our spot in this possible heaven?
                     <br /><br />
                     Well, there&#39;s trouble in paradise - an original sin, of sorts. The quality of the cells you start with might matter a lot, and we&#39;re all getting old, fast.
@@ -256,7 +259,7 @@ const TheLogicMobile = () => (
                     <br /><br />
                     This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
                     <br /><br />
-                    <span className="font-unna text-lg">The cost of cryopreservation is low and the possible benefits are high. </span>
+                    <span className="font-roboto-slab text-lg">The cost of cryopreservation is low and the possible benefits are high. </span>
                     <br /><br />
                     It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with Drew Taylor and Patrick Pumputis
                     In our lifetimes scientists will have created bio-engineering solutions powerful enough to improve our lifespans using preserved young cellular material. It really matters whether you preserved your cells or not because you&#39;re risking the worst possible outcome: missing out on the opportunity to continue doing the things you love indefinitely.
@@ -273,14 +276,14 @@ const MemorabiliaDesktop = () => (
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10 border-t border-white">
         <div className="grid grid-cols-3">
             <div className="col-span-3">
-                <h2 className="font-unna italic text-5xl text-gray-200 text-left">
+                <h2 className="font-roboto-slab text-5xl text-gray-200 text-left">
                     Digital Memorabilia
                 </h2>
             </div>
 
             <div className="col-span-0">
                 <div className="top-0 left-0 w-96 h-0">
-                    <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                    <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left">
                     </h2>
                 </div>
             </div>
@@ -301,7 +304,7 @@ const MemorabiliaMobile = () => (
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
-                <h2 className="font-unna italic text-4xl text-white text-left">
+                <h2 className="font-roboto-slab text-4xl text-white text-left">
                     Digital Memorabilia
                 </h2>
             </div>
@@ -322,7 +325,7 @@ const ArchiveSection1 = () => (
 
             {/* Section 1 */}
             <div className="col-span-3 pt-4">
-                <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
+                <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
                     Pitching Justin Trudeau in Waterloo, 2016
                 </h2>
                 <p className="col-span-3 text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-48 pt-0 text-left">
@@ -338,7 +341,7 @@ const ArchiveSection1 = () => (
 
             {/* Section 2 */}
             <div className="col-span-3 pt-28">
-                <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
+                <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
                     Acorn as an incubating startup in Waterloo, 2017
                 </h2>
             </div>
@@ -351,7 +354,7 @@ const ArchiveSection1 = () => (
             {/* Shared Row for Audio Player and Image */}
             <div className="col-span-3 flex flex-row pt-4">
                 <div className="flex-1 flex justify-start">
-                    <Image src="/v_garage.jpg" alt="Life" width={400} height={400} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/v_garage.jpg" alt="Life" width={400} height={400} className="rounded-lg" />
                 </div>
                 <div className="flex-1 pl-8 flex items-center justify-center">
                     <audio controls className="w-full">
@@ -363,7 +366,7 @@ const ArchiveSection1 = () => (
 
             {/* Section 3 */}
             <div className="col-span-3 pt-28">
-                <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
+                <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
                     Acorn as post-launch startup in Toronto, 2018
                 </h2>
             </div>
@@ -377,7 +380,7 @@ const ArchiveSection1 = () => (
             {/* Shared Row for Audio Player and Image */}
             <div className="col-span-3 flex flex-row pt-4">
                 <div className="flex-1 flex justify-start">
-                    <Image src="/jlabs.jpg" alt="Life" width={400} height={400} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/jlabs.jpg" alt="Life" width={400} height={400} className="rounded-lg" />
                 </div>
                 <div className="flex-1 pl-8 flex items-center justify-center">
                     <audio controls className="w-full">
@@ -396,7 +399,7 @@ const ArchiveSection1Mobile = () => (
 
             {/* Section 1 */}
             <div className="pt-8">
-                <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
+                <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
                     Pitching Justin Trudeau in Waterloo, 2016
                 </h2>
                 <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
@@ -409,14 +412,14 @@ const ArchiveSection1Mobile = () => (
 
             {/* Section 2 */}
             <div className="pt-8">
-                <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
+                <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
                     Acorn in the Velocity Garage, 2017
                 </h2>
                 <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
                     I gave an interview for a university review podcast (Ten with Ken) on the Velocity startup ecosystem at the University of Waterloo back when I was the CEO of Acorn.
                 </p>
                 <div className="flex flex-col items-center justify-center mt-4">
-                    <Image src="/v_garage.jpg" alt="Velocity Garage" width={400} height={400} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/v_garage.jpg" alt="Velocity Garage" width={400} height={400} className="rounded-lg" />
                     <audio controls className="w-full mt-4">
                         <source src="audio/ten_with_ken_Steven_interview.mp3" type="audio/mpeg" />
                     </audio>
@@ -425,14 +428,14 @@ const ArchiveSection1Mobile = () => (
 
             {/* Section 3 */}
             <div className="pt-8">
-                <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
+                <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
                     Acorn post-launch startup in Toronto, 2018
                 </h2>
                 <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
                     I gave an interview for podcast &#39;Spotlight on the Six&#39; (Akash Pasricha) on Acorn, bioengineering, the Toronto startup ecosystem, and my transition from CEO to COO of Acorn Biolabs in 2017.
                 </p>
                 <div className="flex flex-col items-center justify-center mt-4">
-                    <Image src="/jlabs.jpg" alt="JLABS" width={400} height={400} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/jlabs.jpg" alt="JLABS" width={400} height={400} className="rounded-lg" />
                     <audio controls className="w-full mt-4">
                         <source src="audio/spotlight_on_the_six_interview.mp3" type="audio/mpeg" />
                     </audio>
@@ -452,13 +455,13 @@ const ClickEnlarge1 = () => {
         <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10">
             <div className="grid grid-cols-3">
                 <div className="col-span-3 pt-10">
-                    <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
+                    <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
                         Featured in Disrupt Magazine, 2019
                     </h2>
                 </div>
                 <div className="col-span-1">
                     <div className="top-0 left-0 w-96 h-0">
-                        <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                        <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left">
                         </h2>
                     </div>
                 </div>
@@ -474,7 +477,7 @@ const ClickEnlarge1 = () => {
             <div className="col-span-3 mt-6 flex flex-col items-left justify-start">
                 {/* Modified to add onClick event to show modal */}
                 <div className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
-                    <Image src="/disrupt_mag.jpg" alt="full kit patent" width={600} height={600} className="rounded-lg mb-4" layout="intrinsic" />
+                    <Image src="/disrupt_mag.jpg" alt="full kit patent" width={600} height={600} className="rounded-lg mb-4" />
                 </div>
             </div>
             {/* Modal for enlarging the image */}
@@ -485,7 +488,7 @@ const ClickEnlarge1 = () => {
                         <button onClick={() => setIsModalOpen(false)} className="mt-4 mb-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">
                             Close
                         </button>
-                        <Image src="/disrupt_mag.jpg" alt="Enlarged Image" width={2000} height={2000} layout="intrinsic" />
+                        <Image src="/disrupt_mag.jpg" alt="Enlarged Image" width={2000} height={2000} />
                         {/* Close button */}
                         <button onClick={() => setIsModalOpen(false)} className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">
                             Close
@@ -504,7 +507,7 @@ const ClickEnlarge1Mobile = () => {
         <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-2 px-6">
             <div className="grid grid-cols-1">
                 <div className="pt-4">
-                    <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
+                    <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
                         Featured in Disrupt Magazine, 2019
                     </h2>
                     <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
@@ -516,7 +519,7 @@ const ClickEnlarge1Mobile = () => {
                 </div>
                 <div className="mt-4 flex items-center justify-center">
                     <div className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
-                        <Image src="/disrupt_mag.jpg" alt="Disrupt Magazine feature" width={300} height={300} className="rounded-lg mb-4" layout="intrinsic" />
+                        <Image src="/disrupt_mag.jpg" alt="Disrupt Magazine feature" width={300} height={300} className="rounded-lg mb-4" />
                     </div>
                 </div>
                 {isModalOpen && (
@@ -529,7 +532,7 @@ const ClickEnlarge1Mobile = () => {
                                 </button>
                             </div>
                             <div className="flex justify-center items-center">
-                                <Image src="/disrupt_mag.jpg" alt="Enlarged Image" width={1000} height={1000} layout="intrinsic" />
+                                <Image src="/disrupt_mag.jpg" alt="Enlarged Image" width={1000} height={1000} />
                             </div>
                         </div>
                     </div>
@@ -549,7 +552,7 @@ const ArchiveSection2 = () => (
 
             {/* Section 4 */}
             <div className="col-span-3 pt-28">
-                <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
+                <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
                     Discussing Acorn with a TKS students in Vancouver, 2020
                 </h2>
             </div>
@@ -561,7 +564,7 @@ const ArchiveSection2 = () => (
             {/* Shared Row for Audio Player and Image */}
             <div className="col-span-3 flex flex-row pt-4">
                 <div className="flex-1 flex justify-start">
-                    <Image src="/vancouver_skyline.jpg" alt="Life" width={400} height={400} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/vancouver_skyline.jpg" alt="Life" width={400} height={400} className="rounded-lg" />
                 </div>
                 <div className="flex-1 pl-8 flex items-center justify-center">
                     <audio controls className="w-full">
@@ -581,14 +584,14 @@ const ArchiveSection2Mobile = () => (
         <div className="grid grid-cols-1 gap-y-10">
 
             <div className="pt-8">
-                <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
+                <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
                     TKS student interview Vancouver, 2020
                 </h2>
                 <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
                     I gave an interview for a TKS student podcast &#39;The Daily Experiment&#39; (by Mikey and Mukundh) on Acorn as a concept, bioengineering principles, the philosophy of personality, and more back in 2020.
                 </p>
                 <div className="flex flex-col items-center justify-center mt-4">
-                    <Image src="/vancouver_skyline.jpg" alt="Velocity Garage" width={400} height={400} className="rounded-lg" layout="intrinsic" />
+                    <Image src="/vancouver_skyline.jpg" alt="Velocity Garage" width={400} height={400} className="rounded-lg" />
                     <audio controls className="w-full mt-4">
                         <source src="audio/TDE_interview_small.mp3" type="audio/mpeg" />
                     </audio>
@@ -610,13 +613,13 @@ const ClickEnlarge2 = () => {
         <div className="hidden sm:block max-w-screen-lg mx-auto pt-16 pb-2 px-6 sm:px-10">
             <div className="grid grid-cols-3">
                 <div className="col-span-3 pt-10">
-                    <h2 className="font-unna font-bold italic text-left text-2xl text-yellow-600">
+                    <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
                         Patent Publication of Transport Kit, 2022
                     </h2>
                 </div>
                 <div className="col-span-1">
                     <div className="top-0 left-0 w-96 h-0">
-                        <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                        <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left">
                         </h2>
                     </div>
                 </div>
@@ -635,14 +638,14 @@ const ClickEnlarge2 = () => {
                 <div className="col-span-3 mt-4 flex flex-col items-left justify-start">
                     {/* Modified to add onClick event to show modal */}
                     <div className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
-                        <Image src="/kit_patent_full.jpg" alt="full kit patent" width={600} height={600} className="rounded-lg mb-4" layout="intrinsic" />
+                        <Image src="/kit_patent_full.jpg" alt="full kit patent" width={600} height={600} className="rounded-lg mb-4"/>
                     </div>
                 </div>
                 {/* Modal for enlarging the image */}
                 {isModalOpen && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
                         <div className="bg-white p-4 rounded-lg max-w-7xl max-h-full overflow-auto">
-                            <Image src="/kit_patent_full.jpg" alt="Enlarged Image" width={2000} height={2000} layout="intrinsic" />
+                            <Image src="/kit_patent_full.jpg" alt="Enlarged Image" width={2000} height={2000}  />
                             {/* Close button */}
                             <button onClick={() => setIsModalOpen(false)} className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">
                                 Close
@@ -662,7 +665,7 @@ const ClickEnlarge2Mobile = () => {
         <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-2 px-6">
             <div className="grid grid-cols-1">
                 <div className="pt-4">
-                    <h2 className="font-unna font-bold italic text-left text-xl text-yellow-600">
+                    <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
                         Patent Publication of Transport Kit, 2022
                     </h2>
                     <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
@@ -677,14 +680,14 @@ const ClickEnlarge2Mobile = () => {
                 <div className="mt-4 flex items-center justify-center">
                     {/* Modified to add onTap event to show modal */}
                     <div className="cursor-pointer" onClick={() => setIsModalOpen(true)}>
-                        <Image src="/kit_patent_full.jpg" alt="full kit patent" width={400} height={400} className="rounded-lg mb-4" layout="intrinsic" />
+                        <Image src="/kit_patent_full.jpg" alt="full kit patent" width={400} height={400} className="rounded-lg mb-4" />
                     </div>
                 </div>
                 {/* Modal for enlarging the image */}
                 {isModalOpen && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
                         <div className="bg-white p-4 rounded-lg max-w-xs max-h-full overflow-auto">
-                            <Image src="/kit_patent_full.jpg" alt="Enlarged Image" width={1000} height={1000} layout="intrinsic" />
+                            <Image src="/kit_patent_full.jpg" alt="Enlarged Image" width={1000} height={1000} />
                             {/* Close button */}
                             <button onClick={() => setIsModalOpen(false)} className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">
                                 Close
@@ -713,7 +716,7 @@ const NavPanel = () => (
                 <li key={index} className="md:col-span-1">
                     <Link href={item.href} passHref>
                         <div className="flex flex-col items-center">
-                            <Image src={item.imgSrc} alt={item.text} width={150} height={150} className="rounded-lg w-36 h-auto md:w-full" layout="intrinsic" />
+                            <Image src={item.imgSrc} alt={item.text} width={150} height={150} className="rounded-lg w-36 h-auto md:w-full" />
                             <span className="mt-2 text-sm">{item.text}</span>
                         </div>
                     </Link>

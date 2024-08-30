@@ -29,14 +29,14 @@ const HeaderDesktop = () => (
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
-                <h2 className="font-unna font-bold italic text-4xl text-white text-left">
+                <h2 className="font-roboto-slab font-bold text-4xl text-white text-left">
                     Engineering biology will <br /> revolutionize the human condition.
                 </h2>
             </div>
 
             <div className="col-span-0">
                 <div className="top-0 left-0 w-96 h-0">
-                    <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                    <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left">
                     </h2>
                 </div>
             </div>
@@ -50,14 +50,14 @@ const HeaderMobile = () => (
         <div className="grid grid-cols-3">
 
             <div className="col-span-3">
-                <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left">
                     Engineering biology will <br /> revolutionize the human condition.
                 </h2>
             </div>
 
             <div className="col-span-0">
                 <div className="top-0 left-0 w-96 h-0">
-                    <h2 className="font-unna font-bold italic text-3xl text-white text-left">
+                    <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left">
                     </h2>
                 </div>
             </div>
@@ -76,7 +76,7 @@ const PanelDesktop = () => (
 
             {/* Introduction */}
             <div className="col-span-12">
-                <h2 className="font-unna font-bold text-lg text-gray-400 text-left">
+                <h2 className="font-roboto-slab font-bold text-lg text-gray-400 text-left">
                     A few first principles toward my North Star:
                 </h2>
             </div>
@@ -152,7 +152,7 @@ const PanelMobile = () => (
     <div className="sm:hidden max-w-screen-lg mx-auto py-4 px-6 border-t">
         <div className="flex flex-col gap-y-12">
             <div className="col-span-12 mt-2">
-                <h2 className="font-unna font-bold italic text-lg text-gray-400 leading-tight text-center">
+                <h2 className="font-roboto-slab font-bold italic text-lg text-gray-400 leading-tight text-center">
                     First, a short story of first principles<br /> toward a North Star:
                 </h2>
             </div>
@@ -160,7 +160,7 @@ const PanelMobile = () => (
             {/* Section 1 */}
             <div className="flex flex-col items-center">
                 <Image src="/origin_of_life_2.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
-                <span className="font-unna font-bold italic text-3xl text-white">Life started itself</span>
+                <span className="font-roboto-slab font-bold italic text-3xl text-white">Life started itself</span>
                 <p className="font-roboto-slab font-extralight text-center text-xs px-2">
                     Earth-life emerged spontaneously and evolved itself into living diversity and brand new phenomenal categories.
                 </p>
@@ -168,7 +168,7 @@ const PanelMobile = () => (
             {/* Section 2 */}
             <div className="flex flex-col items-center">
                 <Image src="/diversity_of_life_3.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
-                <span className="font-unna font-bold italic text-3xl text-white">Evolved within the limit </span>
+                <span className="font-roboto-slab font-bold italic text-3xl text-white">Evolved within the limit </span>
                 <p className="font-roboto-slab font-extralight text-center text-xs px-2">
                     That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena
                     -- including consciousness itself -- strongly suggests our universe is capable of hosting other undiscovered phenomena.
@@ -177,7 +177,7 @@ const PanelMobile = () => (
             {/* Section 3 */}
             <div className="flex flex-col items-center">
                 <Image src="/intelligent_design_4.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
-                <span className="font-unna font-bold italic text-3xl text-white"> Can evolve un-constrained </span>
+                <span className="font-roboto-slab font-bold italic text-3xl text-white"> Can evolve un-constrained </span>
                 <p className="font-roboto-slab font-extralight text-centner text-xs px-2">
                     An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
                 </p>
@@ -185,7 +185,7 @@ const PanelMobile = () => (
             {/* Section 4 */}
             <div className="flex flex-col items-center pb-0">
                 <Image src="/brain_1.jpg" alt="Life" height={400} width={400} className="rounded-lg" />
-                <span className="font-unna font-bold italic text-3xl text-white"> We are also bioengineerable</span>
+                <span className="font-roboto-slab font-bold italic text-3xl text-white"> We are also bioengineerable</span>
                 <p className="font-roboto-slab font-extralight text-center text-xs px-2">
                     We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate,
                     human-experience-altering exploration.</p>
@@ -206,12 +206,12 @@ const TextSummary1 = () => (
             </div>
             {/* Text content beside the image */}
             <div className="col-span-5 flex flex-col justify-center">
-                <h2 className="font-unna font-bold italic text-2xl pl-2 text-white">
+                <h2 className="font-roboto-slab font-bold italic text-2xl pl-2 text-white">
                     So, let&#39;s accelerate bioengineering.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pl-2 pt-4">
                     We&#39;re at the tip of the <i>genetic hyperspace iceberg</i>. <br /><br />
-                    The kinds and scales of mechanical and phenomenological entities is near.
+                    The kinds and scales of mechanical and phenomenological entities possible is unimaginable.
                     <br /> <br />
                 </p>
             </div>
@@ -227,12 +227,12 @@ const TextSummary1Mobile = () => (
                 <Image src="/great_tree_iceberg.jpg" alt="Life" width={300} height={540} className="rounded-lg" layout="intrinsic" />
             </div>
             <div>
-                <h2 className="font-unna font-bold italic text-xl text-white text-center">
+                <h2 className="font-roboto-slab font-bold text-xl text-white text-center">
                     So, let&#39;s accelerate bioengineering.
                 </h2>
                 <p className="font-roboto-slab font-extralight text-gray-400 text-center text-sm pt-4">
                     We&#39;re at the tip of the <i>genetic hyperspace iceberg</i>.<br /><br />
-                    The kinds and scales of mechanical and phenomenological entities are near.
+                    The kinds and scales of mechanical and phenomenological entities possible is unimaginable.
                 </p>
             </div>
         </div>
@@ -245,7 +245,7 @@ const TextSummary2 = () => (
         <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-12">
             {/* Text content beside the image */}
             <div className="col-span-3 flex flex-col justify-center">
-                <h2 className="font-unna font-bold italic text-right text-2xl pr-2 text-white">
+                <h2 className="font-roboto-slab font-bold italic text-right text-2xl pr-2 text-white">
                     Powerfully, with AI
                 </h2>
                 <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pr-2 pt-4 text-right">
@@ -269,7 +269,7 @@ const TextSummary2Mobile = () => (
                 <div>
                     <Image src="/wizard_bird.jpg" alt="Life" width={350} height={400} className="rounded-lg" layout="intrinsic" />
                 </div>
-                <h2 className="font-unna font-bold italic text-xl text-white text-center pt-8">
+                <h2 className="font-roboto-slab font-bold italic text-xl text-white text-center pt-8">
                     Powerfully, with AI
                 </h2>
                 <p className="font-roboto-slab font-extralight text-gray-400 text-center text-sm pt-4">
@@ -283,45 +283,69 @@ const TextSummary2Mobile = () => (
 
 
 
+
 const ComingSoonDesktop = () => (
-    <div className="hidden sm:block max-w-screen-lg mx-auto pt-16 px-6">
-        {/* Grid layout */}
-        <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
-            {/* Text content beside the image */}
-            <div className="col-span-8 flex flex-col justify-center pt-20 pb-20">
-                <h2 className="font-unna text-center font-bold italic text-3xl text-white">
-                    I&#39;ll upload progress here as I go.
-                </h2>
-                <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4">
-                    Javascript model of the origin of life coming soon. <br />
-                    But for now hang tight. I&#39;m just one guy learning and building as much as possible, you know.
-                    <br /> <br />
-                </p>
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-16 px-6 sm:px-10">
+        <div className="grid grid-cols-3">
+
+            <div className="col-span-3">
+            <h2 className="font-roboto-slab text-center font-bold italic text-3xl text-white">
+                        I'll upload progress here as I go.
+                    </h2>
+                    <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4">
+                        Javascript model of the origin of life here to kick things off! <br />
+                        <br /> <br />
+                    </p>
+                 
+                    <div className="mt-4 flex justify-center">
+                        <iframe
+                            src="/OOL_Sim/index.html"
+                            width="135%"
+                            height="700px"
+                            style={{ border: 'none' }}
+                            title="Origin of Life Simulation"
+                        ></iframe>
+                    </div>
             </div>
+
+            <div className="col-span-0">
+                <div className="top-0 left-0 w-96 h-0">
+                    <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left">
+                    </h2>
+                </div>
+            </div>
+
         </div>
     </div>
 );
 
 
-const ComingSoonMobile = () => (
-    <div className="sm:hidden max-w-screen-lg mx-auto pt-16 px-6">
-        {/* Grid layout */}
-        <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
-            {/* Text content beside the image */}
-            <div className="col-span-8 flex flex-col justify-center pt-20 pb-20">
-                <h2 className="font-unna text-center font-bold italic text-3xl text-white">
-                    I&#39;ll upload progress <br />  here as I go.
-                </h2>
-                <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
-                    Javascript model of the origin of life coming soon. <br />
-                    But for now hang tight. I&#39;m just one guy learning and building as much as possible, you know.
-                    <br /> <br />
-                </p>
+const ComingSoonMobile = () => {
+    return (
+        <div className="sm:hidden max-w-screen-lg mx-auto pt-16 px-6">
+            <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
+                <div className="col-span-8 flex flex-col justify-center pt-20 pb-20">
+                    <h2 className="font-roboto-slab text-center font-bold italic text-3xl text-white">
+                        I'll upload progress here as I go.
+                    </h2>
+                    <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
+                        Javascript model of the origin of life to kick things off! <br />
+                        <br /> <br />
+                    </p>
+                    <div className="mt-4 flex justify-center">
+                        <iframe
+                            src="/OOL_Sim/index.html"
+                            width="100%"
+                            height="500px"
+                            style={{ border: 'none' }}
+                            title="Origin of Life Simulation"
+                        ></iframe>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-);
-
+    );
+};
 
 
 
