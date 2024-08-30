@@ -290,7 +290,7 @@ const ComingSoonDesktop = () => (
 
             <div className="col-span-3">
             <h2 className="font-roboto-slab text-center font-bold italic text-3xl text-white">
-                        I'll upload progress here as I go.
+                        I&#39;ll upload progress here as I go.
                     </h2>
                     <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4">
                         Javascript model of the origin of life here to kick things off! <br />
@@ -326,7 +326,7 @@ const ComingSoonMobile = () => {
             <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
                 <div className="col-span-8 flex flex-col justify-center pt-20 pb-20">
                     <h2 className="font-roboto-slab text-center font-bold italic text-3xl text-white">
-                        I'll upload progress here as I go.
+                        I&#39;ll upload progress here as I go.
                     </h2>
                     <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
                         Javascript model of the origin of life to kick things off! <br />
