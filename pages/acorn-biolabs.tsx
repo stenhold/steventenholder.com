@@ -58,7 +58,7 @@ const HeaderDesktop = () => (
 
 
             <div className="col-span-3">
-                <h2 className="font-roboto-slab text-md text-gray-200 text-left pr-80 pt-8">
+                <h2 className="font-roboto-slab text-md text-gray-200 text-left pr-50 pt-8">
                     This page is intended to be a fun time-capsule of nostalgic moments that 
                     <br />
                     capture my story with Acorn
@@ -88,7 +88,7 @@ const HeaderMobile = () => (
 
             <div className="col-span-3">
                 <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
-                    I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">Acorn Biolabs</a> to make that idea real.
+                    Back in 2015, I conceived of and co-founded <a href="https://acorn.me" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">Acorn Biolabs</a> to make that idea real.
                 </h2>
             </div>
 
@@ -129,9 +129,9 @@ const TheLogic = () => (
                     <Image src="/pascal.png" alt="Life" width={800} height={700} className="rounded-lg"/>
                 </div>
             </div>
-            <div className="col-span-2 flex flex-col justify-center pt-0 pb-2">
+            <div className="col-span-3 flex flex-col justify-center pt-0 pb-2">
                 <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-                    <span className=" text-left font-bold text-lg text-gray-100">
+                    <span className=" text-left font-bold text-xl text-white">
                      Have you heard of Pascal&#39;s Wager?
                      </span>
                      <br />
@@ -152,7 +152,7 @@ const TheLogic = () => (
                     <br /><br />
                     <br />
 
-                    <span className=" text-left font-bold text-lg text-gray-100">
+                    <span className=" text-left font-bold text-xl text-white">
                     My modern bioengineering-longevity-version goes like this:
                      </span>  <br /> <br />
 
@@ -180,9 +180,9 @@ const TheLogic = () => (
                     <Image src="/longevity_wager.png" alt="Life" width={800} height={700} className="rounded-lg"/>
                 </div>
             </div>
-            <div className="col-span-2 flex flex-col justify-center pt-0 pb-20">
+            <div className="col-span-3 flex flex-col justify-center pt-0 pb-20">
                 <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-                    <span className=" text-left font-bold text-lg text-gray-100">    
+                    <span className=" text-left font-bold text-xl font-white">    
                     Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager. 
                     </span>
                     <br /><br />
@@ -196,7 +196,9 @@ const TheLogic = () => (
                     <br /><br />
                     This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
                     <br /><br /><br />
-                    <span className="font-roboto-slab font-bold text-lg">The cost of cryopreservation is low. </span>
+                    <span className="font-roboto-slab font-bold text-lg">
+                    The cost of cryopreservation is low. 
+                    </span>
                     <br /><br /> It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with Drew Taylor and Patrick Pumputis
                     In our lifetimes scientists will have created bio-engineering solutions powerful enough to improve our lifespans using preserved young cellular material. It really matters whether you preserved your cells or not because you&#39;re risking the worst possible outcome: missing out on the opportunity to continue doing the things you love indefinitely.
                     That&#39;s pretty powerful. Is it more or less convincing than the original wager? It becomes personal to each of us to look at the facts, what we believe in, what we want out of life, and how much we feel there&#39;s a real opportunity for bio-engineering to achieve something.
@@ -226,7 +228,7 @@ const TheLogicMobile = () => (
 
             <div className="col-span-1 flex flex-col justify-center pt-0 pb-2">
                 <p className="font-roboto-slab font-extralight text-left text-xs pr-4 pt-4">
-                    <span className="font-roboto-slab text-xl">Have you heard of Pascal&#39;s Wager?</span>
+                    <span className="font-roboto-slab text-lg">Have you heard of Pascal&#39;s Wager?</span>
                     <br /><br />
                     It&#39;s about as mathematical a reason to believe in God as any. Pascal didn&#39;t rely on evidence or revelation for his argument. Instead, he stressed the relatively insignificant cost to secure the possibility of an infinitely positive outcome; when the enormities of heaven and hell are at stake, disbelief becomes illogical.
                     <br /><br />
