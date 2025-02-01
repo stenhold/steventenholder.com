@@ -1,0 +1,114 @@
+Folder PATH listing for volume 1 TB
+Volume serial number is 1C6A-1E65
+C:.
+¦   .eslintrc.json
+¦   .gitignore
+¦   folder_tree.txt
+¦   metadata.ts
+¦   next.config.mjs
+¦   package-lock.json
+¦   package.json
+¦   postcss.config.js
+¦   README.md
+¦   tailwind.config.ts
+¦   tsconfig.json
+¦   vercel.json
+¦   
++---app
+¦       favicon.ico
+¦       layout.tsx
+¦       
++---components
+¦       Footer.tsx
+¦       ImageLink.tsx
+¦       
++---pages
+¦   ¦   acorn-biolabs.tsx
+¦   ¦   archive.tsx
+¦   ¦   bioeng.tsx
+¦   ¦   blog.tsx
+¦   ¦   index.tsx
+¦   ¦   podcast.tsx
+¦   ¦   _app.tsx
+¦   ¦   _document.js
+¦   ¦   
+¦   +---api
+¦           rss.js
+¦           
++---podcast
+¦       episode1.mp3
+¦       episode2.mp3
+¦       episode3.mp3
+¦       episode4.mp3
+¦       episode5.mp3
+¦       episode6.mp3
+¦       
++---public
+¦   ¦   acorn_biolabs.jpg
+¦   ¦   acorn_biolabs_1950.jpg
+¦   ¦   acorn_cryo_chamber.jpg
+¦   ¦   bio_eng.jpg
+¦   ¦   bio_eng_2.jpg
+¦   ¦   bio_eng_img.jpg
+¦   ¦   blog.jpg
+¦   ¦   blog_cosmos.jpg
+¦   ¦   brain_1.jpg
+¦   ¦   brain_1.png
+¦   ¦   close.png
+¦   ¦   davinci.jpg
+¦   ¦   disrupt_mag.jpg
+¦   ¦   disrupt_mag_1.jpg
+¦   ¦   disrupt_mag_2.jpg
+¦   ¦   diversity_of_life.jpg
+¦   ¦   diversity_of_life_3.jpg
+¦   ¦   great_tree_iceberg.jpg
+¦   ¦   growing_neurons_8mb.gif
+¦   ¦   home-kit-diagram.png
+¦   ¦   iceberg.jpg
+¦   ¦   iceberg_tech_tree.jpg
+¦   ¦   intelligent_design.jpg
+¦   ¦   intelligent_design_4.jpg
+¦   ¦   jlabs.jpg
+¦   ¦   jlabs_toronto.jpg
+¦   ¦   kit_patent_1.jpg
+¦   ¦   kit_patent_2.jpg
+¦   ¦   kit_patent_full.jpg
+¦   ¦   kit_patent_page_2.jpg
+¦   ¦   life_on_earth.jpg
+¦   ¦   logo.png
+¦   ¦   longevity_wager.png
+¦   ¦   neurons_background.jpg
+¦   ¦   origin_of_life_1.jpg
+¦   ¦   origin_of_life_2.jpg
+¦   ¦   pascal.png
+¦   ¦   patent_1.jpg
+¦   ¦   podcast_conversations.jpg
+¦   ¦   podcast_convos.jpg
+¦   ¦   rss_feed.xml
+¦   ¦   s.png
+¦   ¦   steven.png
+¦   ¦   Stevens Conversations middle.jpg
+¦   ¦   stevens_conversations_banner.jpg
+¦   ¦   steven_s_conversations_square.png
+¦   ¦   vancouver_skyline.jpg
+¦   ¦   velocity.jpg
+¦   ¦   velocity_garage.jpg
+¦   ¦   v_garage.jpg
+¦   ¦   wizard_AI_creator.jpg
+¦   ¦   wizard_AI_creator_v.jpg
+¦   ¦   wizard_bird.jpg
+¦   ¦   
+¦   +---audio
+¦   ¦       spotlight_on_the_six_interview.mp3
+¦   ¦       TDE_interview_small.mp3
+¦   ¦       ten_with_ken_Steven_interview.mp3
+¦   ¦       
+¦   +---OOL_Sim
+¦           index.html
+¦           script.js
+¦           sketch.js
+¦           style.css
+¦           
++---styles
+        globals.css
+        

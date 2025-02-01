@@ -1,13 +1,10 @@
 {
     "version": 2,
     "routes": [
-        {
-            "src": "/podcasts",
-            "dest": "/podcasts.html"
-        },
-        {
-            "src": "/podcast",
-            "dest": "/podcasts.html"
-        }
+      {
+        "src": "/podcasts",
+        "dest": "/podcast" 
+      }
     ]
-}
+  }
+  
