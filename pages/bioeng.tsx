@@ -52,7 +52,7 @@ const HeaderMobile = () => (
 
 /** Desktop panel content */
 const PanelDesktop = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-4 pb-4 px-6 sm:px-10 border-t">
+  <div className="hidden sm:block max-w-screen-lg mx-auto pt-4 pb-0 px-6 sm:px-10 border-t">
     <div className="grid grid-cols-12 gap-y-8 gap-x-4">
       {/* Introduction */}
       <div className="col-span-12">
@@ -270,14 +270,14 @@ const PanelMobile = () => (
 
 /** Desktop simulation section */
 const ComingSoonDesktop = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-16 px-6 sm:px-10">
+  <div className="hidden sm:block max-w-screen-lg mx-auto pt-12 pb-16 px-6 sm:px-10 border-t">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
         <h2 className="font-roboto-slab text-center font-bold italic text-3xl text-white">
-          I’ll upload progress here as I go.
+            I’ll upload more ideas here as I go.
         </h2>
-        <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4">
-          Javascript model of the origin of life here to kick things off!<br /><br /><br />
+        <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4 pb-12">
+            Javascript model of the origin of life — as imagined by Freeman Dyson in the 1980s — to kick things off!
         </p>
         <div className="mt-4 flex justify-center">
           <iframe
@@ -335,7 +335,7 @@ const ComingSoonMobile = () => {
 /** Desktop summary section */
 const TextSummary1 = () => (
   <div className="hidden sm:block max-w-screen-lg mx-auto pt-8 px-6">
-    <div className="grid grid-cols-8 gap-4 border-t border-white">
+    <div className="grid grid-cols-8 gap-4 border-white">
       <div className="col-span-3 col-start-1 flex items-center pt-12">
         <Image
           src="/great_tree_iceberg.jpg"
@@ -368,7 +368,7 @@ const TextSummary1Mobile = () => (
           So, let’s accelerate bioengineering.
         </h2>
         <p className="font-roboto-slab text-gray-200 text-sm pt-4">
-          <i><u>We’re at the tip of the genetic hyperspace iceberg</u></i>.<br />
+          <i>We’re at the tip of the genetic hyperspace iceberg</i>.<br />
         </p>
         <p className="font-roboto-slab font-light text-gray-400 text-sm pt-4">
           The kinds and scales of mechanical and phenomenological entities possible is unimaginable.
@@ -392,7 +392,7 @@ const TextSummary1Mobile = () => (
 /** Desktop summary section for TextSummary2 */
 const TextSummary2 = () => (
   <div className="hidden sm:block">
-    <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-12">
+    <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-40">
       <div className="col-span-3 flex flex-col justify-center">
         <h2 className="font-roboto-slab font-bold italic text-right text-2xl pr-2 text-white">
           Powerfully, with AI
