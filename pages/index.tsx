@@ -27,7 +27,7 @@ const HeroDesktop = () => (
       <p className="font-roboto-slab text-gray-400 text-left text-xs sm:text-sm">
         Human longevity first. Intelligence next.
         <br />
-        Currently I&apos;m exploring how LLMs can empower bio-engineering.
+        Currently I&apos;m exploring how LLMs can empower bio-engineering with a new startup called zeroshotbio.
         <br />
         <br />
         I also have fun creating music, cinematography, podcasting,
@@ -45,7 +45,7 @@ const HeroDesktop = () => (
 
 /** Mobile hero */
 const HeroMobile = () => (
-  <div className="sm:hidden text-left px-10 pt-12">
+  <div className="sm:hidden text-left px-10 pt-20">
     <Image
       src="/steven.png"
       alt="Steven ten Holder"
@@ -68,7 +68,7 @@ const HeroMobile = () => (
       <p className="font-roboto-slab text-gray-400 text-left text-xs sm:text-sm">
         Human longevity first. Intelligence next.
         <br />
-        Currently I&apos;m exploring how LLMs can empower bio-engineering.
+        Currently I&apos;m exploring how LLMs can empower bio-engineering with a new startup called zeroshotbio.
         <br />
         <br />
         I also enjoy creating music, cinematography, and podcasting.

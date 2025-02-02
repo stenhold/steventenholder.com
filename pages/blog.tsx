@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 
 /** Desktop blog content */
 const BlogDesktop = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-8 px-6">
+  <div className="hidden sm:block max-w-screen-lg mx-auto pt-40 px-6">
     {/* Grid layout */}
     <div className="grid grid-cols-8 gap-4 border-t border-b pb-14 border-white">
       {/* Left-side image */}
@@ -58,7 +58,7 @@ const BlogDesktop = () => (
 
 /** Mobile blog content */
 const BlogMobile = () => (
-  <div className="sm:hidden max-w-screen-lg mx-auto pt-8 px-6">
+  <div className="sm:hidden max-w-screen-lg mx-auto pt-12 px-6">
     <div className="flex flex-col items-center">
       <div className="pb-8">
         <Image
@@ -74,7 +74,7 @@ const BlogMobile = () => (
         <h2 className="font-unna font-bold italic text-xl text-white text-center">
           I&#39;ve enjoyed writing about big questions.
         </h2>
-        <p className="font-roboto-slab italic text-gray-400 text-left pb-6 pt-8 text-xs sm:text-sm pl-4 pt-4">
+        <p className="font-roboto-slab italic text-gray-400 text-left pb-6 pt-4 text-xs sm:text-sm pl-4 pt-4">
           - What does our sexuality say about human nature?
           <br />
           - How valuable are humans on the cosmic scale?
@@ -82,12 +82,12 @@ const BlogMobile = () => (
           - Given modern progress, how should we define purpose?
           <br />
         </p>
-        <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-4">
+        <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-2">
           In each piece I attempt to take an empirical logical perspective on relevant, controversial human issues toward unintuitive conclusions.
           <br /> <br />
           Check it out:
         </p>
-        <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-10">
+        <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-6">
           <a
             href="https://medium.com/@steventen"
             target="_blank"

@@ -78,7 +78,7 @@ const HeaderMobile = () => (
   <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-8 px-6">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-roboto-slab italic text-4xl text-white text-left pb-16">
+        <h2 className="font-roboto-slab text-4xl text-white text-left pb-16 pt-8">
           Should we all be cryopreserving <br /> our own young cells for longevity?
         </h2>
       </div>
@@ -337,9 +337,11 @@ const TheLogicMobile = () => (
         </div>
 
         <p className="font-roboto-slab font-extralight text-left text-xs pr-4 pt-4">
+        <div className="pb-2 pt-8">
           <span className="font-roboto-slab text-lg">
             Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager..
           </span>
+        </div>
           <br />
           So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing
           to secure our spot in this possible heaven?
@@ -359,9 +361,11 @@ const TheLogicMobile = () => (
           This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
           <br />
           <br />
+          <div className="pb-0 pt-8">
           <span className="font-roboto-slab text-lg">
             The cost of cryopreservation is low and the possible benefits are high.
           </span>
+          </div>
           <br />
           <br />
           It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with Drew

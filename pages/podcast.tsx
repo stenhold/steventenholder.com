@@ -38,7 +38,7 @@ const HeaderDesktop = () => (
 
 /** Hero header for mobile */
 const HeaderMobile = () => (
-  <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
+  <div className="sm:hidden max-w-screen-lg mx-auto pt-20 pb-4 px-6">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
         <h2 className="font-unna italic text-4xl text-white text-left">
@@ -73,7 +73,7 @@ const ComingSoonDesktop = () => (
           I have many more <br /> conversations to upload.
         </h2>
         <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
-          Coming soon, but for now please enjoy what I have up:
+          I may upload more soon, but for now please enjoy what I have up:
         </p>
       </div>
     </div>
@@ -89,7 +89,7 @@ const ComingSoonMobile = () => (
           I have many more <br /> conversations to upload.
         </h2>
         <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
-          Coming soon, but for now please enjoy what I have up:
+          I may upload more soon, <br/> but for now please enjoy what I have up:
         </p>
       </div>
     </div>
@@ -164,7 +164,7 @@ const PodcastsMobile = () => (
 
 /** Nav panel to other pages */
 const NavPanel = () => (
-  <div className="max-w-screen-lg mx-auto pt-40 pb-20 px-10">
+  <div className="max-w-screen-lg mx-auto pt-8 pb-20 px-10">
     <ul className="grid grid-cols-2 sm:grid-cols-5 gap-10">
       {[
         { href: "/", imgSrc: "/steven.png", text: "Home" },
