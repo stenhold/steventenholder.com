@@ -411,13 +411,13 @@ const TheLogicMobile = () => (
   
 
 /** 
- * “Digital Memorabilia” heading for large screens 
+ * “Digital Memorabilia” heading for Desktop
  */
 const MemorabiliaDesktop = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10 border-t border-white">
+  <div className="hidden sm:block max-w-screen-lg mx-auto pt-40 pb-2 px-6 sm:px-10 border-t border-white">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-roboto-slab font-bold text-3xl text-gray-200 text-left">
+        <h2 className="font-roboto-slab font-bold text-3xl text-white text-left">
           Digital Memorabilia
         </h2>
       </div>
@@ -467,7 +467,7 @@ const ArchiveSection1 = () => (
     <div className="grid grid-cols-3">
       {/* Section 1 */}
       <div className="col-span-3 pt-4">
-        <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-xl text-blue-400">
           Pitching Justin Trudeau in Waterloo, 2016
         </h2>
         <p className="col-span-3 text-gray-400 font-roboto-slab font-extralight text-xs sm:text-sm pr-48 pt-0 text-left">
@@ -489,7 +489,7 @@ const ArchiveSection1 = () => (
 
       {/* Section 2 */}
       <div className="col-span-3 pt-28">
-        <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-xl text-blue-400">
           Acorn as an incubating startup in Waterloo, 2017
         </h2>
       </div>
@@ -519,7 +519,7 @@ const ArchiveSection1 = () => (
 
       {/* Section 3 */}
       <div className="col-span-3 pt-28">
-        <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-xl text-blue-400">
           Acorn as post-launch startup in Toronto, 2018
         </h2>
       </div>
@@ -636,7 +636,7 @@ const ClickEnlarge1 = () => {
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10">
       <div className="grid grid-cols-3">
         <div className="col-span-3 pt-10">
-        <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
+        <h2 className="font-roboto-slab font-bold text-left text-xl text-blue-400">
             Featured in Disrupt Magazine, 2019
           </h2>
         </div>
@@ -761,7 +761,7 @@ const ArchiveSection2 = () => (
     <div className="grid grid-cols-3">
       {/* Section 4 */}
       <div className="col-span-3 pt-28">
-        <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-xl text-blue-400">
           Discussing Acorn with a TKS students in Vancouver, 2020
         </h2>
       </div>
@@ -835,7 +835,7 @@ const ClickEnlarge2 = () => {
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-16 pb-2 px-6 sm:px-10">
       <div className="grid grid-cols-3">
         <div className="col-span-3 pt-10">
-      <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
+        <h2 className="font-roboto-slab font-bold text-left text-xl text-blue-400">
             Patent Publication of Transport Kit, 2022
           </h2>
         </div>
