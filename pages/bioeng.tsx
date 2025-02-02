@@ -26,7 +26,7 @@ const HeaderDesktop = () => (
   <div className="hidden sm:block max-w-screen-lg mx-auto pt-32 pb-16 px-6 sm:px-10">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-roboto-slab font-bold text-4xl text-white text-left">
+        <h2 className="font-roboto-slab  font-bold text-4xl text-white text-left">
           Engineering biology will <br /> revolutionize the human condition.
         </h2>
       </div>
@@ -44,7 +44,7 @@ const HeaderMobile = () => (
   <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-roboto-slab font-bold text-3xl text-white text-left">
+        <h2 className="font-roboto-slab font-bold text-2xl text-white text-left">
           Engineering biology will revolutionize the human condition.
         </h2>
       </div>
@@ -147,7 +147,7 @@ const PanelMobile = () => (
   <div className="sm:hidden max-w-screen-lg mx-auto pt-6 pb-16 px-6 sm:px-10 border-t">
     {/* Heading for the mobile panel */}
     <div className="w-full pb-16">
-      <h2 className="font-roboto-slab font-bold text-lg text-gray-400 text-left">
+      <h2 className="font-roboto-slab font-light text-sm text-gray-300 text-left">
         Here, a few first principles <br /> toward my current North Star:
       </h2>
     </div>

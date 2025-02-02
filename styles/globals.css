@@ -2,52 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Roboto and Unna fonts */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200&display=swap');
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  /* Set the primary font family to Roboto, but you can specify Unna or Roboto Slab for specific elements or classes as needed */
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-/* You might want to add specific classes for Unna and Roboto Slab or set them for specific elements */
-.unna-font {
-  font-family: 'Unna', serif;
-}
-
-.roboto-slab-font {
-  font-family: 'Roboto Slab', serif;
-}
-
+/* Root variables */
 :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* Base styles */
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    padding: 0;
+    margin: 0;
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Font family utility classes */
+.font-unna {
+    font-family: 'Unna', serif;
 }
+
+.font-roboto-slab {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Font weight utility classes for Roboto Slab */
+.font-thin {
+    font-weight: 100;
+}
+
+.font-extralight {
+    font-weight: 200;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+/* Custom utilities */
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+/* Note: We don't need to define custom text size classes here as Tailwind 
+   already provides these utilities. You can use them directly:
+   text-xs (0.75rem)
+   text-sm (0.875rem)
+   text-base (1rem)
+   text-lg (1.25rem)
+   text-xl (1.5rem)
+   text-2xl (1.875rem)
+   text-3xl (2.25rem)
+   text-4xl (3rem)
+   ...and so on
+*/
