@@ -242,7 +242,7 @@ const TheLogic = () => (
               This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
             </p>
   
-            <h3 className="font-roboto-slab font-bold text-lg pt-12">
+            <h3 className="text-left font-bold text-xl text-white pt-12">
               The cost of cryopreservation is low.
             </h3>
             
