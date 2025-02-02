@@ -82,41 +82,55 @@ const HeroMobile = () => (
   </div>
 );
 
-/** First row of clickable images */
+
+
+/** First row of clickable images with custom text styling */
 const ImagePanelFirstRow = () => (
   <div className="max-w-screen-lg mx-auto py-10">
-    <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mb-0">
+    <ul className="grid grid-rows-1 grid-cols-2 gap-8 sm:gap-20 mx-4 sm:mx-10 mb-0">
       <ImageLink
         href="/bioeng"
         imgSrc="/bio_eng.jpg"
         text="Bioengineering Ideas"
         gridClass="col-span-2 sm:col-span-1"
+        textSize="text-xl sm:text-2xl"
+        textWeight="font-medium"
+        textColor="text-white"
       />
       <ImageLink
         href="/acorn-biolabs"
         imgSrc="/acorn_biolabs_1950.jpg"
         text="Acorn Biolabs"
         gridClass="col-span-2 sm:col-span-1"
+        textSize="text-xl sm:text-2xl"
+        textWeight="font-medium"
+        textColor="text-white"
       />
     </ul>
   </div>
 );
 
-/** Second row of clickable images */
+/** Second row of clickable images with custom text styling */
 const ImagePanelSecondRow = () => (
   <div className="max-w-screen-lg mx-auto py-4">
-    <ul className="grid grid-rows-1 grid-cols-2 gap-20 m-10 mt-2">
+    <ul className="grid grid-rows-1 grid-cols-2 gap-8 sm:gap-20 mx-4 sm:mx-10 mt-2">
       <ImageLink
         href="/podcast"
         imgSrc="/podcast_conversations.jpg"
         text="Podcast"
         gridClass="col-span-2 sm:col-span-1"
+        textSize="text-lg sm:text-2xl"
+        textWeight="font-medium"
+        textColor="text-white"
       />
       <ImageLink
         href="/blog"
         imgSrc="/blog.jpg"
         text="Blog"
         gridClass="col-span-2 sm:col-span-1"
+        textSize="text-lg sm:text-2xl"
+        textWeight="font-medium"
+        textColor="text-white"
       />
     </ul>
   </div>

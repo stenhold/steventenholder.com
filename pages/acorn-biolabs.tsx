@@ -15,7 +15,7 @@ import Footer from "../components/Footer";
  * Large-screen hero/intro content 
  */
 const HeaderDesktop = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-16 pb-16 px-6 sm:px-10 border-b">
+  <div className="hidden sm:block max-w-screen-lg mx-auto pt-32 pb-16 px-6 sm:px-10 border-b">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
         <h2 className="font-roboto-slab font-bold text-4xl text-white text-left pb-4">
@@ -56,7 +56,7 @@ const HeaderDesktop = () => (
       </div>
 
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-md text-gray-200 text-left pr-50 pt-8">
+        <h2 className="font-roboto-slab text-base text-gray-300 text-left pr-50 pt-8 pb-16">
           This page is intended to be a fun time-capsule of nostalgic moments that
           <br />
           capture my story with Acorn from concept through execution.
@@ -75,17 +75,17 @@ const HeaderDesktop = () => (
  * Mobile hero/intro content 
  */
 const HeaderMobile = () => (
-  <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-8 px-6">
+  <div className="sm:hidden max-w-screen-lg mx-auto pt-16 pb-8 px-6">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-4xl text-white text-left pb-16 pt-8">
-          Should we all be cryopreserving <br /> our own young cells for longevity?
+        <h2 className="font-roboto-slab text-2xl font-extrabold text-white text-left pb-2 pt-8">
+          Should we be cryopreserving <br /> young cells for longevity?
         </h2>
       </div>
 
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
-          Back in 2015, I conceived of and co-founded{" "}
+        <h2 className="font-roboto-slab font-bold text-sm text-gray-100 text-left pt-2">
+          Back in 2015, I conceived of and co-founded{" "} <br/>
           <a
             href="https://acorn.me"
             target="_blank"
@@ -109,7 +109,7 @@ const HeaderMobile = () => (
       </div>
 
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-md text-gray-300 text-left pt-8">
+        <h2 className="font-roboto-slab text- text-gray-300 text-left pt-4 pb-12">
           This page is meant as fun time-capsule of nostalgic moments that capture my story with
           Acorn from concept to launched company.
           <br />
@@ -122,266 +122,293 @@ const HeaderMobile = () => (
   </div>
 );
 
-/** 
- * “Pascal's Bioengineering Wager” essay for desktop 
+/**
+ * "Pascal's Bioengineering Wager" essay for desktop 
  */
 const TheLogic = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-2 px-6 sm:px-10">
-    <div className="grid grid-cols-3">
-      <div className="col-span-3">
-        <div className="pt-4">
-          <h2 className="font-roboto-slab text-left font-bold text-3xl text-white">
-            Pascal&#39;s Bioengineering Wager
-          </h2>
-          <h2 className="font-roboto-slab text-left italic text-md text-gray-200 pt-3">
-            The logic behind modern young-cell cryopreservation.
-          </h2>
+    <div className="hidden sm:block max-w-screen-lg mx-auto pt-10 pb-2 px-6 sm:px-10">
+      <div className="grid grid-cols-3">
+        <div className="col-span-3">
+          <div className="pt-4">
+            <h2 className="font-roboto-slab text-left font-bold text-3xl text-white">
+              Pascal&#39;s Bioengineering Wager
+            </h2>
+            <h2 className="font-roboto-slab text-left text-base text-gray-400 pt-3">
+              The logic behind modern young-cell cryopreservation.
+            </h2>
+          </div>
+  
+          <div className="flex items-center pt-8 pb-4">
+            <Image
+              src="/pascal.png"
+              alt="Life"
+              width={800}
+              height={700}
+              className="rounded-lg"
+            />
+          </div>
         </div>
-
-        <div className="flex items-center pt-8 pb-4">
-          <Image
-            src="/pascal.png"
-            alt="Life"
-            width={800}
-            height={700}
-            className="rounded-lg"
-          />
+  
+        <div className="col-span-3 flex flex-col justify-center pt-8 pb-2">
+          <div className="font-roboto-slab text-gray-300 font-extralight text-left text-xs sm:text-sm pr-20 pt-4 space-y-3">
+            <h3 className="text-left font-bold text-xl text-white">
+              Have you heard of Pascal&#39;s Wager?
+            </h3>
+            
+            <p>
+              It&#39;s a very simple, statistically reliable reason to believe in the Christian God.
+            </p>
+            
+            <p>
+              Neither does Pascal depend on evidence nor personal revelation for his argument. Instead,
+              he merely emphasizes the relatively insignificant cost to secure{" "}
+              <i>the possibility</i> of an infinitely positive outcome: eternity in heaven. While a
+              reasonable thinker may doubt heaven&#39;s existence on any number of grounds, there will
+              always remain an inescapable uncertainty. One hour of church once a week (plus tithing)
+              isn&#39;t an irrational price to pay to hedge one&#39;s bets.
+            </p>
+            
+            <p>
+              Whether or not Pascal&#39;s Wager is actually convincing, his argument&#39;s underlying
+              rationale apply neatly today to human longevity.
+            </p>
+  
+            <h3 className="text-left font-bold text-xl text-white pt-12">
+              My modern bioengineering-longevity-version goes like this:
+            </h3>
+            
+            <p>
+              There are compelling reasons to believe biotechnology is going to continue advancing
+              tremendously in the coming decades and those advancements may lead to radical
+              life-extension therapeutics.
+            </p>
+            
+            <p>
+              Imagine, for example, using your own cells in a 3D-bioprinter to create a fresh new liver
+              that could save your life. Or modifying the embryological process to generate new organs
+              from individual stem cells for transplant.
+            </p>
+            
+            <p>
+              Both are real strategies already in preliminary proof-of-concept that could lead to
+              substantial health and life-extension improvements.
+            </p>
+            
+            <p>
+              If we can manage to live decades or centuries longer we can bear witness to human
+              civilizational progress over millennial time-scales, upgrade our own intelligence, and
+              join humanity&#39;s incredibly rich technological future into the stars and beyond.
+              Basically, <i>real</i> heaven.
+            </p>
+          </div>
+  
+          <div className="flex items-center pt-16 pb-16">
+            <Image
+              src="/longevity_wager.png"
+              alt="Life"
+              width={600}
+              height={700}
+              className="rounded-lg"
+            />
+          </div>
         </div>
-      </div>
+  
+        <div className="col-span-3 flex flex-col justify-center pt-0 pb-32">
+          <div className="font-roboto-slab text-gray-300  font-extralight text-left text-xs sm:text-sm pr-20 space-y-3 leading-relaxed">
+            <h3 className="text-left font-bold text-xl text-white">
+              Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager.
+            </h3>
+            <p>
+              So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing to
+              get secure our spot in this possible heaven?
+            </p>
+            <p>
+              Well, there&#39;s trouble in paradise - an original sin, of sorts.
+            </p>
+            <p>
+              The quality of the cells you start with might matter a lot and we&#39;re all getting old,
+              fast.
+            </p>
 
-      <div className="col-span-3 flex flex-col justify-center pt-0 pb-2">
-        <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-          <span className="text-left font-bold text-xl text-white">
-            Have you heard of Pascal&#39;s Wager?
-          </span>
-          <br />
-          <br />
-          It&#39;s a very simple, statistically reliable reason to believe in the Christian God.
-          <br />
-          <br />
-          Neither does Pascal depend on evidence nor personal revelation for his argument. Instead,
-          he merely emphasizes the relatively insignificant cost to secure{" "}
-          <i>the possibility</i> of an infinitely positive outcome: eternity in heaven. While a
-          reasonable thinker may doubt heaven&#39;s existence on any number of gounrds, there will
-          always remain an inescapable uncertanty. One hour of church once a week (plus tithing)
-          isn&#39;t an irrational price to pay to hedge one&#39;s bets.
-          <br />
-          <br />
-          Wether or not Pascal&#39;s Wager is actually convincing, his argument&#39;s underlying
-          rationalle apply neatly today to human longevity.
-          <br />
-          <br />
-          <br />
-          <span className="text-left font-bold text-xl text-white">
-            My modern bioengineering-longevity-version goes like this:
-          </span>{" "}
-          <br /> <br />
-          There are compelling reasons to believe biotechnology is going to continue advancing
-          tremendously in the coming decades and those advancements may lead to radical
-          life-extension therapeutics.
-          <br />
-          <br />
-          Imagine, for example, using your own cells in a 3D-bioprinter to create a fresh new liver
-          that could save your life. Or modifying the embryological process to generate new organs
-          from individual stem cells for transplant.
-          <br />
-          <br />
-          Both are real strategies already in preliminary proof-of-concept that could lead to
-          substantial health and life-extension improvements.
-          <br />
-          <br />
-          If we can manage to live decades or centuries longer we can bear witness to human
-          civilizational progress over millennial time-scales, upgrade our own intelligence, and
-          join humanity&#39;s incredibly rich technological future into the stars and beyond.
-          Basically, <i>real</i> heaven.
-          <br />
-          <br />
-        </p>
-
-        <div className="flex items-center pt-4 pb-0">
-          <Image
-            src="/longevity_wager.png"
-            alt="Life"
-            width={800}
-            height={700}
-            className="rounded-lg"
-          />
+            <p>
+              Imagine yourself decades from now as an old fart donating your stem cells to be grown and
+              used in 3D-bioprinting to create your new liver, or heart, or skin, or kidney, or neurons.
+              Your stem cells suck because you&#39;re old. Your granddaughter is happy to donate her
+              healthy young stem cells, but the doctors tell you that your immune system won&#39;t accept.
+              If only you had… BANKED YOUR OWN STEM CELLS FOR YOURSELF WHEN YOU WERE YOUNG.
+            </p>
+            
+            <p>
+              This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
+            </p>
+  
+            <h3 className="font-roboto-slab font-bold text-lg pt-12">
+              The cost of cryopreservation is low.
+            </h3>
+            
+            <p>
+              It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with
+              Drew Taylor and Patrick Pumputis. In our lifetimes scientists will have created
+              bio-engineering solutions powerful enough to improve our lifespans using preserved young
+              cellular material. It really matters whether you preserved your cells or not because
+              you&#39;re risking the worst possible outcome: missing out on the opportunity to continue
+              doing the things you love indefinitely. That&#39;s pretty powerful. Is it more or less
+              convincing than the original wager? It becomes personal to each of us to look at the
+              facts, what we believe in, what we want out of life, and how much we feel there&#39;s a
+              real opportunity for bio-engineering to achieve something.
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div className="col-span-3 flex flex-col justify-center pt-0 pb-20">
-        <p className="font-roboto-slab font-extralight text-left text-xs sm:text-sm pr-20 pt-4">
-          <span className="text-left font-bold text-xl font-white">
-            Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager.
-          </span>
-          <br />
-          <br />
-          So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing to
-          get secure our spot in this possible heaven?
-          <br />
-          <br />
-          Well, there&#39;s trouble in paradise - an original sin, of sorts.
-          <br />
-          <br />
-          The quality of the cells you start with might matter a lot and we&#39;re all getting old,
-          fast.
-          <br />
-          <br />
-          Imagine yourself decades from now as an old fart donating your stem cells to be grown and
-          used in 3D-bioprinting to create your new liver, or heart, or skin, or kidney, or neurons.
-          Your stem cells suck because you&#39;re old. Your granddaughter is happy to donate her
-          healthy young stem cells, but the doctors tell you that your immune system won&#39;t accept.
-          If only you had… BANKED YOUR OWN STEM CELLS FOR YOURSELF WHEN YOU WERE YOUNG.
-          <br />
-          <br />
-          This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
-          <br />
-          <br />
-          <br />
-          <span className="font-roboto-slab font-bold text-lg">The cost of cryopreservation is low.</span>
-          <br />
-          <br />
-          It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with
-          Drew Taylor and Patrick Pumputis In our lifetimes scientists will have created
-          bio-engineering solutions powerful enough to improve our lifespans using preserved young
-          cellular material. It really matters whether you preserved your cells or not because
-          you&#39;re risking the worst possible outcome: missing out on the opportunity to continue
-          doing the things you love indefinitely. That&#39;s pretty powerful. Is it more or less
-          convincing than the original wager? It becomes personal to each of us to look at the
-          facts, what we believe in, what we want out of life, and how much we feel there&#39;s a
-          real opportunity for bio-engineering to achieve something.
-        </p>
       </div>
     </div>
-  </div>
-);
+  );
+
+
 
 /** 
- * Same essay for mobile screens 
+ * "Pascal's Bioengineering Wager" for Mobile  
  */
 const TheLogicMobile = () => (
-  <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-28 px-6 border-t">
-    <div className="grid grid-cols-1">
-      <div className="col-span-1">
-        <div className="pt-4">
-          <h2 className="font-roboto-slab text-left font-bold italic text-2xl text-white">
-            Pascal&#39;s Bioengineering Wager
-          </h2>
-          <h2 className="font-roboto-slab text-left font-bold italic text-sm text-gray-500">
-            The logic behind modern young-cell cryopreservation.
-          </h2>
-        </div>
-
-        <div className="flex items-center pt-8 pb-4">
-          <Image
-            src="/pascal.png"
-            alt="Pascal"
-            width={800}
-            height={700}
-            className="rounded-lg"
-          />
-        </div>
-      </div>
-
-      <div className="col-span-1 flex flex-col justify-center pt-0 pb-2">
-        <p className="font-roboto-slab font-extralight text-left text-xs pr-4 pt-4">
-          <span className="font-roboto-slab text-lg">Have you heard of Pascal&#39;s Wager?</span>
-          <br />
-          <br />
-          It&#39;s about as mathematical a reason to believe in God as any. Pascal didn&#39;t rely on
-          evidence or revelation for his argument. Instead, he stressed the relatively insignificant
-          cost to secure the possibility of an infinitely positive outcome; when the enormities of
-          heaven and hell are at stake, disbelief becomes illogical.
-          <br />
-          <br />
-          In basic terms, Pascal&#39;s argument is that logically you might as well believe in God.
-          <br />
-          <br />
-          When the benefit is infinitely positive and the consequence infinitely negative - heaven &
-          hell. Even in the face of uncertainty about the reality of heaven or hell, if the cost to
-          play it safe is low enough, you might as well go through the motions and believe! One hour
-          of church once a week isn&#39;t so bad when an infinity of good or bad after death are at
-          stake.
-          <br />
-          <br />
-          Whether or not Pascal&#39;s Wager is actually convincing, his argument&#39;s underlying
-          logic can apply neatly today to human longevity.
-          <br />
-          <br />
-          My bioengineering longevity version goes like this:
-          <br />
-          <br />
-          There are compelling reasons to believe biotechnology is going to continue advancing
-          tremendously in the coming decades and result in radical life-extension. Imagine, for
-          example, using your own cells in a 3D-bioprinter to create a fresh new liver that could
-          save your life. Or modifying the embryological process to generate new organs from
-          individual stem cells for transplant. Both are real strategies already in preliminary
-          proof-of-concept that could lead to substantial health and life-extension improvements.
-          <br />
-          <br />
-          If we can manage to live decades or centuries longer, we can bear witness to human
-          civilizational progress over millennial time-scales, upgrade our own intelligence, and
-          join humanity&#39;s incredibly rich technological future into the stars and beyond.
-          <br />
-          <br />
-        </p>
-
-        <div className="flex items-center pt-4 pb-0">
-          <Image
-            src="/longevity_wager.png"
-            alt="Life"
-            width={1000}
-            height={1000}
-            className="rounded-lg"
-          />
-        </div>
-
-        <p className="font-roboto-slab font-extralight text-left text-xs pr-4 pt-4">
-        <div className="pb-2 pt-8">
-          <span className="font-roboto-slab text-lg">
-            Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager..
-          </span>
-        </div>
-          <br />
-          So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing
-          to secure our spot in this possible heaven?
-          <br />
-          <br />
-          Well, there&#39;s trouble in paradise - an original sin, of sorts. The quality of the cells
-          you start with might matter a lot, and we&#39;re all getting old, fast.
-          <br />
-          <br />
-          Imagine yourself decades from now as an old fart donating your stem cells to be grown and
-          used in 3D-bioprinting to create your new liver, or heart, or skin, or kidney, or neurons.
-          Your stem cells suck because you&#39;re old. Your granddaughter is happy to donate her
-          healthy young stem cells, but the doctors tell you that your immune system won&#39;t accept.
-          If only you had… BANKED YOUR OWN STEM CELLS FOR YOURSELF WHEN YOU WERE YOUNG.
-          <br />
-          <br />
-          This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
-          <br />
-          <br />
-          <div className="pb-0 pt-8">
-          <span className="font-roboto-slab text-lg">
-            The cost of cryopreservation is low and the possible benefits are high.
-          </span>
+    <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-12 px-6 border-t">
+      <div className="grid grid-cols-1">
+        <div className="col-span-1">
+          <div className="pt-4">
+            <h2 className="font-roboto-slab text-left font-bold text-xl text-white">
+              Pascal&#39;s Bioengineering Wager
+            </h2>
+            <h2 className="font-roboto-slab text-left text-sm text-gray-400 pt-3">
+              The logic behind modern young-cell cryopreservation.
+            </h2>
           </div>
-          <br />
-          <br />
-          It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with Drew
-          Taylor and Patrick Pumputis In our lifetimes scientists will have created
-          bio-engineering solutions powerful enough to improve our lifespans using preserved young
-          cellular material. It really matters whether you preserved your cells or not because
-          you&#39;re risking the worst possible outcome: missing out on the opportunity to continue
-          doing the things you love indefinitely. That&#39;s pretty powerful. Is it more or less
-          convincing than the original wager? It becomes personal to each of us to look at the
-          facts, what we believe in, what we want out of life, and how much we feel there&#39;s a
-          real opportunity for bio-engineering to achieve something.
-        </p>
+  
+          <div className="flex items-center pt-8 pb-4">
+            <Image
+              src="/pascal.png"
+              alt="Life"
+              width={800}
+              height={700}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+  
+        <div className="col-span-1 flex flex-col justify-center pt-8 pb-2">
+          <div className="font-roboto-slab text-gray-300 font-extralight text-left text-xs sm:text-sm pr-4 pt-0 space-y-3">
+            <h3 className="text-left font-bold text-xl text-white">
+              Have you heard of Pascal&#39;s Wager?
+            </h3>
+            
+            <p>
+              It&#39;s a very simple, statistically reliable reason to believe in the Christian God.
+            </p>
+            
+            <p>
+              Neither does Pascal depend on evidence nor personal revelation for his argument. Instead,
+              he merely emphasizes the relatively insignificant cost to secure{" "}
+              <i>the possibility</i> of an infinitely positive outcome: eternity in heaven. While a
+              reasonable thinker may doubt heaven&#39;s existence on any number of grounds, there will
+              always remain an inescapable uncertainty. One hour of church once a week (plus tithing)
+              isn&#39;t an irrational price to pay to hedge one&#39;s bets.
+            </p>
+            
+            <p>
+              Whether or not Pascal&#39;s Wager is actually convincing, his argument&#39;s underlying
+              rationale apply neatly today to human longevity.
+            </p>
+  
+            <h3 className="text-left font-bold text-xl text-white pt-8">
+              My modern bioengineering-longevity-version goes like this:
+            </h3>
+            
+            <p>
+              There are compelling reasons to believe biotechnology is going to continue advancing
+              tremendously in the coming decades and those advancements may lead to radical
+              life-extension therapeutics.
+            </p>
+            
+            <p>
+              Imagine, for example, using your own cells in a 3D-bioprinter to create a fresh new liver
+              that could save your life. Or modifying the embryological process to generate new organs
+              from individual stem cells for transplant.
+            </p>
+            
+            <p>
+              Both are real strategies already in preliminary proof-of-concept that could lead to
+              substantial health and life-extension improvements.
+            </p>
+            
+            <p>
+              If we can manage to live decades or centuries longer we can bear witness to human
+              civilizational progress over millennial time-scales, upgrade our own intelligence, and
+              join humanity&#39;s incredibly rich technological future into the stars and beyond.
+              Basically, <i>real</i> heaven.
+            </p>
+          </div>
+  
+          <div className="flex items-center pt-12 pb-12">
+            <Image
+              src="/longevity_wager.png"
+              alt="Life"
+              width={600}
+              height={700}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+  
+        <div className="col-span-1 flex flex-col justify-center pt-0 pb-24">
+          <div className="font-roboto-slab text-gray-300 font-extralight text-left text-xs sm:text-sm pr-4 space-y-3">
+            <h3 className="text-left font-bold text-xl text-white">
+              Longevity is &#39;heaven&#39; in Pascal&#39;s Bioengineering Wager.
+            </h3>
+            
+            <p>
+              So, what&#39;s the &#39;church&#39;? What&#39;s the low-cost thing we should each be doing to
+              get secure our spot in this possible heaven?
+            </p>
+            
+            <p>
+              Well, there&#39;s trouble in paradise - an original sin, of sorts.
+            </p>
+            
+            <p>
+              The quality of the cells you start with might matter a lot and we&#39;re all getting old,
+              fast.
+            </p>
+            
+            <p>
+              Imagine yourself decades from now as an old fart donating your stem cells to be grown and
+              used in 3D-bioprinting to create your new liver, or heart, or skin, or kidney, or neurons.
+              Your stem cells suck because you&#39;re old. Your granddaughter is happy to donate her
+              healthy young stem cells, but the doctors tell you that your immune system won&#39;t accept.
+              If only you had… BANKED YOUR OWN STEM CELLS FOR YOURSELF WHEN YOU WERE YOUNG.
+            </p>
+            
+            <p>
+              This is &#39;church&#39; in my bio version of Pascal&#39;s Wager.
+            </p>
+  
+            <h3 className="text-left font-bold text-xl text-white pt-12">
+              The cost of cryopreservation is low.
+            </h3>
+            
+            <p>
+              It&#39;s called Acorn Biolabs and it&#39;s the startup I started and co-created with
+              Drew Taylor and Patrick Pumputis. In our lifetimes scientists will have created
+              bio-engineering solutions powerful enough to improve our lifespans using preserved young
+              cellular material. It really matters whether you preserved your cells or not because
+              you&#39;re risking the worst possible outcome: missing out on the opportunity to continue
+              doing the things you love indefinitely. That&#39;s pretty powerful. Is it more or less
+              convincing than the original wager? It becomes personal to each of us to look at the
+              facts, what we believe in, what we want out of life, and how much we feel there&#39;s a
+              real opportunity for bio-engineering to achieve something.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+  
 
 /** 
  * “Digital Memorabilia” heading for large screens 
@@ -390,7 +417,7 @@ const MemorabiliaDesktop = () => (
   <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10 border-t border-white">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-5xl text-gray-200 text-left">
+        <h2 className="font-roboto-slab font-bold text-3xl text-gray-200 text-left">
           Digital Memorabilia
         </h2>
       </div>
@@ -417,19 +444,20 @@ const MemorabiliaMobile = () => (
   <div className="sm:hidden max-w-screen-lg mx-auto pt-12 pb-2 px-6 border-t">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-4xl text-white text-left">
+        <h2 className="font-roboto-slab font-bold text-2xl text-left text-blue-400">
           Digital Memorabilia
         </h2>
       </div>
 
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
+        <h2 className="font-roboto-slab text-sm text-gray-300 text-left pt-2">
           Nostalgic bits of content from my years working on Acorn.
         </h2>
       </div>
     </div>
   </div>
 );
+
 
 /** 
  * ArchiveSection1 for desktop 
@@ -531,7 +559,7 @@ const ArchiveSection1Mobile = () => (
     <div className="grid grid-cols-1 gap-y-10">
       {/* Section 1 */}
       <div className="pt-8">
-        <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
           Pitching Justin Trudeau in Waterloo, 2016
         </h2>
         <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
@@ -550,7 +578,7 @@ const ArchiveSection1Mobile = () => (
 
       {/* Section 2 */}
       <div className="pt-8">
-        <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
           Acorn in the Velocity Garage, 2017
         </h2>
         <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
@@ -573,7 +601,7 @@ const ArchiveSection1Mobile = () => (
 
       {/* Section 3 */}
       <div className="pt-8">
-        <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
           Acorn post-launch startup in Toronto, 2018
         </h2>
         <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
@@ -608,7 +636,7 @@ const ClickEnlarge1 = () => {
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-2 px-6 sm:px-10">
       <div className="grid grid-cols-3">
         <div className="col-span-3 pt-10">
-          <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
+        <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
             Featured in Disrupt Magazine, 2019
           </h2>
         </div>
@@ -673,7 +701,7 @@ const ClickEnlarge1Mobile = () => {
     <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-2 px-6">
       <div className="grid grid-cols-1">
         <div className="pt-4">
-          <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
+        <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
             Featured in Disrupt Magazine, 2019
           </h2>
           <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
@@ -772,7 +800,7 @@ const ArchiveSection2Mobile = () => (
   <div className="sm:hidden max-w-screen-lg mx-auto pt-4 pb-2 px-6">
     <div className="grid grid-cols-1 gap-y-10">
       <div className="pt-8">
-        <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
           TKS student interview Vancouver, 2020
         </h2>
         <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">
@@ -807,7 +835,7 @@ const ClickEnlarge2 = () => {
     <div className="hidden sm:block max-w-screen-lg mx-auto pt-16 pb-2 px-6 sm:px-10">
       <div className="grid grid-cols-3">
         <div className="col-span-3 pt-10">
-          <h2 className="font-roboto-slab font-bold text-left text-xl text-yellow-600">
+      <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
             Patent Publication of Transport Kit, 2022
           </h2>
         </div>
@@ -876,7 +904,7 @@ const ClickEnlarge2Mobile = () => {
     <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-2 px-6">
       <div className="grid grid-cols-1">
         <div className="pt-4">
-          <h2 className="font-roboto-slab font-bold italic text-left text-xl text-yellow-600">
+        <h2 className="font-roboto-slab font-bold text-left text-base text-blue-400">
             Patent Publication of Transport Kit, 2022
           </h2>
           <p className="text-gray-400 font-roboto-slab font-extralight text-xs pt-2 text-left">

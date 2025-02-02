@@ -283,37 +283,37 @@ const ComingSoonDesktop = () => (
 
 /** Mobile simulation section */
 const ComingSoonMobile = () => {
-  // Optionally use the custom hook if you need to adjust parameters based on screen size:
-  const isMobile = useIsMobile();
-  return (
-    <div className="sm:hidden max-w-screen-lg mx-auto pt-24 px-6 pb-28">
-      <div className="grid grid-cols-8 gap-4 border-t border-white border-b pb-0">
-        <div className="col-span-8 flex flex-col justify-center pt-10 pb-8">
-          <h2 className="font-roboto-slab font-bold text-3xl text-white">
-            I’ll upload more ideas <br /> here as I go.
-          </h2>
-          <p className="font-roboto-slab font-extralight text-xs sm:text-sm pt-4">
-            Javascript model of the origin of life — as imagined by Freeman Dyson in the 1980s — to kick things off!
-          </p>
-          <div className="mt-4 flex justify-center">
-            <div className="w-full" style={{ maxWidth: "600px" }}>
-              <iframe
-                src="/OOL_Sim/index.html"
-                width="100%"
-                height="400px"
-                style={{ border: "none" }}
-                title="Origin of Life Simulation"
-              ></iframe>
+    const isMobile = useIsMobile();
+    
+    return (
+      <div className="sm:hidden max-w-screen-lg mx-auto pt-24 px-6 pb-28">
+        <div className="grid grid-cols-8 gap-4 border-t border-white border-b pb-0">
+          <div className="col-span-8 flex flex-col justify-center pt-10 pb-8">
+            <h2 className="font-roboto-slab font-bold text-2xl text-white">
+              I&#39;ll upload more ideas <br /> here as I go.
+            </h2>
+            <p className="font-roboto-slab font-extralight text-xs sm:text-sm pt-4">
+              Javascript model of the origin of life — as imagined by Freeman Dyson in the 1980s — to kick things off!
+            </p>
+            <div className="mt-4 flex justify-center">
+              <div className="w-full" style={{ maxWidth: "350px" }}>
+                <iframe
+                  src="/OOL_Sim_Mobile/index.html"
+                  width="100%"
+                  height="700px"
+                  style={{ border: "none" }}
+                  title="Origin of Life Simulation (Mobile)"
+                />
+              </div>
             </div>
+            <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-6 text-gray-400">
+              (Note: For best experience, try a tablet/desktop!)
+            </p>
           </div>
-          <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-6 text-gray-400">
-            (Note: For best experience, try a tablet/desktop!)
-          </p>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 /** Desktop summary section */
 const TextSummary1 = () => (

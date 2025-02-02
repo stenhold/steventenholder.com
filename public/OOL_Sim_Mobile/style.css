@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;  /* Reduced from 20px */
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    font-size: 18px;  /* Reduced from default */
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 80%;  /* Make slider more mobile-friendly */
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px 0;
+}
