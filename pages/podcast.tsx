@@ -1,3 +1,5 @@
+// pages/podcast.tsx
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -191,36 +193,6 @@ const NavPanel = () => (
   </div>
 );
 
-/** Gallery of hinge photos */
-const HingePhotoGallery = () => (
-  <div className="max-w-screen-lg mx-auto pt-8 px-6 sm:px-10">
-    <h2 className="font-unna italic text-2xl text-white text-left pb-4">
-      Hinge Photo Gallery
-    </h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-      {[
-        "/hinge_photos/1.png",
-        "/hinge_photos/2.png",
-        "/hinge_photos/3.png",
-        "/hinge_photos/4.png",
-        "/hinge_photos/5.png",
-        "/hinge_photos/6.png",
-      ].map((src, idx) => (
-        <div key={idx} className="flex justify-center">
-          <Image
-            src={src}
-            alt={`Hinge Photo ${idx + 1}`}
-            width={240}
-            height={320}
-            className="rounded-lg"
-            layout="intrinsic"
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
 /** Final page component */
 export default function PodcastPage() {
   return (
@@ -233,9 +205,6 @@ export default function PodcastPage() {
 
       <PodcastsDesktop />
       <PodcastsMobile />
-
-      {/* Added hinge photo gallery */}
-      <HingePhotoGallery />
 
       <NavPanel />
       <Footer />
