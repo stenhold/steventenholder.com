@@ -7,6 +7,37 @@ import Link from "next/link";
 // Import the shared Footer from your components folder instead of redefining it
 import Footer from "../components/Footer";
 
+const blogContent = {
+  title: "I've enjoyed writing about big questions.",
+  bullets: [
+    "What does our sexuality say about human nature?",
+    "How valuable are humans on the cosmic scale?",
+    "Given modern progress, how should we define purpose?",
+  ],
+  body:
+    "In each piece I attempt to take a logical perspective on relevant, controversial human issues toward unintuitive conclusions.",
+  cta: "Visit medium.com",
+  ctaHref: "https://medium.com/@steventen",
+  styles: {
+    // Desktop Control
+    desktop: {
+      title: "font-unna font-bold italic text-2xl pl-2 text-white",
+      bullets: "font-roboto-slab italic text-gray-400 text-left text-xs sm:text-sm pl-6 pt-4",
+      body: "font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-4",
+      ctaWrap: "font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-10",
+      cta: "inline-block bg-yellow-900 text-white px-6 py-3 rounded hover:bg-yellow-700 transition-colors",
+    },
+    // Mobile Control
+    mobile: {
+      title: "font-unna font-bold italic text-xl text-white text-center",
+      bullets: "font-roboto-slab italic text-gray-400 text-left text-xs sm:text-sm pl-4 pt-4",
+      body: "font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-2",
+      ctaWrap: "font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-6",
+      cta: "inline-block bg-yellow-900 text-white px-6 py-3 rounded hover:bg-yellow-700 transition-colors",
+    },
+  },
+};
+
 /** Desktop blog content */
 const BlogDesktop = () => (
   <div className="hidden sm:block max-w-screen-lg mx-auto pt-40 px-6">
@@ -20,35 +51,35 @@ const BlogDesktop = () => (
           width={500}
           height={900}
           className="rounded-lg"
-          layout="intrinsic"
         />
       </div>
       {/* Right-side text */}
       <div className="col-span-5 flex flex-col justify-center">
-        <h2 className="font-unna font-bold italic text-2xl pl-2 text-white">
-          I&#39;ve enjoyed writing about big questions.
+        {/* Desktop Control */}
+        <h2 className={blogContent.styles.desktop.title}>
+          {blogContent.title}
         </h2>
-        <p className="font-roboto-slab italic text-gray-400 text-left pb-6 pt-8 text-xs sm:text-sm pl-6 pt-4">
-          - What does our sexuality say about human nature?
-          <br />
-          - How valuable are humans on the cosmic scale?
-          <br />
-          - Given modern progress, how should we define purpose?
-          <br />
+        <p className={blogContent.styles.desktop.bullets}>
+          {blogContent.bullets.map((item) => (
+            <React.Fragment key={item}>
+              - {item}
+              <br />
+            </React.Fragment>
+          ))}
         </p>
-        <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-4">
-          In each piece I attempt to take an empirical logical perspective on relevant, controversial human issues toward unintuitive conclusions.
+        <p className={blogContent.styles.desktop.body}>
+          {blogContent.body}
           <br /> <br />
           Check it out:
         </p>
-        <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-10">
+        <p className={blogContent.styles.desktop.ctaWrap}>
           <a
-            href="https://medium.com/@steventen"
+            href={blogContent.ctaHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-yellow-900 text-white px-6 py-3 rounded hover:bg-yellow-700 transition-colors"
+            className={blogContent.styles.desktop.cta}
           >
-            Visit medium.com
+            {blogContent.cta}
           </a>
         </p>
       </div>
@@ -67,34 +98,34 @@ const BlogMobile = () => (
           width={300}
           height={540}
           className="rounded-lg"
-          layout="intrinsic"
         />
       </div>
       <div>
-        <h2 className="font-unna font-bold italic text-xl text-white text-center">
-          I&#39;ve enjoyed writing about big questions.
+        {/* Mobile Control */}
+        <h2 className={blogContent.styles.mobile.title}>
+          {blogContent.title}
         </h2>
-        <p className="font-roboto-slab italic text-gray-400 text-left pb-6 pt-4 text-xs sm:text-sm pl-4 pt-4">
-          - What does our sexuality say about human nature?
-          <br />
-          - How valuable are humans on the cosmic scale?
-          <br />
-          - Given modern progress, how should we define purpose?
-          <br />
+        <p className={blogContent.styles.mobile.bullets}>
+          {blogContent.bullets.map((item) => (
+            <React.Fragment key={item}>
+              - {item}
+              <br />
+            </React.Fragment>
+          ))}
         </p>
-        <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-2">
-          In each piece I attempt to take an empirical logical perspective on relevant, controversial human issues toward unintuitive conclusions.
+        <p className={blogContent.styles.mobile.body}>
+          {blogContent.body}
           <br /> <br />
           Check it out:
         </p>
-        <p className="font-roboto-slab font-extralight text-gray-200 text-left text-xs sm:text-sm pl-2 pt-6">
+        <p className={blogContent.styles.mobile.ctaWrap}>
           <a
-            href="https://medium.com/@steventen"
+            href={blogContent.ctaHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-yellow-900 text-white px-6 py-3 rounded hover:bg-yellow-700 transition-colors"
+            className={blogContent.styles.mobile.cta}
           >
-            Visit medium.com
+            {blogContent.cta}
           </a>
         </p>
       </div>
@@ -122,7 +153,6 @@ const NavPanel = () => (
                 width={150}
                 height={150}
                 className="rounded-lg w-36 h-auto md:w-full"
-                layout="intrinsic"
               />
               <span className="mt-2 text-sm">{item.text}</span>
             </div>

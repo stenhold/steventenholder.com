@@ -1,266 +1,381 @@
-// pages/bioeng.tsx
-
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Import shared components (Footer and possibly NavPanel) to avoid inline duplicates
 import Footer from "../components/Footer";
-// If you have a shared NavPanel in components, import it instead of defining it inline.
-// import NavPanel from "../components/NavPanel";
 
-// Custom hook to detect if the viewport is less than 640px (Tailwind's "sm" breakpoint)
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 640);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-  return isMobile;
-}
+/*
+  Tailwind reference for classes used on this page (default scale):
 
-/** Desktop hero/intro content */
-const HeaderDesktop = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-32 pb-16 px-6 sm:px-10">
-    <div className="grid grid-cols-3">
-      <div className="col-span-3">
-        <h2 className="font-roboto-slab  font-bold text-4xl text-white text-left">
-          Engineering biology will <br /> revolutionize the human condition.
+  Breakpoints
+  sm: = >= 640px (desktop rules start at this width)
+
+  Text sizes
+  text-xs  = 0.75rem  (12px)
+  text-sm  = 0.875rem (14px)
+  text-base= 1rem     (16px)
+  text-lg  = 1.125rem (18px)
+  text-xl  = 1.25rem  (20px)
+  text-2xl = 1.5rem   (24px)
+  text-3xl = 1.875rem (30px)
+  text-4xl = 2.25rem  (36px)
+
+  Font families / styles
+  font-unna        = Unna (serif)
+  font-roboto-slab = Roboto Slab (serif)
+  italic           = italic style
+  font-extralight  = 200
+
+  Text alignment & color
+  text-left / text-center / text-right
+  text-white, text-gray-400
+
+  Spacing scale (px/py/pt/pb/mt/mb/space-y/gap use the same scale)
+  1  = 0.25rem (4px)
+  2  = 0.5rem  (8px)
+  3  = 0.75rem (12px)
+  4  = 1rem    (16px)
+  6  = 1.5rem  (24px)
+  8  = 2rem    (32px)
+  10 = 2.5rem  (40px)
+  12 = 3rem    (48px)
+  24 = 6rem    (96px)
+  28 = 7rem    (112px)
+  32 = 8rem    (128px)
+  40 = 10rem   (160px)
+
+  Layout / sizing
+  max-w-screen-lg = 1024px
+  w-full = 100%
+  rounded-lg = 0.5rem (8px)
+  object-cover = image crops to fill
+  hidden / block / flex = display utilities
+
+  Grid
+  grid / grid-cols-2 / grid-cols-3 / grid-cols-8 / grid-cols-12
+  col-span-* = number of columns to span in the current grid
+*/
+
+
+const Header = () => (
+  <div className="w-full max-w-screen-lg mx-auto pt-10 pb-4 sm:pt-32 sm:pb-16 px-6 sm:px-10">
+    {/* Desktop Control: sm:text-4xl | Mobile Control: text-2xl */}
+    <h2 className="font-unna italic text-2xl sm:text-4xl text-white text-left">
+      Engineering biology will <br /> revolutionize the human condition.
+    </h2>
+  </div>
+);
+
+const Panel = () => (
+  <div className="max-w-screen-lg mx-auto pt-4 pb-16 px-6 sm:px-10 border-t">
+    {/* Desktop Control: sm:text-lg | Mobile Control: text-sm */}
+    <h2 className="font-roboto-slab text-sm sm:text-lg text-gray-400 text-left">
+      A few first principles toward my North Star:
+    </h2>
+    <div className="mt-8 space-y-8">
+      {bioSections.map((section) => (
+        <div key={section.title} className="grid grid-cols-12 gap-x-4 gap-y-2 sm:gap-y-8">
+          <div className={section.styles.mobile.imageWrap}>
+            <Image
+              src={section.imageSrc}
+              alt={section.imageAlt}
+              height={400}
+              width={400}
+              className={section.styles.mobile.image}
+            />
+          </div>
+          <div className={section.styles.mobile.textWrap}>
+            {/* Desktop Control */}
+            <h3 className={`hidden sm:block ${section.styles.desktop.title}`}>
+              {section.title}
+            </h3>
+            {/* Mobile Control */}
+            <h3 className={`sm:hidden ${section.styles.mobile.title}`}>
+              {section.title}
+            </h3>
+            <p className={`sm:hidden ${section.styles.mobile.body}`}>
+              {section.body}
+            </p>
+            <p className={`hidden sm:block ${section.styles.desktop.body}`}>
+              {section.body}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+
+const bioSections = [
+  {
+    title: "Life started itself",
+    body:
+      "Earth-life emerged spontaneously from the primordial earth ~4 billion years ago and evolved itself into brand new phenomenal categories.",
+    imageSrc: "/origin_of_life_2.jpg",
+    imageAlt: "Life",
+    styles: {
+      // Mobile Control
+      mobile: {
+        title: "font-roboto-slab text-base text-white text-left py-1",
+        body: "font-roboto-slab font-extralight text-gray-400 text-left text-xs mt-1",
+        image: "rounded-lg object-cover",
+        imageWrap: "col-span-5",
+        textWrap: "col-span-7 flex flex-col justify-center px-2",
+      },
+      // Desktop Control
+      desktop: {
+        title: "font-roboto-slab text-xl text-white text-left py-1",
+        body: "font-roboto-slab font-extralight text-gray-400 text-left text-sm mt-1",
+        image: "rounded-lg object-cover",
+        imageWrap: "col-span-5",
+        textWrap: "col-span-7 flex flex-col justify-center px-0",
+      },
+    },
+  },
+  {
+    title: "Evolved within the limit",
+    body:
+      "That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena — including consciousness itself — strongly suggests our universe is capable of hosting other undiscovered phenomena.",
+    imageSrc: "/diversity_of_life_3.jpg",
+    imageAlt: "Life",
+    styles: {
+      // Mobile Control
+      mobile: {
+        title: "font-roboto-slab text-base text-white text-left py-1",
+        body: "font-roboto-slab font-extralight text-gray-400 text-left text-xs mt-1",
+        image: "rounded-lg object-cover",
+        imageWrap: "col-span-5",
+        textWrap: "col-span-7 flex flex-col justify-center px-2",
+      },
+      // Desktop Control
+      desktop: {
+        title: "font-roboto-slab text-xl text-white text-left py-1",
+        body: "font-roboto-slab font-extralight text-gray-400 text-left text-sm mt-1",
+        image: "rounded-lg object-cover",
+        imageWrap: "col-span-5",
+        textWrap: "col-span-7 flex flex-col justify-center px-0",
+      },
+    },
+  },
+  {
+    title: "Has potential beyond the limit",
+    body:
+      "Natural selection was the only game in town, but isn’t the only way. An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.",
+    imageSrc: "/intelligent_design_4.jpg",
+    imageAlt: "Life",
+    styles: {
+      // Mobile Control
+      mobile: {
+        title: "font-roboto-slab text-base text-white text-left py-1",
+        body: "font-roboto-slab font-extralight text-gray-400 text-left text-xs mt-1",
+        image: "rounded-lg object-cover",
+        imageWrap: "col-span-5",
+        textWrap: "col-span-7 flex flex-col justify-center px-2",
+      },
+      // Desktop Control
+      desktop: {
+        title: "font-roboto-slab text-xl text-white text-left py-1",
+        body: "font-roboto-slab font-extralight text-gray-400 text-left text-sm mt-1",
+        image: "rounded-lg object-cover",
+        imageWrap: "col-span-5",
+        textWrap: "col-span-7 flex flex-col justify-center px-0",
+      },
+    },
+  },
+  {
+    title: "We too are engineerable biology",
+    body:
+      "We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, human-experience-altering exploration.",
+    imageSrc: "/brain_1.jpg",
+    imageAlt: "Life",
+    styles: {
+      // Mobile Control
+      mobile: {
+        title: "font-roboto-slab text-base text-white text-left py-1",
+        body: "font-roboto-slab font-extralight text-gray-400 text-left text-xs mt-1",
+        image: "rounded-lg object-cover",
+        imageWrap: "col-span-5",
+        textWrap: "col-span-7 flex flex-col justify-center px-2",
+      },
+      // Desktop Control
+      desktop: {
+        title: "font-roboto-slab text-xl text-white text-left py-1",
+        body: "font-roboto-slab font-extralight text-gray-400 text-left text-sm mt-1",
+        image: "rounded-lg object-cover",
+        imageWrap: "col-span-5",
+        textWrap: "col-span-7 flex flex-col justify-center px-0",
+      },
+    },
+  },
+];
+
+
+
+const summaryOne = {
+  title: "So, let’s accelerate bioengineering.",
+  body:
+    "We’re at the tip of the genetic hyperspace iceberg. The kinds and scales of mechanical and phenomenological entities possible is unimaginable.",
+  image: {
+    src: "/great_tree_iceberg.jpg",
+    alt: "Life",
+    mobile: { width: 390, height: 702 },
+    desktop: { width: 650, height: 1170 },
+  },
+  styles: {
+    // Mobile Control
+    mobile: {
+      title: "font-roboto-slab italic text-xl text-white",
+      body: "font-roboto-slab font-extralight text-gray-400 text-left text-xs pt-4",
+    },
+    // Desktop Control
+    desktop: {
+      title: "font-roboto-slab italic text-xl text-white",
+      body: "font-roboto-slab font-extralight text-gray-400 text-left text-sm pt-4",
+    },
+  },
+};
+
+const TextSummary1 = () => (
+  <div className="max-w-screen-lg mx-auto pt-8 px-6">
+    <div className="grid grid-cols-8 gap-4 border-white">
+      <div className="col-span-3 sm:col-span-3 flex items-center pt-6 sm:pt-12">
+        {/* Mobile Control */}
+        <div className="sm:hidden">
+          <Image
+            src={summaryOne.image.src}
+            alt={summaryOne.image.alt}
+            width={summaryOne.image.mobile.width}
+            height={summaryOne.image.mobile.height}
+            className="rounded-lg"
+          />
+        </div>
+        {/* Desktop Control */}
+        <div className="hidden sm:block">
+          <Image
+            src={summaryOne.image.src}
+            alt={summaryOne.image.alt}
+            width={summaryOne.image.desktop.width}
+            height={summaryOne.image.desktop.height}
+            className="rounded-lg"
+          />
+        </div>
+      </div>
+      <div className="col-span-5 sm:col-span-5 flex flex-col justify-center">
+        {/* Mobile Control */}
+        <h2 className={`sm:hidden ${summaryOne.styles.mobile.title}`}>
+          {summaryOne.title}
         </h2>
-      </div>
-      <div className="col-span-0">
-        <div className="top-0 left-0 w-96 h-0">
-          <h2 className="font-roboto-slab font-bold italic text-3xl text-white text-left" />
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-/** Mobile hero/intro content */
-const HeaderMobile = () => (
-  <div className="sm:hidden max-w-screen-lg mx-auto pt-10 pb-4 px-6">
-    <div className="grid grid-cols-3">
-      <div className="col-span-3">
-        <h2 className="font-roboto-slab font-bold text-2xl text-white text-left">
-          Engineering biology will revolutionize the human condition.
+        <p className={`sm:hidden ${summaryOne.styles.mobile.body}`}>
+          <i>We’re at the tip of the genetic hyperspace iceberg</i>.<br /><br />
+          The kinds and scales of mechanical and phenomenological entities possible is unimaginable.
+        </p>
+        {/* Desktop Control */}
+        <h2 className={`hidden sm:block ${summaryOne.styles.desktop.title}`}>
+          {summaryOne.title}
         </h2>
+        <p className={`hidden sm:block ${summaryOne.styles.desktop.body}`}>
+          We’re at the tip of the <i>genetic hyperspace iceberg</i>.<br /><br />
+          The kinds and scales of mechanical and phenomenological entities possible is unimaginable.
+        </p>
       </div>
     </div>
   </div>
 );
 
-/** Desktop panel content */
-const PanelDesktop = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-4 pb-4 px-6 sm:px-10 border-t">
-    <div className="grid grid-cols-12 gap-y-8 gap-x-4">
-      {/* Introduction */}
-      <div className="col-span-12">
-        <h2 className="font-roboto-slab font-bold text-lg text-gray-400 text-left">
-          A few first principles toward my North Star:
+const summaryTwo = {
+  title: "Powerfully, with AI",
+  body:
+    "The chaos of biological complexity will almost certainly become best understood by AI. The emergence of LLMs and their success with human language hints at the possibility for new understandings of biology.",
+  image: {
+    src: "/wizard_bird.jpg",
+    alt: "Life",
+    mobile: { width: 595, height: 680 },
+    desktop: { width: 1190, height: 1360 },
+  },
+  styles: {
+    // Mobile Control
+    mobile: {
+      title: "font-roboto-slab italic text-xl text-white text-left",
+      body: "font-roboto-slab font-extralight text-gray-400 text-left text-xs pt-4",
+    },
+    // Desktop Control
+    desktop: {
+      title: "font-roboto-slab italic text-xl text-white text-right",
+      body: "font-roboto-slab font-extralight text-gray-400 text-right text-sm pt-4",
+    },
+  },
+};
+
+const TextSummary2 = () => (
+  <div className="max-w-screen-lg mx-auto pt-8 px-6 pb-40">
+    <div className="grid grid-cols-8 gap-4">
+      <div className="col-span-5 sm:col-span-3 flex flex-col justify-center order-1">
+        {/* Desktop Control: sm:text-right | Mobile Control: text-left */}
+        {/* Mobile Control */}
+        <h2 className={`sm:hidden ${summaryTwo.styles.mobile.title}`}>
+          {summaryTwo.title}
         </h2>
-      </div>
-      {/* Section 1 */}
-      <div className="col-span-5">
-        <Image
-          src="/origin_of_life_2.jpg"
-          alt="Life"
-          height={400}
-          width={400}
-          objectFit="cover"
-          className="rounded-lg"
-        />
-      </div>
-      <div className="col-span-7 flex flex-col justify-center">
-        <span className="font-roboto-slab font-bold text-2xl text-white">
-          Life started itself
-        </span>
-        <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm">
-          Earth-life emerged spontaneously from the primordial earth ~4 billion years ago and evolved itself into brand new phenomenal categories.
+        <p className={`sm:hidden ${summaryTwo.styles.mobile.body}`}>
+          The chaos of biological complexity will almost certainly become best understood by AI.
+          <br /><br />
+          The emergence of LLMs and their success with human language hints at the possibility for new understandings of biology.
+        </p>
+        {/* Desktop Control */}
+        <h2 className={`hidden sm:block ${summaryTwo.styles.desktop.title}`}>
+          {summaryTwo.title}
+        </h2>
+        <p className={`hidden sm:block ${summaryTwo.styles.desktop.body}`}>
+          The chaos of biological complexity will almost certainly become best understood by AI.
+          <br /><br />
+          The emergence of LLMs and their success with human language hints at the possibility for new understandings of biology.
         </p>
       </div>
-      {/* Section 2 */}
-      <div className="col-span-5">
-        <Image
-          src="/neurons_background.jpg"
-          alt="Life"
-          height={400}
-          width={400}
-          objectFit="cover"
-          className="rounded-lg"
-        />
-      </div>
-      <div className="col-span-7 flex flex-col justify-center">
-        <span className="font-roboto-slab font-bold text-2xl text-white">
-          Evolved within the limit
-        </span>
-        <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm">
-          That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena — including consciousness itself — strongly suggests our universe is capable of hosting other undiscovered phenomena.
-        </p>
-      </div>
-      {/* Section 3 */}
-      <div className="col-span-5">
-        <Image
-          src="/intelligent_design_4.jpg"
-          alt="Life"
-          height={400}
-          width={400}
-          objectFit="cover"
-          className="rounded-lg"
-        />
-      </div>
-      <div className="col-span-7 flex flex-col justify-center">
-        <span className="font-roboto-slab font-bold text-2xl text-white">
-          Has potential beyond the limit
-        </span>
-        <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm">
-          Natural selection was the only game in town, but isn’t the only way. An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
-        </p>
-      </div>
-      {/* Section 4 */}
-      <div className="col-span-5">
-        <Image
-          src="/brain_1.jpg"
-          alt="Life"
-          height={400}
-          width={400}
-          objectFit="cover"
-          className="rounded-lg"
-        />
-      </div>
-      <div className="col-span-7 flex flex-col justify-center">
-        <span className="font-roboto-slab font-bold text-2xl text-white">
-          We too are engineerable biology
-        </span>
-        <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm">
-          We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, human-experience-altering exploration.
-        </p>
-      </div>
-    </div>
-  </div>
-);
-
-/** Mobile panel content – each section now has its title on its own row with image and text side‐by‐side */
-const PanelMobile = () => (
-  <div className="sm:hidden max-w-screen-lg mx-auto pt-6 pb-16 px-6 sm:px-10 border-t">
-    {/* Heading for the mobile panel */}
-    <div className="w-full pb-16">
-      <h2 className="font-roboto-slab font-light text-sm text-gray-300 text-left">
-        Here, a few first principles <br /> toward my current North Star:
-      </h2>
-    </div>
-    <div className="space-y-8">
-      {/* Section 1 */}
-      <div className="grid grid-cols-12 gap-y-2 gap-x-2">
-        {/* Title row */}
-        <div className="col-span-12">
-          <h3 className="font-roboto-slab font-bold text-xl text-white text-left py-1">
-            Life started itself
-          </h3>
-        </div>
-        {/* Image */}
-        <div className="col-span-5">
+      <div className="col-span-3 sm:col-span-5 flex items-center order-2">
+        {/* Mobile Control */}
+        <div className="sm:hidden">
           <Image
-            src="/origin_of_life_2.jpg"
-            alt="Life"
-            height={320}
-            width={320}
-            objectFit="cover"
+            src={summaryTwo.image.src}
+            alt={summaryTwo.image.alt}
+            width={summaryTwo.image.mobile.width}
+            height={summaryTwo.image.mobile.height}
             className="rounded-lg"
           />
         </div>
-        {/* Text */}
-        <div className="col-span-7 flex flex-col justify-center px-2">
-          <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm mt-1">
-            Earth-life emerged spontaneously from the primordial earth ~4 billion years ago and evolved itself into brand new phenomenal categories.
-          </p>
-        </div>
-      </div>
-      {/* Section 2 */}
-      <div className="grid grid-cols-12 gap-y-2 gap-x-2">
-        <div className="col-span-12">
-          <h3 className="font-roboto-slab font-bold text-xl text-white text-left py-1">
-            Evolved within the limit
-          </h3>
-        </div>
-        <div className="col-span-5">
+        {/* Desktop Control */}
+        <div className="hidden sm:block">
           <Image
-            src="/diversity_of_life_3.jpg"
-            alt="Life"
-            height={320}
-            width={320}
-            objectFit="cover"
+            src={summaryTwo.image.src}
+            alt={summaryTwo.image.alt}
+            width={summaryTwo.image.desktop.width}
+            height={summaryTwo.image.desktop.height}
             className="rounded-lg"
           />
-        </div>
-        <div className="col-span-7 flex flex-col justify-center px-2">
-          <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm mt-1">
-            That a purely self-emergent, resource-constrained process could generate entirely novel categories of phenomena — including consciousness itself — strongly suggests our universe is capable of hosting other undiscovered phenomena.
-          </p>
-        </div>
-      </div>
-      {/* Section 3 */}
-      <div className="grid grid-cols-12 gap-y-2 gap-x-2">
-        <div className="col-span-12">
-          <h3 className="font-roboto-slab font-bold text-xl text-white text-left py-1">
-            Has potential beyond the limit
-          </h3>
-        </div>
-        <div className="col-span-5">
-          <Image
-            src="/intelligent_design_4.jpg"
-            alt="Life"
-            height={320}
-            width={320}
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
-        <div className="col-span-7 flex flex-col justify-center px-2">
-          <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm mt-1">
-            Natural selection was the only game in town, but isn’t the only way. An intelligently-guided, non-resource-constrained version of biology would result in forms and phenomena with as yet unimaginable capabilities.
-          </p>
-        </div>
-      </div>
-      {/* Section 4 */}
-      <div className="grid grid-cols-12 gap-y-2 gap-x-2">
-        <div className="col-span-12">
-          <h3 className="font-roboto-slab font-bold text-xl text-white text-left py-1">
-            We too are engineerable biology
-          </h3>
-        </div>
-        <div className="col-span-5">
-          <Image
-            src="/brain_1.jpg"
-            alt="Life"
-            height={320}
-            width={320}
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
-        <div className="col-span-7 flex flex-col justify-center px-2">
-          <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm mt-1">
-            We ourselves exist on that same biological operating system. New categories of phenomena applied to our own biology will be the ultimate, human-experience-altering exploration.
-          </p>
         </div>
       </div>
     </div>
   </div>
 );
 
-/** Desktop simulation section */
+/** Desktop Control */
 const ComingSoonDesktop = () => (
   <div className="hidden sm:block max-w-screen-lg mx-auto pt-12 pb-40 px-6 sm:px-10 border-t">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-center font-bold italic text-3xl text-white">
-          I’ll upload progress here as I go.
+        <h2 className="font-unna italic text-center text-3xl text-white">
+          Fun javascript model of the origin of life
         </h2>
         <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-4 pb-8">
-          Javascript model of the origin of life here to kick things off!<br /><br /><br />
+          As imagined by Freeman Dyson in his 1985 book, Origns of Life.  
+        </p>
+        <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pl-4 pt-0 pb-8">
+          This toy model treats early life as short chains of monomers drifting in a constrained
+          soup. Red and blue sites swap through probabilistic mutations, and the live graph tracks
+          how each population rises and falls over time. Move your cursor to perturb the system,
+          nudging the particles away like a gentle environmental push. When chains get close enough,
+          active sites can seed neighbors, hinting at how local interactions might propagate
+          structure. The goal is not realism, but intuition for how simple rules can yield emergent
+          patterns.
         </p>
         <div className="mt-0 flex justify-center">
           <iframe
@@ -281,155 +396,46 @@ const ComingSoonDesktop = () => (
   </div>
 );
 
-/** Mobile simulation section */
-const ComingSoonMobile = () => {
-    const isMobile = useIsMobile();
-    
-    return (
-      <div className="sm:hidden max-w-screen-lg mx-auto pt-24 px-6 pb-28">
-        <div className="grid grid-cols-8 gap-4 border-t border-white border-b pb-0">
-          <div className="col-span-8 flex flex-col justify-center pt-10 pb-8">
-            <h2 className="font-roboto-slab font-bold text-2xl text-white">
-              I&#39;ll upload more ideas <br /> here as I go.
-            </h2>
-            <p className="font-roboto-slab font-extralight text-xs sm:text-sm pt-4">
-              Javascript model of the origin of life — as imagined by Freeman Dyson in the 1980s — to kick things off!
-            </p>
-            <div className="mt-4 flex justify-center">
-              <div className="w-full" style={{ maxWidth: "350px" }}>
-                <iframe
-                  src="/OOL_Sim_Mobile/index.html"
-                  width="100%"
-                  height="700px"
-                  style={{ border: "none" }}
-                  title="Origin of Life Simulation (Mobile)"
-                />
-              </div>
-            </div>
-            <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-6 text-gray-400">
-              (Note: For best experience, try a tablet/desktop!)
-            </p>
+/** Mobile Control */
+const ComingSoonMobile = () => (
+  <div className="sm:hidden max-w-screen-lg mx-auto pt-2 px-6 pb-28">
+    <div className="grid grid-cols-8 gap-4 border-t border-white border-b pb-0">
+      <div className="col-span-8 flex flex-col pt-10 pb-8">
+        <h2 className="font-roboto-slab text-left text-xl text-white">
+          Fun simulation of the origin of life
+        </h2>
+        <p className="font-roboto-slab text-font-extralight text-xs sm:text-sm pt-4">
+           As imagined by Freeman Dyson in his 1985 book, <br/> Origns of Life. 
+        </p>
+        <p className="font-roboto-slab font-extralight text-xs sm:text-sm pt-4 pb-4">
+          This toy model treats early life as short chains of monomers drifting in a constrained
+          soup. Red and blue sites swap through probabilistic mutations, and the live graph tracks
+          how each population rises and falls over time. Move your cursor to perturb the system,
+          nudging the particles away like a gentle environmental push. When chains get close enough,
+          active sites can seed neighbors, hinting at how local interactions might propagate
+          structure. The goal is not realism, but intuition for how simple rules can yield emergent
+          patterns.
+        </p>
+        <div className="mt-4 flex justify-center">
+          <div className="w-full" style={{ maxWidth: "350px" }}>
+            <iframe
+              src="/OOL_Sim_Mobile/index.html"
+              width="100%"
+              height="700px"
+              style={{ border: "none" }}
+              title="Origin of Life Simulation (Mobile)"
+            />
           </div>
         </div>
-      </div>
-    );
-  };
-
-/** Desktop summary section */
-const TextSummary1 = () => (
-  <div className="hidden sm:block max-w-screen-lg mx-auto pt-8 px-6">
-    <div className="grid grid-cols-8 gap-4 border-white">
-      <div className="col-span-3 col-start-1 flex items-center pt-12">
-        <Image
-          src="/great_tree_iceberg.jpg"
-          alt="Life"
-          width={500}
-          height={900}
-          className="rounded-lg"
-          layout="intrinsic"
-        />
-      </div>
-      <div className="col-span-5 flex flex-col justify-center">
-        <h2 className="font-roboto-slab font-bold italic text-2xl pl-2 text-white">
-          So, let’s accelerate bioengineering.
-        </h2>
-        <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pl-2 pt-4">
-          We’re at the tip of the <i>genetic hyperspace iceberg</i>.<br /><br />
-          The kinds and scales of mechanical and phenomenological entities possible is unimaginable.
+        <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-6 text-gray-400">
+          (Note: For best experience, try a tablet/desktop!)
         </p>
       </div>
     </div>
   </div>
 );
 
-/** Mobile summary section */
-const TextSummary1Mobile = () => (
-  <div className="sm:hidden max-w-screen-lg mx-auto pt-8 px-6">
-    <div className="flex flex-col items-center">
-      <div className="pb-8">
-        <h2 className="font-roboto-slab font-bold text-xl text-white">
-          So, let’s accelerate bioengineering.
-        </h2>
-        <p className="font-roboto-slab text-gray-200 text-sm pt-4">
-          <i>We’re at the tip of the genetic hyperspace iceberg</i>.<br />
-        </p>
-        <p className="font-roboto-slab font-light text-gray-400 text-sm pt-4">
-          The kinds and scales of mechanical and phenomenological entities possible is unimaginable.
-        </p>
-      </div>
-      {/* Left-align the image */}
-      <div className="pb-8 self-start">
-        <Image
-          src="/great_tree_iceberg.jpg"
-          alt="Life"
-          width={300}
-          height={540}
-          className="rounded-lg"
-          layout="intrinsic"
-        />
-      </div>
-    </div>
-  </div>
-);
 
-/** Desktop summary section for TextSummary2 */
-const TextSummary2 = () => (
-  <div className="hidden sm:block">
-    <div className="grid grid-cols-8 gap-4 max-w-screen-lg mx-auto px-6 pb-40">
-      <div className="col-span-3 flex flex-col justify-center">
-        <h2 className="font-roboto-slab font-bold italic text-right text-2xl pr-2 text-white">
-          Powerfully, with AI
-        </h2>
-        <p className="font-roboto-slab font-extralight text-gray-400 text-left text-xs sm:text-sm pr-2 pt-4 text-right">
-          The chaos of biological complexity will almost certainly become best understood by AI.
-          <br /><br />
-          The emergence of LLMs and their success with human language hints at the possiblity for new understandings of biology.
-        </p>
-      </div>
-      <div className="col-span-5 flex items-center">
-        <Image
-          src="/wizard_bird.jpg"
-          alt="Life"
-          width={700}
-          height={800}
-          className="rounded-lg"
-          layout="intrinsic"
-        />
-      </div>
-    </div>
-  </div>
-);
-
-/** Mobile summary section for TextSummary2 */
-const TextSummary2Mobile = () => (
-  <div className="sm:hidden max-w-screen-lg mx-auto pt-8 px-6">
-    <div className="flex flex-col items-center">
-      <div className="pb-8">
-        <h2 className="font-roboto-slab font-bold italic text-xl text-white">
-          Powerfully, with AI
-        </h2>
-        <p className="font-roboto-slab font-extralight text-gray-400 text-sm pt-4">
-          The chaos of biological complexity will almost certainly become best understood by AI.
-          <br /><br />
-          The emergence of LLMs and their success with human language hints at the possibility for new understandings of biology.
-        </p>
-      </div>
-      {/* Left-align the image */}
-      <div className="pb-8 self-start">
-        <Image
-          src="/wizard_bird.jpg"
-          alt="Life"
-          width={350}
-          height={400}
-          className="rounded-lg"
-          layout="intrinsic"
-        />
-      </div>
-    </div>
-  </div>
-);
-
-/** NavPanel – using the original style for "BioEng Ideas" */
 const NavPanel = () => (
   <div className="max-w-screen-lg mx-auto pt-10 pb-20 px-10">
     <ul className="grid grid-cols-2 sm:grid-cols-5 gap-10">
@@ -449,7 +455,6 @@ const NavPanel = () => (
                 width={150}
                 height={150}
                 className="rounded-lg w-36 h-auto md:w-full"
-                layout="intrinsic"
               />
               <span className="mt-2 text-sm">{item.text}</span>
             </div>
@@ -460,27 +465,15 @@ const NavPanel = () => (
   </div>
 );
 
-/** The main BioEng page export */
 export default function BioEng() {
-  // Optionally use the custom hook here if needed
-  const isMobile = useIsMobile();
   return (
     <div className="text-xs space-y-4 w-full flex flex-col items-center overflow-x-hidden">
-      <HeaderDesktop />
-      <HeaderMobile />
-
-      <PanelDesktop />
-      <PanelMobile />
-
+      <Header />
+      <Panel />
       <TextSummary1 />
-      <TextSummary1Mobile />
-
       <TextSummary2 />
-      <TextSummary2Mobile />
-
       <ComingSoonDesktop />
       <ComingSoonMobile />
-
       <NavPanel />
       <Footer />
     </div>
