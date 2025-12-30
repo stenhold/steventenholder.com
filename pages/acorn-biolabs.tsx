@@ -1041,6 +1041,7 @@ const ClickEnlarge2Section = () => {
               alt={patentFeatureContent.image.alt}
               width={patentFeatureContent.image.desktop.width}
               height={patentFeatureContent.image.desktop.height}
+              unoptimized
               className="rounded-lg mb-4"
             />
           </div>
@@ -1069,6 +1070,7 @@ const ClickEnlarge2Section = () => {
                 alt={patentFeatureContent.image.alt}
                 width={patentFeatureContent.image.mobile.width}
                 height={patentFeatureContent.image.mobile.height}
+                unoptimized
                 className="rounded-lg mb-4"
               />
             </div>
@@ -1086,6 +1088,7 @@ const ClickEnlarge2Section = () => {
                 alt="Enlarged Image"
                 width={patentFeatureContent.image.modalDesktop.width}
                 height={patentFeatureContent.image.modalDesktop.height}
+                unoptimized
               />
               <button
                 onClick={() => setIsModalOpen(false)}
@@ -1104,6 +1107,7 @@ const ClickEnlarge2Section = () => {
                 alt="Enlarged Image"
                 width={patentFeatureContent.image.modalMobile.width}
                 height={patentFeatureContent.image.modalMobile.height}
+                unoptimized
               />
               <button
                 onClick={() => setIsModalOpen(false)}
