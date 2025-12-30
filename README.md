@@ -1,13 +1,12 @@
-# Steven's Personal Website. 
+# Steven's Personal Website.
 
-No instructions to follow ya&#39;ll! Just enjoy it. 
+No instructions to follow ya&#39;ll! Just enjoy it.
 
-I MAY have some javascript on here sometime soon that you can deploy yourself. 
-Ideally that will be simulation code for: 
+I MAY have some simulations on here sometime soon that you can deploy yourself.
 
 - Origins of Life
 - Embryogenesis
 
 And eventually
 
-- LLMs for genomics 
+- LLMs for genomics

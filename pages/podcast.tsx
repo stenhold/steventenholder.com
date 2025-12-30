@@ -7,18 +7,53 @@ import Link from "next/link";
 // Import shared Footer
 import Footer from "../components/Footer";
 
+const headerContent = {
+  title: "Casual conversations with friends.",
+  subtitle: "Podcast is the new blog: conversations on display.",
+  styles: {
+    // Desktop Control
+    desktop: {
+      title: "font-unna italic text-4xl text-white text-left",
+      subtitle: "font-roboto-slab text-lg text-gray-300 text-left pt-2",
+    },
+    // Mobile Control
+    mobile: {
+      title: "font-unna italic text-4xl text-white text-left",
+      subtitle: "font-roboto-slab text-lg text-gray-300 text-left pt-2",
+    },
+  },
+};
+
+const comingSoonContent = {
+  title: "I have many more conversations to upload.",
+  subtitle: "I may upload more soon, but for now please enjoy what I have up:",
+  styles: {
+    // Desktop Control
+    desktop: {
+      title: "font-unna text-center font-bold italic text-3xl text-white",
+      subtitle: "font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4",
+    },
+    // Mobile Control
+    mobile: {
+      title: "font-unna text-center font-bold italic text-2xl text-white",
+      subtitle: "font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4",
+    },
+  },
+};
+
 /** Hero header for desktop view */
 const HeaderDesktop = () => (
   <div className="hidden sm:block max-w-screen-lg mx-auto pt-20 pb-16 px-6 sm:px-10">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-unna italic text-4xl text-white text-left">
-          Casual conversations with friends.
+        {/* Desktop Control */}
+        <h2 className={headerContent.styles.desktop.title}>
+          {headerContent.title}
         </h2>
       </div>
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
-          Podcast is the new blog: conversations on display.
+        <h2 className={headerContent.styles.desktop.subtitle}>
+          {headerContent.subtitle}
         </h2>
       </div>
 
@@ -29,7 +64,6 @@ const HeaderDesktop = () => (
           width={800}
           height={700}
           className="rounded-lg"
-          layout="intrinsic"
         />
       </div>
     </div>
@@ -41,12 +75,13 @@ const HeaderMobile = () => (
   <div className="sm:hidden max-w-screen-lg mx-auto pt-20 pb-4 px-6">
     <div className="grid grid-cols-3">
       <div className="col-span-3">
-        <h2 className="font-unna italic text-4xl text-white text-left">
-          Casual conversations with friends.
+        {/* Mobile Control */}
+        <h2 className={headerContent.styles.mobile.title}>
+          {headerContent.title}
         </h2>
       </div>
       <div className="col-span-3">
-        <h2 className="font-roboto-slab text-lg text-gray-300 text-left pt-2">
+        <h2 className={headerContent.styles.mobile.subtitle}>
           Podcast is the new blog: <br /> conversations on display.
         </h2>
       </div>
@@ -57,7 +92,6 @@ const HeaderMobile = () => (
           width={800}
           height={700}
           className="rounded-lg"
-          layout="intrinsic"
         />
       </div>
     </div>
@@ -69,11 +103,12 @@ const ComingSoonDesktop = () => (
   <div className="hidden sm:block max-w-screen-lg mx-auto pt-8 px-6">
     <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
       <div className="col-span-8 flex flex-col justify-center pt-12 pb-12">
-        <h2 className="font-unna text-center font-bold italic text-3xl text-white">
+        {/* Desktop Control */}
+        <h2 className={comingSoonContent.styles.desktop.title}>
           I have many more <br /> conversations to upload.
         </h2>
-        <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
-          I may upload more soon, but for now please enjoy what I have up:
+        <p className={comingSoonContent.styles.desktop.subtitle}>
+          {comingSoonContent.subtitle}
         </p>
       </div>
     </div>
@@ -85,10 +120,11 @@ const ComingSoonMobile = () => (
   <div className="sm:hidden max-w-screen-lg mx-auto pt-12 px-6">
     <div className="grid grid-cols-8 gap-4 border-t border-white border-b">
       <div className="col-span-8 flex flex-col justify-center pt-12 pb-12">
-        <h2 className="font-unna text-center font-bold italic text-2xl text-white">
+        {/* Mobile Control */}
+        <h2 className={comingSoonContent.styles.mobile.title}>
           I have many more <br /> conversations to upload.
         </h2>
-        <p className="font-roboto-slab font-extralight text-center text-xs sm:text-sm pt-4">
+        <p className={comingSoonContent.styles.mobile.subtitle}>
           I may upload more soon, <br/> but for now please enjoy what I have up:
         </p>
       </div>
@@ -182,7 +218,6 @@ const NavPanel = () => (
                 width={150}
                 height={150}
                 className="rounded-lg w-36 h-auto md:w-full"
-                layout="intrinsic"
               />
               <span className="mt-2 text-sm">{item.text}</span>
             </div>
